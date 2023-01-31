@@ -1,0 +1,22 @@
+{
+  "name": "@miso.ai/client-sdk-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "npx rimraf dist",
+    "build:shared": "cp -a ../shared/dist dist",
+    "build:sass": "npx sass scss:dist/css",
+    "watch:sass": "npx sass --watch scss:dist/css",
+    "build:11ty": "npx eleventy",
+    "watch:11ty": "npx eleventy --serve --port=10101",
+    "_build": "npm run clean && npm run build:shared && npm run build:sass",
+    "build": "npm run _build && npm run build:11ty",
+    "start": "npm run _build && npm-run-all --parallel watch:*",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "devDependencies": {
+    "@miso.ai/eleventy-plugin-miso-docs": "file:../../packages/plugin",
+    "@miso.ai/miso-specs": "file:../../packages/specs",
+    "@11ty/eleventy": "^1.0.1"
+  }
+}

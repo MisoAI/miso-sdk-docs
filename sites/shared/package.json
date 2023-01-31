@@ -1,0 +1,10 @@
+{
+  "name": "@miso.ai/shared-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:clean": "npx rimraf dist",
+    "build": "npm run build:clean && npx sass scss:dist/css",
+    "start": "npx sass --watch scss:dist/css"
+  }
+}
