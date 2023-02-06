@@ -1,6 +1,5 @@
 {
   "name": "@miso.ai/client-sdk-docs",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
     "clean": "npx rimraf dist",

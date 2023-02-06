@@ -1,7 +1,6 @@
 {
   "name": "@miso.ai/eleventy-plugin-miso-docs",
   "description": "Miso 11ty plugin for doc sites",
-  "version": "1.0.0",
   "private": true,
   "main": "src/index.js",
  "scripts": {

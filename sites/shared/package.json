@@ -1,6 +1,5 @@
 {
   "name": "@miso.ai/shared-docs",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build:clean": "npx rimraf dist",
