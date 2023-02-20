@@ -16,6 +16,6 @@
   "devDependencies": {
     "@miso.ai/eleventy-plugin-miso-docs": "file:../../packages/plugin",
     "@miso.ai/miso-specs": "file:../../packages/specs",
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^2.0.0"
   }
 }

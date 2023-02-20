@@ -6,7 +6,7 @@
  "scripts": {
   },
   "peerDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^2.0.0"
   },
   "dependencies": {
     "@miso.ai/miso-specs": "file:../specs",

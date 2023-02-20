@@ -71,12 +71,7 @@ module.exports = function MisoDocsPlugin(config, {
     '../shared/asset': '/',
     'asset': '/'
   });
-  // TODO: this is changed in 2.x
-  config.setBrowserSyncConfig({
-    files: [
-      './dist/css/**/*.css',
-    ],
-  });
+  config.addWatchTarget('./scss/');
   config.addGlobalData('layout', 'base.njk');
   overrideConfigResult(config, {
     dir: {
