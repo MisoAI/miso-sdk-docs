@@ -4,7 +4,7 @@ const Data = require('./data');
 
 module.exports = function(config) {
   config.addPlugin(MisoDocsPlugin, {
-    pathPrefix: '/miso-sdk-docs/',
+    pathPrefix: '/miso-server-js-sdk/',
   });
 
   const data = new Data();

@@ -2,9 +2,9 @@
 {%- set canonicalUrl = [ "https://", hostname, page.url | url ] | join -%}
 
 {%- if pageMeta.title -%}
-  {%- set title = "Miso SDK for JavaScript" -%}
-{%- else -%}
   {%- set title = ["Miso SDK for JavaScript - ", pageMeta.title] | join -%}
+{%- else -%}
+  {%- set title = "Miso SDK for JavaScript" -%}
 {%- endif -%}
 
 {%- set description = pageMeta.desc -%}

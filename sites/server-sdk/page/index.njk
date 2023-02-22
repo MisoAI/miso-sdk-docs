@@ -23,7 +23,7 @@ layout: home.njk
       <ul class="component-list list-unstyled">
       {%- for component in intro.components -%}
         <li class="component">
-          <a href="{{ component.path | url }}">
+          <a href="{{ [component.path, '/'] | join | url }}">
             <div class="card">
               <h4 class="title">
                 <span>{{ component.title }}</span>

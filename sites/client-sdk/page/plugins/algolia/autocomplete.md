@@ -6,7 +6,7 @@ title: Working with Autocomplete
 
 You can combine the power of Miso with InstantSearch.js and Autocomplete.
 
-1. [Install]({{ '/plugins/algolia/installation' | url }}) Miso SDK and its Algolia plugin.
+1. [Install]({{ '/plugins/algolia/installation/' | url }}) Miso SDK and its Algolia plugin.
 1. Install [Autocomplete](https://www.algolia.com/doc/ui-libraries/autocomplete/introduction/getting-started/).
 1. Follow the [guide](https://www.algolia.com/doc/ui-libraries/autocomplete/integrations/with-instantsearch/) to integrate InstantSearch.js and Autocomplete.
 1. Use the autocomplete client from Miso in place of Algolia's original search client.

@@ -4,10 +4,10 @@ title: Working with InstantSearch.js
 
 With InstantSearch.js properly setup, you can connect it to Miso SDK easily:
 
-1. [Install]({{ '/plugins/algolia/installation' | url }}) Miso SDK and its Algolia plugin.
+1. [Install]({{ '/plugins/algolia/installation/' | url }}) Miso SDK and its Algolia plugin.
 1. Substitute algolia's search client with the one generated from Miso SDK client.
 
-Miso's philosophy promotes a submit-based search paradigm, accomplished with an [autocomplete]({{ '/plugins/algolia/autocomplete' | url }}) UI pattern.
+Miso's philosophy promotes a submit-based search paradigm, accomplished with an [autocomplete]({{ '/plugins/algolia/autocomplete/' | url }}) UI pattern.
 
 ### Example
 

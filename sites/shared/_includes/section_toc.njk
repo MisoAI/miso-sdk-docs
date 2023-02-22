@@ -6,7 +6,7 @@
     {%- for p in section.pages -%}
       <li class="page mb-4">
         <h5 class="title mb-2">
-          <a href="{{ ['/', chapter, p.path] | join | url }}">{{ p.title }}</a>
+          <a href="{{ ['/', chapter, p.path, '/'] | join | url }}">{{ p.title }}</a>
         </h5>
         {%- if p.desc -%}
         <p class="mb-0">

@@ -59,4 +59,4 @@ The tracker will capture the following interaction event and send to Miso API au
 * `click`
 
 ### See also
-* [Performance Measurement]({{ '/sdk/interactions/performance' | url }})
+* [Performance Measurement]({{ '/sdk/interactions/performance/' | url }})
