@@ -16,15 +16,11 @@
 </button>
 <div id="navbar" class="collapse navbar-collapse">
   <ul class="navbar-nav flex-row flex-wrap pt-2 py-md-0">
+  {% for chapter in chapters %}
     <li class="nav-item col-6 col-md-auto">
-      <a class="nav-link p-2" href="{{ '/sdk' | url }}">SDK</a>
+      <a class="nav-link p-2" href="{{ [ '/', chapter ] | join | url }}">{{ sitemap[chapter].title }}</a>
     </li>
-    <li class="nav-item col-6 col-md-auto">
-      <a class="nav-link p-2" href="{{ '/ui' | url }}">UI</a>
-    </li>
-    <li class="nav-item col-6 col-md-auto">
-      <a class="nav-link p-2" href="{{ '/plugins' | url }}">Plugins</a>
-    </li>
+  {% endfor %}
   </ul>
   <hr class="d-md-none text-white-50">
   <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
