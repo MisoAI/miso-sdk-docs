@@ -4,7 +4,7 @@ title: Upload Interactions
 
 #### Syntax
 ```js
-miso.api.interactions.upload(event);
+client.api.interactions.upload(event);
 ```
 
 #### Parameters
@@ -112,7 +112,7 @@ const event = {
   quantities: [3, 5],
   user_id: '...'
 };
-miso.api.interactions.upload(event);
+client.api.interactions.upload(event);
 ```
 
 #### Learn more

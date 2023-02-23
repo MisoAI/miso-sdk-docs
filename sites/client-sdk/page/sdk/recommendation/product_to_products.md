@@ -6,7 +6,7 @@ description: Returns the products that are related to an anchor product (often t
 
 #### Syntax
 ```js
-const response = await miso.api.recommendation.productToProducts(payload, options);
+const response = await client.api.recommendation.productToProducts(payload, options);
 ```
 
 {% include 'section/sdk-api.md' %}
@@ -20,7 +20,7 @@ const payload = {
   buy_together: true,
   fl: ['title', 'sale_price', 'custom_attributes.*']
 };
-const { products } = await miso.api.recommendation.productToProducts(payload);
+const { products } = await client.api.recommendation.productToProducts(payload);
 ```
 
 #### Learn more

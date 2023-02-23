@@ -9,7 +9,7 @@ You can specify a timeout in milleseconds.
 
 ```js
 try {
-  const { products } = await miso.api.recommendation.userToProducts(payload, { timeout: 5000 });
+  const { products } = await client.api.recommendation.userToProducts(payload, { timeout: 5000 });
 } catch (e) {
   // ...
 }
@@ -20,14 +20,14 @@ You can call API in bulk mode. API calls in bulk mode from the same event loop w
 
 ```js
 const [ responseA, responseB ] = await Promise.all([
-  miso.api.recommendation.userToProducts(payload, { bulk: true }),
-  miso.api.recommendation.userToTrending(payload, { bulk: true })
+  client.api.recommendation.userToProducts(payload, { bulk: true }),
+  client.api.recommendation.userToTrending(payload, { bulk: true })
 ]);
 ```
 
 Be aware of asynchrony. In the following example, the bulk mode will NOT be in effect:
 
 ```js
-const responseA = await miso.api.recommendation.userToProducts(payload, { bulk: true });
-const responseB = await miso.api.recommendation.userToProducts(payload, { bulk: true });
+const responseA = await client.api.recommendation.userToProducts(payload, { bulk: true });
+const responseB = await client.api.recommendation.userToProducts(payload, { bulk: true });
 ```

@@ -15,15 +15,15 @@ The SDK takes care of `anonymous_id` automatically using session storage. It wil
 You can also set `anonymous_id` by yourself:
 
 ```js
-miso.context.anonymous_id = 'my_anonymous_id';
+client.context.anonymous_id = 'my_anonymous_id';
 ```
 
 ### User ID and user hash
 Set `user_id` and `user_hash`:
 
 ```js
-miso.context.user_id = 'user_id';
-miso.context.user_hash = 'user_hash';
+client.context.user_id = 'user_id';
+client.context.user_hash = 'user_hash';
 ```
 
 See [REST API](https://api.askmiso.com/#operation/search_v1_search_search_post) for more details about `user_hash`.
