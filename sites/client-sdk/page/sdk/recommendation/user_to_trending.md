@@ -9,7 +9,7 @@ description: Returns the products that are currently trending and are most likel
 const response = await client.api.recommendation.userToTrending(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js

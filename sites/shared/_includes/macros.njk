@@ -1,4 +1,9 @@
 {% macro proptable(group, name) %}
+{%- if data.props[group][name] -%}
+  {%- set _group = data.props[group][name] -%}
+{%- else -%}
+  {%- set _group = specs[group].groups[name] -%}
+{%- endif -%}
 <table class="table">
   <thead>
     <tr>
@@ -8,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-  {%- for prop in data.props[group][name].props -%}
+  {%- for prop in _group.props -%}
     <tr>
       <td><code>{{ prop.name }}</code></td>
       <td>{{ prop.type }}</td>

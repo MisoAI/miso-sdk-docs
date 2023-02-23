@@ -1,0 +1,38 @@
+props:
+# payload
+- key: product_id
+  required: true
+  type: string
+  desc: |
+    The `product_id` of the catalog item.
+# request options
+- key: async
+  type: boolean
+  desc: |
+    Turn on asynchronous mode in upload APIs.
+    Default: `false`.
+- key: dryRun
+  type: boolean
+  desc: |
+    Make a dry run with upload APIs.
+    Default: `false`.
+
+
+
+groups:
+# upload
+- key: products.upload.payload
+  props:
+  - product_id
+# request options
+- key: users.upload.options
+  props:
+  - async
+  - dryRun
+- key: products.upload.options
+  props:
+  - async
+  - dryRun
+- key: interactions.upload.options
+  props:
+  - dryRun

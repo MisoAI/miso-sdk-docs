@@ -6,10 +6,10 @@ description: Returns the products that are most likely to drive conversion for t
 
 #### Syntax
 ```js
-const response = await miso.api.recommendation.userToProducts(payload, options);
+const response = await client.api.recommendation.userToProducts(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js
@@ -18,7 +18,7 @@ const payload = {
   user_hash: '...',
   fl: ['title', 'sale_price', 'custom_attributes.*']
 };
-const { products } = await miso.api.recommendation.userToProducts(payload);
+const { products } = await client.api.recommendation.userToProducts(payload);
 ```
 
 #### Learn more

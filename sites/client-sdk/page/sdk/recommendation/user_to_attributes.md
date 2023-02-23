@@ -9,7 +9,7 @@ description: Returns the product attributes that Miso expects to drive a convers
 const response = await client.api.recommendation.userToAttributes(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js

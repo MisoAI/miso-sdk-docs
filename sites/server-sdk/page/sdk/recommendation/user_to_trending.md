@@ -6,10 +6,10 @@ description: Returns the products that are currently trending and are most likel
 
 #### Syntax
 ```js
-const response = await miso.api.recommendation.userToTrending(payload, options);
+const response = await client.api.recommendation.userToTrending(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js
@@ -18,7 +18,7 @@ const payload = {
   user_hash: '...',
   fl: ['title', 'sale_price', 'custom_attributes.*']
 };
-const { products } = await miso.api.recommendation.userToTrending(payload);
+const { products } = await client.api.recommendation.userToTrending(payload);
 ```
 
 #### Learn more

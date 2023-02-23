@@ -6,10 +6,10 @@ description: Provides real-time, personalized, typo resistant typeahead for your
 
 #### Syntax
 ```js
-const response = await miso.api.search.autocomplete(payload, options);
+const response = await client.api.search.autocomplete(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js
@@ -20,7 +20,7 @@ const payload = {
   fl: ['title', 'sale_price'],
   completion_fields: ['title', 'tags', 'custom_attributes.author']
 };
-const { completions } = await miso.api.search.autocomplete(payload);
+const { completions } = await client.api.search.autocomplete(payload);
 for (const { text, text_with_markups, product } of completions.title) {
   // ...
 }

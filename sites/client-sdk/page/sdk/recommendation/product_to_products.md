@@ -9,7 +9,7 @@ description: Returns the products that are related to an anchor product (often t
 const response = await client.api.recommendation.productToProducts(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js

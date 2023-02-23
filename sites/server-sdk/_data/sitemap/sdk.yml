@@ -7,6 +7,13 @@ sections:
   - title: Installation
     path: /installation
     desc: Guild to install this SDK in your project.
+- title: Catalog
+  path: /catalog
+  desc: Send catalog to Miso's data consumer.
+  pages:
+  - title: Upload
+    path: /catalog/upload
+    desc: Send catalog to Miso's data consumer.
 - title: Interactions
   path: /interactions
   desc: Send user interaction events to Miso's data consumer.

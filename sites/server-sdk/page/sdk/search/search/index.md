@@ -6,10 +6,10 @@ description: Perform a personalized, typo-correcting, semantic search.
 
 #### Syntax
 ```js
-const response = await miso.api.search.search(payload, options);
+const response = await client.api.search.search(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js
@@ -19,7 +19,7 @@ const payload = {
   q: 'doge',
   fl: ['title', 'sale_price', 'custom_attributes.*']
 };
-const { products } = await miso.api.search.search(payload);
+const { products } = await client.api.search.search(payload);
 ```
 
 #### Learn more

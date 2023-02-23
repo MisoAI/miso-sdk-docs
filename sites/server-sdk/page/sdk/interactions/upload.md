@@ -2,13 +2,20 @@
 title: Upload Interactions
 ---
 
+{% from 'macros.njk' import proptable %}
+
 #### Syntax
 ```js
-miso.api.interactions.upload(event);
+await client.api.interactions.upload(events, options);
 ```
 
 #### Parameters
-The `event` parameter is an object with the properties depending on the event type:
+The `events` parameter can be:
+* An object, representing a single user interaction event
+* An array of objects, representing multiple events
+* A JSON string of array of objects
+
+A single record of event object can have the following properties depending on the event type:
 
 <style>
 #event-types {
@@ -101,8 +108,15 @@ The `event` parameter is an object with the properties depending on the event ty
   onSelectEventType(radio.value);
 </script>
 
+#### Options
+The `options` parameter is an optional object with the following properties:
+
+{{ proptable('sdk:data', 'interactions.upload.options') }}
+
+See the [request options page]({{ '/sdk/request-options/' | url }}) for more details.
+
 #### Return value
-A `Promise` without value. In general you don't need to wait for the response.
+A `Promise` without value.
 
 #### Examples
 ```js
@@ -112,7 +126,7 @@ const event = {
   quantities: [3, 5],
   user_id: '...'
 };
-miso.api.interactions.upload(event);
+await client.api.interactions.upload(event);
 ```
 
 #### Learn more

@@ -9,7 +9,7 @@ description: Provides real-time, personalized, typo resistant typeahead for your
 const response = await client.api.search.autocomplete(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js

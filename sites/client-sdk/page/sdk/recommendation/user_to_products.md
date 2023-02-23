@@ -9,7 +9,7 @@ description: Returns the products that are most likely to drive conversion for t
 const response = await client.api.recommendation.userToProducts(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js

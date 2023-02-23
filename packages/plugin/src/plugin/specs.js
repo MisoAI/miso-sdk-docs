@@ -12,8 +12,11 @@ class Specs {
     this._data = compute();
   }
   get event() {
-    // TODO: use proxy
+    // TODO: use proxy?
     return this._data.event;
+  }
+  get query_api() {
+    return this._data.query_api;
   }
 }
 

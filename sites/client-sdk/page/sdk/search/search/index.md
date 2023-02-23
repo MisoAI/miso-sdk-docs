@@ -9,7 +9,7 @@ description: Perform a personalized, typo-correcting, semantic search.
 const response = await client.api.search.search(payload, options);
 ```
 
-{% include 'section/sdk-api.md' %}
+{% include 'section/sdk-query-api.md' %}
 
 #### Examples
 ```js
