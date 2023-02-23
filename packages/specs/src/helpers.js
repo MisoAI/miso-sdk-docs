@@ -31,7 +31,7 @@ function unfoldProps(propMap, mixinGroupMap, keys, arr = []) {
   return arr;
 }
 
-export function resolveProps(groups, props) {
+export function expand(groups, props) {
   const propMap = buildPropMap(props);
   const mixinGroupMap = buildMixinGroupMap(groups);
 
