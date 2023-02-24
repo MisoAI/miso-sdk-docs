@@ -1,6 +1,6 @@
 ---
 api: user_to_trending
-title: User to Trending
+title: User to Ttrending
 description: Returns the products that are currently trending and are most likely to be of interest to this user.
 ---
 

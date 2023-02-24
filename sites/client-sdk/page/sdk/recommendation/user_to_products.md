@@ -1,6 +1,6 @@
 ---
 api: user_to_products
-title: User to Products
+title: User to products
 description: Returns the products that are most likely to drive conversion for the given user.
 ---
 

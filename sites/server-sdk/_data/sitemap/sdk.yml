@@ -9,21 +9,28 @@ sections:
     desc: Guild to install this SDK in your project.
 - title: Catalog
   path: /catalog
-  desc: Send catalog to Miso's data consumer.
+  desc: Catalog APIs
   pages:
   - title: Upload
     path: /catalog/upload
-    desc: Send catalog to Miso's data consumer.
+    desc: Send catalog to Miso dataset.
 - title: Interactions
   path: /interactions
-  desc: Send user interaction events to Miso's data consumer.
+  desc: Interaction APIs.
   pages:
   - title: Events
     path: /interactions/events
     desc: Definitions of interaction events.
   - title: Upload
     path: /interactions/upload
-    desc: Send user interaction events to Miso's data consumer.
+    desc: Send user interaction events to Miso dataset.
+- title: Users
+  path: /users
+  desc: Users APIs
+  pages:
+  - title: Upload
+    path: /users/upload
+    desc: Send user information to Miso dataset.
 - title: Search
   path: /search
   desc: Search and autocomplete APIs.

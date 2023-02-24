@@ -1,8 +1,8 @@
 ---
-title: Request Options
+title: Request options
 ---
 
-You can specify a few parameters in any API request options:
+You can specify a few parameters in API request options:
 
 #### Asynchronous mode
 

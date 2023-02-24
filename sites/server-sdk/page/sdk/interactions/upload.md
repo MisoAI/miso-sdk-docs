@@ -1,5 +1,6 @@
 ---
-title: Upload Interactions
+title: Upload interactions
+description: Upload user interaction events to Miso dataset.
 ---
 
 {% from 'macros.njk' import proptable %}
@@ -111,7 +112,7 @@ A single record of event object can have the following properties depending on t
 #### Options
 The `options` parameter is an optional object with the following properties:
 
-{{ proptable('sdk:data', 'interactions.upload.options') }}
+{{ proptable('data_api', 'interactions.upload.options') }}
 
 See the [request options page]({{ '/sdk/request-options/' | url }}) for more details.
 

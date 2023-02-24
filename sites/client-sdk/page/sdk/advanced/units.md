@@ -1,5 +1,5 @@
 ---
-title: Recommendation Unit
+title: Recommendation unit
 ---
 
 {% from 'macros.njk' import proptable %}

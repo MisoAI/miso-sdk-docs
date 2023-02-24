@@ -1,5 +1,5 @@
 ---
-title: Advanced Topics
+title: Advanced topics
 ---
 
 {% include 'section_toc.njk' %}

@@ -1,6 +1,6 @@
 ---
 api: user_to_attributes
-title: User to Attributes
+title: User to attributes
 description: Returns the product attributes that Miso expects to drive a conversion for the current user.
 ---
 

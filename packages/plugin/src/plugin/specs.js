@@ -18,6 +18,9 @@ class Specs {
   get query_api() {
     return this._data.query_api;
   }
+  get data_api() {
+    return this._data.data_api;
+  }
 }
 
 module.exports = Specs;

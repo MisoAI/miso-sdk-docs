@@ -1,5 +1,5 @@
 ---
-title: Performance Measurement
+title: Performance measurement
 ---
 
 {% from 'macros.njk' import proptable %}

@@ -1,5 +1,5 @@
 ---
-title: Context Variables
+title: Context variables
 ---
 
 This is a quality-of-life module. You can save some shared variables with context API, so they will be passed into other API calls automatically.

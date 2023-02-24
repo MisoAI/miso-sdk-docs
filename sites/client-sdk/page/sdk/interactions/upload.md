@@ -1,5 +1,5 @@
 ---
-title: Upload Interactions
+title: Upload interactions
 ---
 
 #### Syntax

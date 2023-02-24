@@ -1,5 +1,5 @@
 ---
-title: Users
+title: Users APIs
 ---
 
 {% include 'section_toc.njk' %}

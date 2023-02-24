@@ -1,5 +1,5 @@
 ---
-title: Interaction Events
+title: User interaction events
 ---
 
 ### Events

@@ -1,11 +1,5 @@
 props:
-# payload
-- key: product_id
-  required: true
-  type: string
-  desc: |
-    The `product_id` of the catalog item.
-# request options
+# options
 - key: async
   type: boolean
   desc: |
@@ -20,11 +14,7 @@ props:
 
 
 groups:
-# upload
-- key: products.upload.payload
-  props:
-  - product_id
-# request options
+# options
 - key: users.upload.options
   props:
   - async
