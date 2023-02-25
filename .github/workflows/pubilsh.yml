@@ -26,3 +26,11 @@ jobs:
           allow_empty_commit: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.SERVER_SDK_DEPLOY_KEY }}
+          external_repository: MisoAI/miso-server-js-sdk
+          publish_dir: ./sites/server-sdk/dist
+          allow_empty_commit: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
