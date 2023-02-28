@@ -51,6 +51,7 @@ function configMarkdown(config, options) {
 module.exports = function MisoDocsPlugin(config, {
   hostname = 'misoai.github.io',
   pathPrefix,
+  site,
 } = {}) {
 
   // extentions & libraries
@@ -85,6 +86,7 @@ module.exports = function MisoDocsPlugin(config, {
 
   // site parameters
   config.addGlobalData('hostname', hostname);
+  config.addGlobalData('site', site);
   overrideConfigResult(config, {
     pathPrefix,
   });
