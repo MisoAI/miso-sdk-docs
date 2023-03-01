@@ -6,7 +6,8 @@ module.exports = function(config) {
   config.addPlugin(MisoDocsPlugin, {
     pathPrefix: '/miso-client-js-sdk/',
     site: {
-      title: 'Miso SDK for JavaScript'
+      title: 'Miso SDK for JavaScript',
+      projectLink: 'https://github.com/MisoAI/miso-client-js-sdk',
     },
   });
 
