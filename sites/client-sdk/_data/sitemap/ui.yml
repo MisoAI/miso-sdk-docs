@@ -2,38 +2,30 @@ title: UI
 sections:
 - title: Overview
   path:
-  desc: Overview of UI plugin.
+  desc: UI plugin overview
   pages:
-  - title: Quick Start
-    path: /quick-start
-    desc: The simplest setup to play around with the UI plugin.
-  - title: Installation
-    path: /installation
-    desc: A more detailed setup guide.
-  - title: Concept
-    path: /concept
-    desc: Explain how UI plugin works.
-- title: Data Model
-  path: /model
-  desc: Introduce built-in data models.
+  - title: Setup
+    path: /setup
+    desc: How to setup the UI plugin.
+- title: Recommendation
+  path: /recommendation
+  desc: Recommendation UI
   pages:
-  - title: MisoListModel
-    path: /model/list-model
-    desc: A list model to represent search, autocomplete, recommendation results.
-- title: Element
-  path: /element
-  desc: Introduce built-in elements.
-  pages:
-  - title: <miso-list>
-    path: /element/miso-list
-    desc: A customizable list element to display search, autocomplete, recommendation results.
-- title: Recipes
-  path: /recipe
-  desc: Recipes for common scenarios.
-  pages:
-  - title: Custom API
-    path: /recipe/custom-api
-    desc: Customize how data model fetchs data from Miso SDK client, or combined with results from other sources.
-  - title: Deduplication
-    path: /recipe/deduplication
-    desc: Deduplicate recommendation results across multiple elements on the same page.
+  - title: Quick start
+    path: /recommendation/quick-start
+    desc: The shortest path to kick off recommendation UI
+  - title: Recommendation Unit
+    path: /recommendation/unit
+    desc: The JavaScript API to manage a recommendation UI section
+  - title: UI Placement
+    path: /recommendation/placement
+    desc: UI section placement
+  - title: API parameters
+    path: /recommendation/api
+    desc: Configure recommendation API
+  - title: Layouts
+    path: /recommendation/layout
+    desc: Built-in layouts
+  - title: Tracking performance
+    path: /recommendation/tracker
+    desc: Tracking performance events
