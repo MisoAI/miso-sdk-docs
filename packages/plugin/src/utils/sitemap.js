@@ -15,7 +15,7 @@ function buildChapter(dir, file) {
     };
   }
 
-  for (const { pages, ...section } of chapter.sections) {
+  for (const { pages = [], ...section } of chapter.sections) {
     addPageInfo(section);
     for (const page of pages) {
       addPageInfo(page);
