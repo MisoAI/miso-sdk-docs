@@ -15,8 +15,8 @@ Add the SDK JavaScript and stylesheet to your webpage:
 ```html
 <head>
   ...
-  <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@{{version}}/dist/umd/miso.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@{{version}}/dist/css/ui.css">
+  <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@latest/dist/umd/miso.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@latest/dist/css/ui.css">
 </head>
 ```
 
