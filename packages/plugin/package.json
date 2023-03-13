@@ -3,8 +3,6 @@
   "description": "Miso 11ty plugin for doc sites",
   "private": true,
   "main": "src/index.js",
- "scripts": {
-  },
   "peerDependencies": {
     "@11ty/eleventy": "^2.0.0"
   },
