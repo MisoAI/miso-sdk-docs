@@ -3,7 +3,7 @@
   "description": "Miso JavaScript SDK examples: UI recommendation quickstart",
   "private": true,
   "scripts": {
-    "start": "npx serve"
+    "start": "npx serve -nL"
   },
   "devDependencies": {
     "serve": "^14.2.0"
