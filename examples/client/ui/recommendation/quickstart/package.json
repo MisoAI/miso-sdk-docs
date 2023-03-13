@@ -1,5 +1,11 @@
 {
   "name": "@miso.ai/examples-client-ui-recommendation-quickstart",
   "description": "Miso JavaScript SDK examples: UI recommendation quickstart",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "npx serve"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
 }
