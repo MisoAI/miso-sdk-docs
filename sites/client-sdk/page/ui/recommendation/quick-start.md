@@ -2,11 +2,17 @@
 title: Recommendation UI - quick start
 ---
 
+{%- from 'macros.njk' import stackblitz_link with context -%}
+
 You can integrate Miso recommendation results in your website with a few simple steps:
 
 1. Setup UI plugin
 1. Define a recommendation UI section in your webpage
 1. Configure your recommendation UI unit
+
+#### Live demo
+
+{{ stackblitz_link('ui/recommendation/quickstart') }}
 
 ### Setup UI plugin
 
