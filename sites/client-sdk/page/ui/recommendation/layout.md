@@ -2,6 +2,8 @@
 title: Layouts
 ---
 
+{%- from 'macros.njk' import stackblitz_link with context -%}
+
 Select a layout to display the recommendation result:
 
 ```js
@@ -12,6 +14,10 @@ Available built-in layouts are:
 
 * `list` (default)
 * `cards`
+
+#### Live demo
+
+{{ stackblitz_link('ui/recommendation/layouts') }}
 
 ### Customization
 
