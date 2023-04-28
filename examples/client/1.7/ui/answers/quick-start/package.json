@@ -1,0 +1,12 @@
+{
+  "name": "@miso.ai/examples-client-ui-answers-quick-start",
+  "description": "Miso JavaScript SDK examples: UI answers - quick start",
+  "private": true,
+  "scripts": {
+    "start": "npx doggoganger & npx serve -nL"
+  },
+  "devDependencies": {
+    "@miso.ai/doggoganger": "0.9.0-beta.2",
+    "serve": "^14.2.0"
+  }
+}
