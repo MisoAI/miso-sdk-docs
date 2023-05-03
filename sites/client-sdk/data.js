@@ -25,6 +25,7 @@ function computeComparisons() {
 
 function compute() {
   return Object.freeze({
+    env: process.env.ENV,
     props: utils.props.buildDir(join(DATA_DIR, 'prop')),
     comparisons: computeComparisons(),
     pageMeta: utils.sitemap(join(DATA_DIR, 'sitemap')),
@@ -37,6 +38,9 @@ class Data {
   }
   refresh() {
     this._data = compute();
+  }
+  get env() {
+    return this._data.env;
   }
   get props() {
     return this._data.props;

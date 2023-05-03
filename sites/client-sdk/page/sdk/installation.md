@@ -22,7 +22,7 @@ The SDK is also served by [jsDelivr](https://www.jsdelivr.com/package/npm/@miso.
 You can also include the SDK in your webpage with script tag:
 
 The `version` parameter can be one of the following:
-* A specific version. For example: `1.6.0`. (recommended)
+* A specific version. For example: `{{sdk.latest_version}}`. (recommended)
 * A tag: either `latest` or `beta`.
 
 ```html
@@ -33,4 +33,14 @@ The `MisoClient` class is exposed as a global property:
 
 ```js
 const MisoClient = window.MisoClient;
+```
+
+Note that when the script is loaded asynchronously, `MisoClient` may not be available immediately. You can use the following pattern to access the class:
+
+```js
+const misocmd = window.misocmd || (window.misocmd = []);
+misocmd.push(() => {
+  // MisoClient is available here
+});
+</script>
 ```

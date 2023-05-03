@@ -1,7 +1,8 @@
-@import './_code.scss';
-@import './_diagram.scss';
-@import './_util.scss';
-@import './_home.scss';
+@import './code';
+@import './diagram';
+@import './util';
+@import './home';
+@import './preview';
 
 /* layout */
 body.base .miso-body-container {

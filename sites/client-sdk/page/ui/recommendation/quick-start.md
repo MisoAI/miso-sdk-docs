@@ -6,54 +6,52 @@ title: Recommendation UI - quick start
 
 You can integrate Miso recommendation results in your website with a few simple steps:
 
-1. Setup UI plugin
-1. Define a recommendation UI section in your webpage
-1. Configure your recommendation UI unit
+1. Add Miso SDK to your webpage
+1. Place Miso elements in your webpage
+1. Configure your recommendation workflow
 
 #### Live demo
 
-{{ stackblitz_link('ui/recommendation/quick-start') }}
+{{ stackblitz_link('1.7/ui/recommendation/quick-start') }}
 
-### Setup UI plugin
+{% include 'section/ui-quick-start-setup.md' %}
 
-Add the SDK JavaScript and stylesheet to your webpage:
+### Place Miso elements in your webpage
 
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@latest/dist/umd/miso.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@latest/dist/css/ui.css">
-</head>
-```
-
-See [Setup](../../setup/) section for more options.
-
-### Define a recommendation UI section in your webpage
-
-In your webpage, add a `<miso-unit>` custom element where you want to display the recommendation result:
+In your webpage, add the following elements where you want to display the recommendation results:
 
 ```html
-<miso-unit unit-id="default"></miso-unit>
+<miso-recommendation>
+  <miso-results></miso-results>
+</miso-recommendation>
 ```
 
-See [UI Placement](../placement/) section for details.
+See [elements]({{ '/ui/recommendation/elements/' | url }}) section for details.
 
-### Configure your recommendation UI unit
+### Configure your recommendation workflow
 
-Configure the recommendation unit:
+Configure the workflow:
 
-```js
-// turn on the UI plugin
-MisoClient.plugins.use('std:ui');
+```html
+<script>
+// when the SDK is loaded asynchronously, use this pattern to access window.MisoClient
+const misocmd = window.misocmd || (window.misocmd = []);
+misocmd.push(() => {
+  // turn on the UI plugin
+  MisoClient.plugins.use('std:ui');
+  const client = new MisoClient(`${apiKey}`);
+  const workflow = client.ui.recommendation.get();
 
-const client = new MisoClient(`${apiKey}`);
-const unit = client.units.get('default');
+  // specify API parameters (optional)
+  workflow.useApi('user_to_products', { rows: 6 }); // default: 'user_to_products', {}
 
-// specify API parameters (optional)
-unit.useApi('user_to_products', { rows: 6 }); // default: 'user_to_products', {}
+  // choose a layout (optional)
+  workflow.useLayout('cards'); // default: 'list'
 
-// choose a layout (optional)
-unit.useLayout('cards'); // default: 'list'
-
-unit.start();
+  // kick off the workflow
+  workflow.start();
+});
+</script>
 ```
+
+See [workflow]({{ '/ui/recommendation/workflow/' | url }}) section for details.

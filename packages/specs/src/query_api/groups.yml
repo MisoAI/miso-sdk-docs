@@ -72,6 +72,12 @@
   - buy_together
   - _product
   - _page_1
+- key: answer.payload
+  props:
+  - user_id
+  - anonymous_id
+  - user_hash
+  - q_0
 # response
 - key: search.response
   props:
@@ -93,3 +99,11 @@
 - key: product_to_products.response
   props:
   - products
+- key: answer.response
+  props:
+  - answer
+  - question
+  - question_id
+  - sources
+  - related_resources
+  - finished

@@ -16,6 +16,14 @@ sections:
   - title: Request Options
     path: /request-options
     desc: Behavioral options for Miso API requests. Timeout, bulk mode, etc.
+- title: Answers
+  path: /answers
+  desc: Deep text APIs.
+  preview: true
+  pages:
+  - title: Answer
+    path: /answers/answer
+    desc: Answer user's question.
 - title: Search
   path: /search
   desc: Search and autocomplete APIs.

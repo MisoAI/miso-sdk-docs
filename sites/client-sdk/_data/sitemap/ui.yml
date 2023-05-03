@@ -7,25 +7,56 @@ sections:
   - title: Setup
     path: /setup
     desc: How to setup the UI plugin.
+- title: Answers
+  path: /answers
+  desc: UI for Miso answers
+  preview: true
+  pages:
+  - title: Quick start
+    path: /answers/quick-start
+    desc: Answers UI - quick start
+  - title: Workflow
+    path: /answers/workflow
+    desc: Answers workflow API
+  - title: Elements
+    path: /answers/elements
+    desc: Configure answers results' look and feel
 - title: Recommendation
   path: /recommendation
-  desc: Recommendation UI
+  desc: UI for Miso recommendation
   pages:
   - title: Quick start
     path: /recommendation/quick-start
-    desc: The shortest path to kick off recommendation UI
-  - title: Recommendation Unit
-    path: /recommendation/unit
-    desc: The JavaScript API to manage a recommendation UI section
-  - title: UI Placement
-    path: /recommendation/placement
-    desc: UI section placement
-  - title: API parameters
-    path: /recommendation/api
-    desc: Configure recommendation API
-  - title: Layouts
-    path: /recommendation/layout
-    desc: Built-in layouts
-  - title: Tracking performance
-    path: /recommendation/tracker
+    desc: Recommendation UI - quick start
+  - title: Workflow
+    path: /recommendation/workflow
+    desc: Recommendation workflow API
+  - title: Elements
+    path: /recommendation/elements
+    desc: Configure recommendation results' look and feel
+  - title: Performance tracking
+    path: /recommendation/tracking
     desc: Tracking performance events
+- title: Search
+  path: /search
+  desc: UI for Miso search
+  pages:
+  - title: Quick start
+    path: /search/quick-start
+    desc: Search UI - quick start
+  - title: Workflow
+    path: /search/workflow
+    desc: Search workflow API
+  - title: Elements
+    path: /search/elements
+    desc: Configure search results' look and feel
+- title: Elements
+  path: /element
+  desc: Miso custom elements
+  pages:
+  - title: Workflow
+    path: /element/workflow
+    desc: Workflow containers
+  - title: Collections
+    path: /element/collections
+    desc: Elements to represent a list of items

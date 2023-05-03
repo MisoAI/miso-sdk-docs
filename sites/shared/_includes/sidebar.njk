@@ -1,12 +1,12 @@
 <div>
   <ul class="sidebar-list list-unstyled mb-0 py-3 pt-md-1">
   {%- for section in sitemap[chapter].sections -%}
-    <li class="section mb-3{{ ' active' if helpers.isCurrentPage(page.url, chapter, section.path)}}">
+    <li class="section mb-3 {{ 'active' if helpers.isCurrentPage(page.url, chapter, section.path) }} {{ '__preview__' if section.preview }}">
       <a href="{{ ['/', chapter, section.path, '/'] | join | url }}">{{ section.title }}</a>
       <div>
         <ul class="list-unstyled fw-normal pb-1 small">
         {%- for p in section.pages -%}
-          <li class="page{{ ' active' if helpers.isCurrentPage(page.url, chapter, p.path)}}">
+          <li class="page {{ 'active' if helpers.isCurrentPage(page.url, chapter, p.path) }} {{ '__preview__' if p.preview }}">
             <a href="{{ ['/', chapter, p.path, '/'] | join | url }}">{{ p.title }}</a>
           </li>
         {%- endfor -%}
