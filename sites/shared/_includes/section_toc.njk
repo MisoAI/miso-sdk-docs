@@ -4,7 +4,7 @@
   <div class="section-toc">
     <ul class="page-list list-unstyled">
     {%- for p in section.pages -%}
-      <li class="page mb-4">
+      <li class="page mb-4 {{ '__preview__' if p.preview }}">
         <h5 class="title mb-2">
           <a href="{{ ['/', chapter, p.path, '/'] | join | url }}">{{ p.title }}</a>
         </h5>

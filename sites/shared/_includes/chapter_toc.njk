@@ -2,7 +2,7 @@
 <div class="chapter-toc">
   <ul class="section-list list-unstyled">
   {%- for section in sitemap[chapter].sections -%}
-    <li class="section mb-4">
+    <li class="section mb-4 {{ '__preview__' if section.preview }}">
     {%- if helpers.isCurrentPage(page.url, chapter, section.path) -%}
       <h5 class="title mb-2">
         {{ section.title }}
@@ -10,7 +10,7 @@
       <div>
         <ul class="page-list list-unstyled ps-3">
         {%- for p in section.pages -%}
-          <li class="page">
+          <li class="page {{ '__preview__' if p.preview }}">
             <div>
               <a href="{{ ['/', chapter, p.path, '/'] | join | url }}">{{ p.title }}</a>
             </div>
