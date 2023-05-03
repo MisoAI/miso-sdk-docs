@@ -1,0 +1,28 @@
+props:
+# options
+- key: async
+  type: boolean
+  desc: |
+    Turn on asynchronous mode in upload APIs.
+    Default: `false`.
+- key: dryRun
+  type: boolean
+  desc: |
+    Make a dry run with upload APIs.
+    Default: `false`.
+
+
+
+groups:
+# options
+- key: users.upload.options
+  props:
+  - async
+  - dryRun
+- key: products.upload.options
+  props:
+  - async
+  - dryRun
+- key: interactions.upload.options
+  props:
+  - dryRun

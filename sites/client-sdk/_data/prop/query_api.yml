@@ -1,0 +1,38 @@
+props:
+# options
+- key: timeout
+  type: integer
+  desc: |
+    Request timeout in milliseconds.
+- key: bulk
+  type: boolean
+  desc: |
+    Bulked API requests froms the same event loop is packed into a single HTTP request.
+    Default: `false`.
+
+
+
+groups:
+# options
+- key: _options
+  props:
+  - timeout
+  - bulk
+- key: search.options
+  props:
+  - _options
+- key: autocomplete.options
+  props:
+  - _options
+- key: user_to_products.options
+  props:
+  - _options
+- key: user_to_attributes.options
+  props:
+  - _options
+- key: user_to_trending.options
+  props:
+  - _options
+- key: product_to_products.options
+  props:
+  - _options
