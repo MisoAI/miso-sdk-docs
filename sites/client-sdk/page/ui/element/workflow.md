@@ -13,8 +13,8 @@ The following elements serve as containers for corresponding workflows:
   </thead>
   <tbody>
     <tr class="__preview__">
-      <td><code>&lt;miso-answers&gt;</code></td>
-      <td><a href="{{ '/ui/answers/elements/' | url }}">Answers</a></td>
+      <td><code>&lt;miso-ask&gt;</code></td>
+      <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
     </tr>
     <tr>
       <td><code>&lt;miso-search&gt;</code></td>

@@ -20,11 +20,11 @@ The following elements are classified as collection elements:
     </tr>
     <tr class="__preview__">
       <td><code>&lt;miso-sources&gt;</code></td>
-      <td><a href="{{ '/ui/answers/elements/' | url }}">Answers</a></td>
+      <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
     </tr>
     <tr class="__preview__">
       <td><code>&lt;miso-related-resources&gt;</code></td>
-      <td><a href="{{ '/ui/answers/elements/' | url }}">Answers</a></td>
+      <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
     </tr>
   </tbody>
 </table>

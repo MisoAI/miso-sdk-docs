@@ -1,19 +1,19 @@
 ---
-title: Answers UI - elements
+title: Ask UI - elements
 ---
 
 {%- from 'macros.njk' import stackblitz_link with context -%}
 
-Integrate Miso answers in your webpage with the following elements:
+Integrate Miso ask API in your webpage with the following elements:
 
 ```html
 <!-- Place this section where you want the question input box to be -->
-<miso-answers>
+<miso-ask>
   <miso-query></miso-query>
-</miso-answers>
+</miso-ask>
 
 <!-- Place this section where you want to display the answer -->
-<miso-answers>
+<miso-ask>
   <div>You asked about...</div>
   <!-- question text -->
   <miso-question></miso-question>
@@ -25,15 +25,15 @@ Integrate Miso answers in your webpage with the following elements:
   <miso-sources></miso-sources>
   <!-- articles for further reading -->
   <miso-related-resources></miso-related-resources>
-</miso-answers>
+</miso-ask>
 ```
 
 ### Elements
 
-You can mix other elements into the section, split them into multiple secions, or leave out some components:
+You can mix other elements into the section, split them into multiple sections, or leave out some components:
 
 ```html
-<miso-answers>
+<miso-ask>
   <div>You asked about...</div>
   <!-- question text -->
   <miso-question></miso-question>
@@ -46,21 +46,21 @@ You can mix other elements into the section, split them into multiple secions, o
   <div>My reply is based on the following:</div>
   <!-- references in the answer -->
   <miso-sources></miso-sources>
-</miso-answers>
+</miso-ask>
 
-<miso-answers>
+<miso-ask>
   <div>Go beyond, and learn more about this topic:</div>
   <!-- articles for further reading -->
   <miso-related-resources></miso-related-resources>
-</miso-answers>
+</miso-ask>
 ```
 
 You can make the section invisible until the search results are ready:
 
 ```html
-<miso-answers visible-when="ready">
+<miso-ask visible-when="ready">
   ...
-</miso-answers>
+</miso-ask>
 ```
 
 ### Layouts
@@ -68,7 +68,7 @@ You can make the section invisible until the search results are ready:
 You can configure the details of the Miso elements using workflow API:
 
 ```js
-const workflow = client.ui.answers;
+const workflow = client.ui.ask;
 workflow.useLayouts({
   container: ...
   question: ...

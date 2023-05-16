@@ -1,8 +1,8 @@
 ---
-title: Answers UI
+title: Ask UI
 ---
 
-The UI plugin provides tools to integrate Miso search features into your webpage. You can:
+The UI plugin provides tools to integrate Miso ask API features into your webpage. You can:
 
 * Configure default API parameters
 * Customize the layouts to display the result

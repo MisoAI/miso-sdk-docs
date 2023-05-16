@@ -1,8 +1,8 @@
 ---
-title: Answers UI - workflow
+title: Ask UI - workflow
 ---
 
-Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. A answers workflow is a type of workflow for Miso search API, which allows you:
+Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. An `ask` workflow is a type of workflow for Miso search API, which allows you:
 
 * Configure API default payload.
 * Configure the look and feel of UI elements.
@@ -12,7 +12,7 @@ Workflows are JavaScript objects that control the process of the entire data flo
 You can access the workflow as the following:
 
 ```js
-const workflow = client.ui.answers;
+const workflow = client.ui.ask;
 ```
 
 ### Configure API
@@ -26,7 +26,7 @@ workflow.useApi('questions', payload);
 For example, to make the API return `8` products instead of the default value:
 
 ```js
-workflow.useApi('user_to_products', { rows: 8 });
+workflow.useApi('questions', { rows: 8 });
 ```
 
 Given a question `Who's the best doggo?`, the API payload will be:
@@ -49,9 +49,9 @@ Available `apiName` values are:
   </thead>
   <tbody>
     <tr>
-      <td><code>answer</code></td>
+      <td><code>questions</code></td>
       <td>
-        <a href="{{ '/sdk/answers/answer/' | url }}">Answer</a>
+        <a href="{{ '/sdk/ask/questions/' | url }}">Questions</a>
       </td>
     </tr>
   </tbody>
@@ -61,11 +61,12 @@ See the API reference for payload options.
 
 ### Configure UI
 
-You can choose the layout for the recommendation results:
+You can choose the layout for the results:
 
 ```js
 workflow.useLayouts({
-  results: 'cards', // or 'carousel', 'list' (default)
+  sources: 'cards', // or 'carousel', 'list' (default)
+  related_resources: 'carousel' // or 'cards', 'list' (default)
 });
 ```
 
@@ -77,4 +78,4 @@ workflow.useLayouts({
 });
 ```
 
-See [elements]({{ '/ui/answers/elements/' | url }}) section for details.
+See [elements]({{ '/ui/ask/elements/' | url }}) section for details.
