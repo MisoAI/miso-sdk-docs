@@ -14,3 +14,8 @@ body {
   --miso-list-item-gap: 0.65rem;
   --miso-list-description-lines: 3;
 }
+/* fixed in 1.7.3 */
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
