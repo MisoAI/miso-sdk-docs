@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.2/dist/umd/miso.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.2/dist/css/ui.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section class="question">
+      <div class="hero">
+        <div class="hero-inner">
+          <img class="miso-logo" src="/asset/miso-logo.svg" alt="Miso">
+          <!--
+          <div class="toolbar">
+            <button id="logout">Log out</button>
+          </div>
+          -->
+          <img class="brand-banner" src="/asset/brand-banner.svg">
+        </div>
+      </div>
+      <miso-ask>
+        <miso-query>
+          <input class="input" placeholder="Ask O'Reilly Preview anything">
+        </miso-query>
+      </miso-ask>
+    </section>
+    <section class="answer">
+      <div class="container">
+        <miso-ask visible-when="ready">
+          <div class="phrase question">You asked about...</div>
+          <miso-question></miso-question>
+          <miso-answer></miso-answer>
+          <miso-feedback></miso-feedback>
+          <div class="phrase sources">My reply is based on the following:</div>
+          <miso-sources></miso-sources>
+        </miso-ask>
+      </div>
+    </section>
+    <section class="follow-up">
+      <div class="container">
+      </div>
+    </section>
+    <section class="related-resources">
+      <div class="container">
+        <miso-ask visible-when="ready">
+          <div class="phrase related-resources">Go beyond, and learn more about this topic:</div>
+          <miso-related-resources></miso-related-resources>
+        </miso-ask>
+      </div>
+    </section>
+    <!--
+    <div id="login-backdrop" class="login-backdrop">
+      <div class="login-modal">
+        <h3>Enter your Miso API key:</h3>
+        <input id="key-input">
+      </div>
+    </div>
+    -->
+    <script async src="/index.js"></script>
+  </body>
+</html>
