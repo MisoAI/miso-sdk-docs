@@ -6,6 +6,6 @@
     "start": "doggoganger -s -p 5000"
   },
   "devDependencies": {
-    "@miso.ai/doggoganger": "0.9.0-beta.9"
+    "@miso.ai/doggoganger": "0.9.0-beta.10"
   }
 }

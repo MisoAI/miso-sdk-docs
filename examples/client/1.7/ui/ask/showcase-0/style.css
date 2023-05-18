@@ -333,9 +333,3 @@ section.related-resources > .container {
   --miso-list-item-gap: 0.65rem;
   --miso-list-description-lines: 3;
 }
-.miso-list__item-cover-image-container {
-  display: none;
-}
-.miso-list__item-info-container {
-  margin-left: 0;
-}
