@@ -4,21 +4,17 @@ title: Questions
 description: Answer a question using deep text technology.
 ---
 
-The API takes time to process the question and generate answer. You can use the `question_id` returned from the first query to poll the API until the answer is fully populated.
+The `questions` API takes time to process and generate answer. The SDK provides a simple polling mechanism to retrieve the answer.
 
 #### Syntax
 ```js
-// first query
-let response = await client.api.ask.questions(payload);
-const { question_id } = response;
+// get answer object
+const answer = await client.api.ask.questions(payload);
 
-// do something with response
-// ...
-
-// subsequent queries
+// polling response
 let intervalId;
 intervalId = setInterval(async () => {
-  response = await client.api.ask.questions(question_id);
+  const response = await answer.get();
 
   // do something with response
   // ...
@@ -29,10 +25,13 @@ intervalId = setInterval(async () => {
 }, 1000);
 ```
 
-Alternatively, you can configure the API to return an [async iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) and read with `for await ... of` [pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of):
+Alternatively, the `answer` object is also [async iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols), which can be processed with `for await ... of` [pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of):
 
 ```js
-for await (const response of client.api.ask.questions(payload, { iterable: true })) {
+// get answer object
+const answer = await client.api.ask.questions(payload);
+
+for await (const response of answer) {
   // do something with response
   // ...
 }
@@ -45,9 +44,10 @@ for await (const response of client.api.ask.questions(payload, { iterable: true 
 const payload = {
   user_id: '...',
   user_hash: '...',
-  q: 'Who\'s the best doggo?'
+  question: 'Who\'s the best doggo?'
 };
-for (const { answer, sources } of client.api.ask.questions(payload, { iterable: true })) {
+
+for (const { answer, sources } of await client.api.ask.questions(payload)) {
   // do something with response
   // ...
 }

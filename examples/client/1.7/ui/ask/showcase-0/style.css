@@ -153,19 +153,11 @@ section.question miso-query .input {
   color: #33323e;
 }
 
-/* section: answer */
+/* section: answer & sources */
 section.answer > .container {
   width: 43.25rem;
   margin: 4.75rem auto 4rem;
   padding: 0 1rem;
-}
-miso-question h2,
-miso-question h3 {
-  line-height: 1.25;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #33323e;
 }
 .phrase.question {
   line-height: 1.2;
@@ -174,18 +166,22 @@ miso-question h3 {
   font-size: .875rem;
   color: #a6a5bb;
 }
+.miso-text[data-role="question"] {
+  text-transform: capitalize;
+}
+miso-question h2 {
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #33323e;
+}
 .phrase.sources {
   line-height: 1.5;
   margin: 1.5rem 0 1.875rem;
   font-size: .75rem;
   font-weight: 600;
   color: #33323e;
-}
-.phrase.related-resources {
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  font-size: .75rem;
-  font-weight: 600;
 }
 
 /* markdown */
@@ -258,6 +254,8 @@ section.follow-up > .container {
   width: 43.25rem;
   margin: 0 auto;
 }
+
+/* section: related-resources */
 section.related-resources {
   background: #fffaf5;
 }
@@ -268,28 +266,76 @@ section.related-resources > .container {
   padding-top: 3.625rem;
   padding-bottom: 8.125rem;
 }
+.phrase.related-resources {
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-size: .75rem;
+  font-weight: 600;
+}
 
 /* login */
 .login-backdrop {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   z-index: 100;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .85);
+}
+.login-modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40rem;
+  height: 20rem;
+  background: #d73b13;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.login-modal::before {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fffaf5;
+}
+.login-modal .input-wrapper {
+  display: block;
+  position: relative;
+  width: 32rem;
+  z-index: 1;
+  padding: 0 2rem;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 6px 26px rgba(0,0,0,.08);
+}
+.login-modal .input {
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0;
+  border: none;
+  font-weight: 600;
+  color: #33323e;
 }
 
+/* sources & related-resources (for now) */
 .miso-list {
   --miso-list-item-height: 7rem;
   --miso-list-item-gap: 0.65rem;
   --miso-list-description-lines: 3;
 }
-/* fixed in 1.7.3 */
-th {
-  text-align: inherit;
-  text-align: -webkit-match-parent;
+.miso-list__item-cover-image-container {
+  display: none;
 }
-.miso-text[data-role="question"] {
-  text-transform: capitalize;
+.miso-list__item-info-container {
+  margin-left: 0;
 }

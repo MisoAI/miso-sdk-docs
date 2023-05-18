@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/x-icon" href="/asset/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
-    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.2/dist/umd/miso.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.2/dist/css/ui.css" />
+    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.3-beta.2/dist/umd/miso.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.3-beta.2/dist/css/ui.css" />
     <link rel="stylesheet" href="/style.css" />
+    <script src="/patch.js"></script>
   </head>
   <body>
     <section class="question">
@@ -51,14 +53,13 @@
         </miso-ask>
       </div>
     </section>
-    <!--
-    <div id="login-backdrop" class="login-backdrop">
+    <div id="login" class="login-backdrop">
       <div class="login-modal">
-        <h3>Enter your Miso API key:</h3>
-        <input id="key-input">
+        <div class="input-wrapper">
+          <input id="key-input" class="input" placeholder="Enter API key or &quot;lorem&quot;">
+        </div>
       </div>
     </div>
-    -->
     <script async src="/index.js"></script>
   </body>
 </html>

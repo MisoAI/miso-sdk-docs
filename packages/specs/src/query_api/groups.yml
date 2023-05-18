@@ -77,7 +77,7 @@
   - user_id
   - anonymous_id
   - user_hash
-  - q_0
+  - question
 # response
 - key: search.response
   props:
