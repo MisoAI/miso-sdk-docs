@@ -132,23 +132,25 @@ body {
 section.question {
   padding: 0 1rem;
 }
-section.question miso-ask {
-  display: block;
+miso-ask.query-container {
   position: relative;
   width: 44rem;
   height: 4rem;
-  margin: -2rem auto 0;
   z-index: 1;
   padding: 0 2rem;
   border-radius: 9999px;
   background: #fff;
   box-shadow: 0 6px 26px rgba(0,0,0,.08);
 }
-section.question miso-query .input {
+section.question miso-ask.query-container {
+  margin: -2rem auto 0;
+}
+miso-query .input {
   height: 4rem;
   line-height: 4rem;
   padding: 0;
   border: none;
+  border-radius: initial;
   font-weight: 600;
   color: #33323e;
 }
@@ -246,13 +248,21 @@ miso-question h2 {
 }
 
 /* section: follow-up */
-section.follow-up {
-  display: none;
-  margin-top: 6rem;
+.follow-ups miso-ask.query-container {
+  margin: 0 -2rem -2rem;
+  width: 45.25rem;
 }
-section.follow-up > .container {
-  width: 43.25rem;
-  margin: 0 auto;
+.follow-ups .container {
+  width: 41.25rem;
+  margin: 4rem auto;
+  padding: 0;
+}
+.follow-ups .container:last-child {
+  margin-bottom: 0;
+}
+.follow-ups miso-ask > hr:first-child {
+  margin-bottom: 2rem;
+  opacity: 0.25;
 }
 
 /* section: related-resources */
@@ -263,7 +273,7 @@ section.related-resources > .container {
   width: 43.25rem;
   margin: 0 auto;
   min-height: 18rem;
-  padding-top: 3.625rem;
+  padding-top: 5.625rem;
   padding-bottom: 8.125rem;
 }
 .phrase.related-resources {

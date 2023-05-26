@@ -4,5 +4,5 @@ const misocmd = window.misocmd || (window.misocmd = []);
 misocmd.push(() => {
   MisoClient.plugins.use('std:ui');
   const client = new MisoClient(apiKey);
-  client.ui.recommendation.get().start();
+  client.ui.recommendation.start();
 });
