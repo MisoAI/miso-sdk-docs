@@ -40,13 +40,15 @@ misocmd.push(() => {
   // turn on the UI plugin
   MisoClient.plugins.use('std:ui');
   const client = new MisoClient(`${apiKey}`);
-  const workflow = client.ui.recommendation.get();
+  const workflow = client.ui.recommendation;
 
-  // specify API parameters (optional)
+  // override API parameters (optional)
   workflow.useApi('user_to_products', { rows: 6 }); // default: 'user_to_products', {}
 
-  // choose a layout (optional)
-  workflow.useLayout('cards'); // default: 'list'
+  // use a different layout (optional)
+  workflow.useLayouts({
+    results: 'cards' // default: 'list'
+  });
 
   // kick off the workflow
   workflow.start();

@@ -14,14 +14,14 @@ Workflows are JavaScript objects that control the process of the entire data flo
 You can access the workflow as the following:
 
 ```js
-const workflow = client.ui.recommendation.get();
+const workflow = client.ui.recommendation;
 ```
 
 When there are multiple recommendation blocks in the page or in your site, you can access them by their unit IDs:
 
 ```js
 const unitId = 'after-article-1';
-const workflow = client.ui.recommendation.get(unitId);
+const workflow = client.ui.recommendations.get(unitId);
 ```
 
 The workflow will connect to a `<miso-recommendation>` element with a matching `unit-id` attribute:

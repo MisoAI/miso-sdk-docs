@@ -12,7 +12,7 @@ The following elements serve as containers for corresponding workflows:
     </tr>
   </thead>
   <tbody>
-    <tr class="__preview__">
+    <tr>
       <td><code>&lt;miso-ask&gt;</code></td>
       <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
     </tr>
@@ -41,7 +41,7 @@ workflow.setLayouts({
 
 #### Logo
 
-Configure the logo display:
+Turn off Miso logo display globally:
 
 ```js
 workflow.setLayouts({
@@ -49,6 +49,19 @@ workflow.setLayouts({
     logo: false
   },
 });
+```
+
+Configure Miso logo display for each workflow element:
+
+```html
+<miso-ask logo="false">
+</miso-ask>
+
+<miso-search logo="false">
+</miso-search>
+
+<miso-recommendation logo="false">
+</miso-recommendation>
 ```
 
 <table class="table">

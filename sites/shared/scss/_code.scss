@@ -1,3 +1,8 @@
+:root {
+  --color-token-deleted-bg: hsl(350deg 100% 88% / 47%);
+  --color-token-inserted-bg: hsl(120deg 73% 75% / 35%);
+}
+
 pre[class*="language-"],
 code {
   font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
@@ -105,5 +110,27 @@ pre[class*="language-"] {
   }
   &.namespace {
     opacity: 0.75;
+  }
+
+  // diff //
+  &.deleted {
+    background-color: var(--color-token-deleted-bg);
+  }
+  &.inserted {
+    background-color: var(--color-token-inserted-bg);
+  }
+  &.prefix {
+    &.unchanged,
+    &.inserted,
+    &.deleted {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  }
+  &:not(.prefix) {
+    &.inserted,
+    &.deleted {
+      display: block;
+    }
   }
 }

@@ -53,10 +53,9 @@ You can arrange the elements or modify the styles to fit your website. See [elem
 
 ### Create a Miso client instance
 
-Create a Miso client:
+In your script, create a Miso client:
 
-```html
-<script>
+```js
 // when the SDK is loaded asynchronously, use this pattern to access window.MisoClient
 const misocmd = window.misocmd || (window.misocmd = []);
 misocmd.push(() => {
@@ -65,7 +64,6 @@ misocmd.push(() => {
   // create a Miso client instance to enable ask workflow
   new MisoClient(`${apiKey}`);
 });
-</script>
 ```
 
 See [workflow]({{ '/ui/ask/workflow/' | url }}) section for details.

@@ -47,7 +47,7 @@ You can make the section invisible until the recommendation results are ready:
 You can configure the details of the Miso elements using workflow API:
 
 ```js
-const workflow = client.ui.recommendation.get();
+const workflow = client.ui.recommendation;
 workflow.useLayouts({
   container: ...
   results: ...

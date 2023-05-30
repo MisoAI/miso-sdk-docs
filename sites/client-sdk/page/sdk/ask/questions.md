@@ -11,6 +11,9 @@ The `questions` API takes time to process and generate answer. The SDK provides 
 // get answer object
 const answer = await client.api.ask.questions(payload);
 
+// get question ID if you are interested
+const questionId = answer.questionId;
+
 // polling response
 let intervalId;
 intervalId = setInterval(async () => {
@@ -35,6 +38,9 @@ for await (const response of answer) {
   // do something with response
   // ...
 }
+
+// abort polling when necessary
+answer.abort();
 ```
 
 {% include 'section/sdk-query-api.md' %}

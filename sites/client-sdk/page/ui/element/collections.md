@@ -18,11 +18,11 @@ The following elements are classified as collection elements:
         <a href="{{ '/ui/search/elements/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/ui/recommendation/elements/' | url }}">Recommendation</a>
       </td>
     </tr>
-    <tr class="__preview__">
+    <tr>
       <td><code>&lt;miso-sources&gt;</code></td>
       <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
     </tr>
-    <tr class="__preview__">
+    <tr>
       <td><code>&lt;miso-related-resources&gt;</code></td>
       <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
     </tr>
@@ -47,7 +47,7 @@ Available built-in layouts are:
 * `cards`
 * `carousel`
 
-##### Customize styles
+#### Customize styles
 
 You can customize the look-and-feel of any layouts by adding additional CSS rules. The built-in layouts have the following base class names:
 
@@ -84,7 +84,7 @@ workflow.useLayouts({
 });
 ```
 
-##### Customize DOM structure
+#### Customize DOM structure
 
 In addition, to customize product item DOM structure, you can override the template function:
 

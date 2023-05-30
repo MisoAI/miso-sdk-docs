@@ -82,3 +82,4 @@ You can find configuration details in the following sections:
 
 * [Workflow]({{ '/ui/element/workflow/' | url }}) (`container`)
 * [Collections]({{ '/ui/element/collections/' | url }}) (`sources`, `related_resources`)
+* [Search box]({{ '/ui/element/search-box/' | url }}) (`query`)

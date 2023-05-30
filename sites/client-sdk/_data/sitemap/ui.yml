@@ -20,6 +20,9 @@ sections:
   - title: Elements
     path: /ask/elements
     desc: Configure look and feel of results
+  - title: Follow-up questions
+    path: /ask/follow-up
+    desc: Practices to work with follow-up questions
 - title: Recommendation
   path: /recommendation
   desc: UI for Miso recommendation
@@ -59,3 +62,6 @@ sections:
   - title: Collections
     path: /element/collections
     desc: Elements to represent a list of items
+  - title: Search box
+    path: /element/search-box
+    desc: The element for search box
