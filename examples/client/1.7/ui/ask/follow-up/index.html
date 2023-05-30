@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.3-beta.7/dist/umd/miso.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.3-beta.7/dist/css/ui.css" />
+    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.3/dist/umd/miso.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.3/dist/css/ui.css" />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -32,24 +32,6 @@
         <miso-related-resources></miso-related-resources>
       </miso-ask>
     </section>
-    <script id="follow-up-template" type="text/plain">
-    <div class="follow-up">
-      <hr>
-      <miso-ask visible-when="initial loading" parent-question-id="{{parentQuestionId}}">
-        <miso-query></miso-query>
-      </miso-ask>
-      <miso-ask visible-when="ready" parent-question-id="{{parentQuestionId}}" logo="false">
-        <div class="phrase">You asked about...</div>
-        <miso-question></miso-question>
-        <hr>
-        <miso-answer></miso-answer>
-        <miso-feedback></miso-feedback>
-        <hr>
-        <div class="phrase">My reply is based on the following:</div>
-        <miso-sources></miso-sources>
-      </miso-ask>
-    </div>
-    </script>
     <script async src="/index.js"></script>
   </body>
 </html>

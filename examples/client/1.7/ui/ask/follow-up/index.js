@@ -1,9 +1,25 @@
 const followUpsSection = document.getElementById('follow-ups');
 const relatedResourcesContainer = document.getElementById('related-resources');
-const TEMPLATE_STRING = document.getElementById('follow-up-template').innerHTML;
+const TEMPLATE_STRING = `
+<div class="follow-up">
+  <hr>
+  <miso-ask visible-when="initial loading" parent-question-id="{{parentQuestionId}}">
+    <miso-query></miso-query>
+  </miso-ask>
+  <miso-ask visible-when="ready" parent-question-id="{{parentQuestionId}}" logo="false">
+    <div class="phrase">You asked about...</div>
+    <miso-question></miso-question>
+    <hr>
+    <miso-answer></miso-answer>
+    <miso-feedback></miso-feedback>
+    <hr>
+    <div class="phrase">My reply is based on the following:</div>
+    <miso-sources></miso-sources>
+  </miso-ask>
+</div>`;
 
 const template = (data) => {
-  let html = TEMPLATE_STRING;
+  let html = TEMPLATE_STRING.trim();
   for (const key of Object.keys(data)) {
     const value = data[key];
     html = html.replaceAll(`{{${key}}}`, value);
