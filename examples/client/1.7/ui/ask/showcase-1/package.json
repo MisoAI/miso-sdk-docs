@@ -1,6 +1,6 @@
 {
-  "name": "@miso.ai/examples-client-ui-ask-showcase-0",
-  "description": "Miso JavaScript SDK examples: UI ask - showcase 0",
+  "name": "@miso.ai/examples-client-ui-ask-showcase",
+  "description": "Miso JavaScript SDK examples: UI ask - showcase",
   "private": true,
   "scripts": {
     "start": "doggoganger -s -p 5000"

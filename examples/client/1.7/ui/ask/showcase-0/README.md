@@ -1,3 +1,3 @@
-# Miso SDK UI plugin: Miso ask quick-start
+# Miso SDK UI plugin: Miso ask showcase 0
 
-A quick-start example.
+A show case of Miso Answers.
