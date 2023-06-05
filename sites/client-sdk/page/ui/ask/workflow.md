@@ -76,9 +76,15 @@ Available `apiName` values are:
   </thead>
   <tbody>
     <tr>
-      <td><code>questions</code></td>
+      <td><code>"questions"</code></td>
       <td>
         <a href="{{ '/sdk/ask/questions/' | url }}">Questions</a>
+      </td>
+    </tr>
+    <tr>
+      <td><code>false</code></td>
+      <td>
+        Disable built-in data source. See <a href="{{ '/ui/ask/custom-data/' | url }}">customize data source</a>.
       </td>
     </tr>
   </tbody>
@@ -107,6 +113,50 @@ workflow.useLayouts({
 
 See [elements]({{ '/ui/ask/elements/' | url }}) section for details.
 
+### Lifecycle
+
+Update API results manually. See [customize data source]({{ '/ui/ask/custom-data/' | url }}) for details.
+
+```js
+const data = { session, value, ongoing };
+workflow.updateData(data);
+```
+
+The data object has the following properties:
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>session</code></td>
+      <td>object</td>
+      <td>
+        <strong>Required.</strong> Session object from `input` event. Updates associated to expired sessions are ignored.
+      </td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>object</td>
+      <td>
+        <strong>Required.</strong> Result of <a href="{{ '/sdk/ask/questions/' | url }}">questions</a> API.
+      </td>
+    </tr>
+    <tr>
+      <td><code>ongoing</code></td>
+      <td>boolean</td>
+      <td>
+        Whether the result is ongoing, expecting more updates to the current session. Default: <code>false</code>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ### Events
 
 Events on workflow collection:
@@ -122,6 +172,10 @@ Events on individual workflow:
 ```js
 const workflow = client.ui.ask; // or other workflow
 
+workflow.on('input', ({ session, payload }) => {
+  // When user submits a question in search box.
+});
+
 workflow.on('loading', () => {
   // When API is called and we are waiting for the response
 });
@@ -133,5 +187,4 @@ workflow.on('ready', () => {
 workflow.on('done', () => {
   // When answer is fully populated
 });
-
 ```

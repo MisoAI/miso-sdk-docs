@@ -59,15 +59,21 @@ Available `apiName` values are:
   </thead>
   <tbody>
     <tr>
-      <td><code>user_to_products</code></td>
+      <td><code>"user_to_products"</code></td>
       <td>
         <a href="{{ '/sdk/recommendation/user_to_products/' | url }}">User to Products</a>
       </td>
     </tr>
     <tr>
-      <td><code>product_to_products</code></td>
+      <td><code>"product_to_products"</code></td>
       <td>
         <a href="{{ '/sdk/recommendation/product_to_products/' | url }}">Product to Products</a>
+      </td>
+    </tr>
+    <tr>
+      <td><code>false</code></td>
+      <td>
+        Disable built-in data source.
       </td>
     </tr>
   </tbody>

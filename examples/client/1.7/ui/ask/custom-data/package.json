@@ -1,0 +1,11 @@
+{
+  "name": "@miso.ai/examples-client-ui-ask-quick-start",
+  "description": "Miso JavaScript SDK examples: UI ask - quick start",
+  "private": true,
+  "scripts": {
+    "start": "npx serve -nL -p 5000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

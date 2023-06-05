@@ -49,9 +49,15 @@ Available `apiName` values are:
   </thead>
   <tbody>
     <tr>
-      <td><code>search</code></td>
+      <td><code>"search"</code></td>
       <td>
         <a href="{{ '/sdk/search/search/' | url }}">Search</a>
+      </td>
+    </tr>
+    <tr>
+      <td><code>false</code></td>
+      <td>
+        Disable built-in data source.
       </td>
     </tr>
   </tbody>

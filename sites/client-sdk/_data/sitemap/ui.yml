@@ -23,6 +23,9 @@ sections:
   - title: Follow-up questions
     path: /ask/follow-up
     desc: Practices to work with follow-up questions
+  - title: Customize data source
+    path: /ask/custom-data
+    desc: Practices to work with custom data sources
 - title: Recommendation
   path: /recommendation
   desc: UI for Miso recommendation
