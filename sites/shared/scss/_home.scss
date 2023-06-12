@@ -15,6 +15,20 @@ body.home main {
     color: var(--color-primary) !important;
   }
 
+  .cta {
+    height: 2.5rem;
+    border-radius: 9999px;
+    padding: 0 1.5rem;
+    font-size: .875rem;
+    font-weight: 600;
+    display: inline-flex;
+    background: #1a4ce3;
+    color: #fff !important;;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
   #components ul {
     display: flex;
     flex-flow: row wrap;
