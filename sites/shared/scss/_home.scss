@@ -22,11 +22,18 @@ body.home main {
     font-size: .875rem;
     font-weight: 600;
     display: inline-flex;
-    background: #1a4ce3;
-    color: #fff !important;;
+    //background: #1a4ce3;
+    border-color: #1a4ce3;
+    color: #1a4ce3 !important;
+    //color: #fff !important;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+
+    &:hover {
+      background: #1a4ce3;
+      color: #fff !important;
+    }
   }
 
   #components ul {

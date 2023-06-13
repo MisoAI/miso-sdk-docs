@@ -89,9 +89,13 @@ header {
   }
 }
 .try-miso-btn {
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
   font-weight: 600;
+  font-size: 0.85rem;
   color: #fff;
   border-color: #fff;
+
   &:hover,
   &:active {
     color: var(--color-primary);
