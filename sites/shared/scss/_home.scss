@@ -31,25 +31,42 @@ body.home main {
 
   #components ul {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     margin: 0;
-    padding: 0 $component-gutter-half;
+    padding: 0 10%;
     list-style: none;
 
     > li {
-      width: 33.3333%;
       position: relative;
       display: block;
       padding: $component-gutter-half;
+
+      &:nth-child(odd) {
+        margin-right: 10%;
+      }
+      &:nth-child(even) {
+        margin-left: 10%;
+      }
+      &:nth-child(3n) .card {
+        background-color: #eff;
+      }
+      &:nth-child(3n + 1) .card {
+        background-color: #fef;
+      }
+      &:nth-child(3n + 2) .card {
+        background-color: #ffe;
+      }
     }
     .card {
+      position: relative;
       border: 1px solid #333;
       border-radius: 8px;
-      padding: 1.2rem;
-      height: 280px;
+      padding: 1rem;
+      height: 6rem;
       color: #333;
       background-color: #fff;
       user-select: none;
+      font-size: 1rem;
 
       &:hover {
         transition: transform 0.1s ease-in;
@@ -58,13 +75,31 @@ body.home main {
       }
 
       > .title {
-        margin-top: calc(-1.5rem * 0.6 - 1.2rem - 1px);
+        margin-top: calc(-1.25rem * 0.6 - 1rem - 1px);
+        margin-bottom: 0;
         color: var(--color-primary) !important;
 
         > span {
-          background-color: #fff;
+          position: relative;
           margin: 0 -5px;
           padding: 0 5px;
+          z-index: 1;
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            bottom: calc(50% - 1px);
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+          }
+        }
+
+        + p {
+          margin-top: 0.15rem;
         }
       }
     }
