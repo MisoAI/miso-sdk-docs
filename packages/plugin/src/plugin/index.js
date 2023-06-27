@@ -81,7 +81,17 @@ module.exports = function MisoDocsPlugin(config, {
       layouts: '../../shared/_layouts',
       data: '../_data',
       output: 'dist'
-    }
+    },
+    templateFormats: [
+      'njk',
+      'md',
+      'html',
+      'js',
+      'css',
+      'svg',
+      'png',
+      'jpg',
+    ],
   });
 
   // site parameters

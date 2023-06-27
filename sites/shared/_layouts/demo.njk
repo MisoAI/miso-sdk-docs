@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'meta.njk' %}
+    {% include 'favicon.njk' %}
+    {% include 'font_inter.njk' %}
+    <script src=https://www.unpkg.com/@miso.ai/doggoganger@0.9.0-beta.13/dist/umd/doggoganger-browser.min.js></script>
+    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.4/dist/umd/miso.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.7.4/dist/css/ui.css" />
+  </head>
+  <body class="demo">
+    {{ content | safe }}
+  </body>
+</html>
