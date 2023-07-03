@@ -78,6 +78,7 @@
   - anonymous_id
   - user_hash
   - question
+  - parent_question_id
 # response
 - key: search.response
   props:

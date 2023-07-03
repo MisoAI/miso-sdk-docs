@@ -123,10 +123,14 @@
   type: string
   desc: |
     The question.
+- key: parent_question_id
+  type: string
+  desc: |
+    The ID of the previous question. Make this query a follow-up question by specifying this ID.
 - key: question_id
   type: string
   desc: |
-    The question id which be can used to retrieve answer updates.
+    The question ID which be can used to retrieve answer updates.
 - key: sources
   type: array of objects
   desc: |
