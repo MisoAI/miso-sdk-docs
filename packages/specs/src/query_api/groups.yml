@@ -7,6 +7,7 @@
   - user_hash
 - key: _product
   props:
+  - fq
   - fl
   - type
 - key: _page_0
@@ -74,11 +75,11 @@
   - _page_1
 - key: questions.payload
   props:
-  - user_id
-  - anonymous_id
-  - user_hash
   - question
   - parent_question_id
+  - fq
+  - source_fl
+  - related_resource_fl
 # response
 - key: search.response
   props:
@@ -107,4 +108,5 @@
   - question_id
   - sources
   - related_resources
+  - followup_questions
   - finished

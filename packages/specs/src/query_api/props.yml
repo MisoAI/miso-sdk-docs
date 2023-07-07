@@ -32,6 +32,10 @@
   type: string
   desc: |
     The search query the user has entered. Must be non-empty.
+- key: fq
+  type: string
+  desc: |
+    A query string in Solr syntax which restricts the superset of products to return, without influencing the overall ranking.
 - key: field
   required: true
   type: string
@@ -54,18 +58,41 @@
   desc: |
     Whether to focus on the Products that are frequently bought together.
     Default: `false`.
-# product
+# request: search/recommendation
 - key: fl
   type: array of strings
   default: '[]'
   desc: |
     List of fields to retrieve. The field `product_id` is always included.
     When not specified, only `product_id` will be retrieved. 
-    You can retrieve all fields with `["*"]`
+    You can retrieve all fields with `["*"]`. Default: `["*"]`.
 - key: type
   type: string
   desc: |
     Specify the type of product to return.
+# request: ask
+- key: question
+  type: string
+  desc: |
+    The question.
+- key: parent_question_id
+  type: string
+  desc: |
+    The ID of the previous question. Make this query a follow-up question by specifying this ID.
+- key: question_id
+  type: string
+  desc: |
+    The question ID which be can used to retrieve answer updates.
+- key: source_fl
+  type: array of strings
+  desc: |
+    A list of fields to be returned on `sources` items. The fields `product_id`, `title`, `snippet` are always included.
+    Default: `["cover_image"]`.
+- key: related_resource_fl
+  type: array of strings
+  desc: |
+    A list of fields to be returned on `related_resources` items. The fields `product_id`, `title`, `snippet` are always included.
+    Default: `["cover_image"]`.
 # pagination
 - key: start_0
   name: start
@@ -115,22 +142,11 @@
   type: array of objects
   desc: |
     An array of recommended attributes.
+# response: ask
 - key: answer
   type: string
   desc: |
     The answer to the question.
-- key: question
-  type: string
-  desc: |
-    The question.
-- key: parent_question_id
-  type: string
-  desc: |
-    The ID of the previous question. Make this query a follow-up question by specifying this ID.
-- key: question_id
-  type: string
-  desc: |
-    The question ID which be can used to retrieve answer updates.
 - key: sources
   type: array of objects
   desc: |
@@ -139,6 +155,10 @@
   type: array of objects
   desc: |
     An array of articles that the answer is related to.
+- key: followup_questions
+  type: array of strings
+  desc: |
+    An array of sugessions for follow-up questions.
 - key: finished
   type: boolean
   desc: |

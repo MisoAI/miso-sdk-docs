@@ -41,38 +41,35 @@ Add a new section to the page to hold follow-up questions:
 +   </section>
 ```
 
-Make a template function to create new follow-up sections:
+Make a render function to create new follow-up sections:
 
 ```js
-const templateString = `
-<div class="follow-up">
-  <hr>
-  <miso-ask visible-when="initial loading" parent-question-id="{{'{{parentQuestionId}}'}}">
-    <miso-query></miso-query>
+function render({ parentQuestionId }) {
+  return `
+<div class="container">
+  <miso-ask class="query-container" visible-when="initial loading" parent-question-id="${parentQuestionId}">
+    <miso-query>
+      <input class="input" data-role="input" placeholder="Ask a follow-up question">
+      <div class="autocomplete" data-role="autocomplete">
+        <ol class="suggestion-list" data-role="suggestion-list"></ol>
+      </div>
+    </miso-query>
   </miso-ask>
-  <miso-ask visible-when="ready" parent-question-id="{{'{{parentQuestionId}}'}}">
-    <div class="phrase">You asked about...</div>
-    <miso-question></miso-question>
+  <miso-ask visible-when="ready" logo="false" parent-question-id="${parentQuestionId}">
     <hr>
+    <div class="phrase question">And then you asked about...</div>
+    <miso-question></miso-question>
     <miso-answer></miso-answer>
     <miso-feedback></miso-feedback>
-    <hr>
-    <div class="phrase">My reply is based on the following:</div>
+    <div class="phrase sources">My reply is based on the following:</div>
     <miso-sources></miso-sources>
     <hr>
     <div class="phrase">Go beyond, and learn more about this topic:</div>
     <miso-related-resources></miso-related-resources>
   </miso-ask>
-</div>`;
-
-const template = (data) => {
-  let html = templateString.trim();
-  for (const key of Object.keys(data)) {
-    const value = data[key];
-    html = html.replaceAll(`{{'{{${key}}}'}}`, value);
-  }
-  return html;
-};
+</div>
+`;
+}
 ```
 
 Listen to `done` event of each workflow to create a new follow-up section:
@@ -94,7 +91,7 @@ Listen to `done` event of each workflow to create a new follow-up section:
 +   function setup(workflow) {
 +     // when a answer is fully populated, insert a new section for the follow-up question
 +     workflow.on('done', () => {
-+       followUpsSection.insertAdjacentHTML('beforeend', template({ parentQuestionId: workflow.questionId }));
++       followUpsSection.insertAdjacentHTML('beforeend', render({ parentQuestionId: workflow.questionId }));
 +     });
 +   }
 ```
@@ -171,26 +168,32 @@ Let's make the outcome more elegant by extracting the `<miso-related-resources>`
 Remove it from the template as well:
 
 ```diff-js
-    const templateString = `
-    <div class="follow-up">
-      <hr>
-      <miso-ask visible-when="initial loading" parent-question-id="{{'{{parentQuestionId}}'}}">
-        <miso-query></miso-query>
+    function render({ parentQuestionId }) {
+      return `
+    <div class="container">
+      <miso-ask class="query-container" visible-when="initial loading" parent-question-id="${parentQuestionId}">
+        <miso-query>
+          <input class="input" data-role="input" placeholder="Ask a follow-up question">
+          <div class="autocomplete" data-role="autocomplete">
+            <ol class="suggestion-list" data-role="suggestion-list"></ol>
+          </div>
+        </miso-query>
       </miso-ask>
-      <miso-ask visible-when="ready" parent-question-id="{{'{{parentQuestionId}}'}}">
-        <div class="phrase">You asked about...</div>
-        <miso-question></miso-question>
+      <miso-ask visible-when="ready" logo="false" parent-question-id="${parentQuestionId}">
         <hr>
+        <div class="phrase question">And then you asked about...</div>
+        <miso-question></miso-question>
         <miso-answer></miso-answer>
         <miso-feedback></miso-feedback>
-        <hr>
-        <div class="phrase">My reply is based on the following:</div>
+        <div class="phrase sources">My reply is based on the following:</div>
         <miso-sources></miso-sources>
 -       <hr>
 -       <div class="phrase">Go beyond, and learn more about this topic:</div>
 -       <miso-related-resources></miso-related-resources>
       </miso-ask>
-    </div>`;
+    </div>
+    `;
+    }
 ```
 
 Last, we re-assign the workflow of the `<miso-related-resources>` element whenever a workflow is loading:
@@ -203,7 +206,7 @@ Last, we re-assign the workflow of the `<miso-related-resources>` element whenev
 +     });
       // when a answer is fully populated, insert a new section for the follow-up question
       workflow.on('done', () => {
-        followUpsSection.insertAdjacentHTML('beforeend', template({ parentQuestionId: workflow.questionId }));
+        followUpsSection.insertAdjacentHTML('beforeend', render({ parentQuestionId: workflow.questionId }));
       });
     }
 ```

@@ -23,7 +23,19 @@ The following elements are classified as search box elements:
 
 ### Layouts
 
-The is currently no configuration options for search box elements.
+The only and default layout for this category is `search-box`.
+
+#### Autocomplete
+
+The search box elements enable autocomplete feature with `ask` workflow. You can disable it by:
+
+```js
+workflow.useLayouts({
+  query: {
+    autocomplete: false
+  }
+});
+```
 
 #### Customize styles
 
@@ -61,13 +73,18 @@ Simply leave elements inside `<miso-query>` element:
 ```html
 <miso-query>
   <div>
-    <input>
+    <input type="text" data-role="input">
     <button type="submit">
+  </div>
+  <div data-role="autocomplete">
+    <ol data-role="suggestion-list"></ol>
   </div>
 </miso-query>
 ```
 
 The layout handles DOM events by the following rules:
 
-1. The first `<input>` element without attribute `type="submit"` holds the query text.
+1. The first `<input>` element with attribute `data-role="input"` holds the query text.
 1. When clicking on an element with attribute `type="submit"`, it submits the query.
+1. If present, the element with attribute `data-role="autocomplete"` works an autocomplete container.
+1. If present, the element with attribute `data-role="suggestion-list"` holds option items of autocomplete suggestions.
