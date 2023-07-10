@@ -37,6 +37,30 @@ workflow.useLayouts({
 });
 ```
 
+#### Placeholder text
+
+You can specify the placeholder text of the search box input element by:
+
+```js
+workflow.useLayouts({
+  query: {
+    placeholder: 'Ask anything!'
+  }
+});
+```
+
+#### Button text
+
+The default text of the submit button is `Search` for `search` workflow and `Ask` for `ask` workflow. You can change it by:
+
+```js
+workflow.useLayouts({
+  query: {
+    buttonText: 'Go!'
+  }
+});
+```
+
 #### Customize styles
 
 You can customize the look-and-feel of any layouts by adding additional CSS rules. The built-in layouts have the following base class names:
