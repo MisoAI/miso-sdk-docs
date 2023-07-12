@@ -50,6 +50,10 @@ function render({ parentQuestionId }) {
 }
 
 function setup(workflow) {
+  workflow.useApi('questions', {
+    source_fl: ['cover_image', 'url'],
+    related_resoruce_fl: ['cover_image', 'url'],
+  });
   // follow-up questions:
   // when a answer is fully populated, insert a new section for the follow-up question
   workflow.on('done', () => {
