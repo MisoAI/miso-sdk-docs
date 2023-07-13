@@ -176,15 +176,85 @@ workflow.on('input', ({ session, payload }) => {
   // When user submits a question in search box.
 });
 
-workflow.on('loading', () => {
-  // When API is called and we are waiting for the response
-});
-
-workflow.on('ready', () => {
-  // When answer starts to display
-});
-
-workflow.on('done', () => {
+workflow.on('done', ({ session, status, ongoing }) => {
   // When answer is fully populated
 });
 ```
+
+* The session will always result in either a `done`, `interrupt`, or `error` event.
+* Following the three types of event, the session then always ends with a `finally` event.
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Data</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>input</code></td>
+      <td>
+        <code>session</code>, <code>payload</code>
+      </td>
+      <td>
+        When user submits a question in search box.
+      </td>
+    </tr>
+    <tr>
+      <td><code>loading</code></td>
+      <td>
+        <code>session</code>, <code>status</code>, <code>ongoing</code>
+      </td>
+      <td>
+        When API is called and the workflow is waiting for the response.
+      </td>
+    </tr>
+    <tr>
+      <td><code>ready</code></td>
+      <td>
+        <code>session</code>, <code>status</code>, <code>ongoing</code>
+      </td>
+      <td>
+        When the workflow starts to display the answer.
+      </td>
+    </tr>
+    <tr>
+      <td><code>done</code></td>
+      <td>
+        <code>session</code>, <code>status</code>, <code>ongoing</code>
+      </td>
+      <td>
+        When the answer is fully populated.
+      </td>
+    </tr>
+    <tr>
+      <td><code>interrupt</code></td>
+      <td>
+        <code>session</code>, <code>status</code>, <code>ongoing</code>
+      </td>
+      <td>
+        When the current session is interrupted by a new session (usually by a new question input).
+      </td>
+    </tr>
+    <tr>
+      <td><code>error</code></td>
+      <td>
+        <code>session</code>, <code>status</code>, <code>ongoing</code>
+      </td>
+      <td>
+        When the session is interrupted by an error.
+      </td>
+    </tr>
+    <tr>
+      <td><code>finally</code></td>
+      <td>
+        <code>session</code>, <code>status</code>, <code>ongoing</code>
+      </td>
+      <td>
+        When the session is terminated, either due to completion, interruption or error.
+      </td>
+    </tr>
+  </tbody>
+</table>
