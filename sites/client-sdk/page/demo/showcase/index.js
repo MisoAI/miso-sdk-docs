@@ -87,6 +87,8 @@ function start(apiKey) {
   misocmd.push(() => {
     MisoClient.plugins.use('std:ui');
 
+    displayVersionInfo(MisoClient);
+
     const client = new MisoClient(apiKey);
     const rootWorkflow = client.ui.ask;
 
@@ -112,4 +114,15 @@ function start(apiKey) {
     });
   
   });
+}
+
+function displayVersionInfo(MisoClient) {
+  let version = MisoClient.version;
+  const versionInfo = document.getElementById('sdk-version');
+  if (versionInfo) {
+    if (version !== 'dev') {
+      version = `v${version}`;
+    }
+    versionInfo.innerHTML = `SDK ${version}`;
+  }
 }
