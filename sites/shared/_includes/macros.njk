@@ -86,6 +86,14 @@
 </div>
 {% endmacro %}
 
+{% macro insite_demo_link(path) %}
+<div class="my-4">
+  <a href="{{ ['/demo/', path, '/'] | join | url }}" class="btn btn-primary" role="button" target="_blank" rel="noopener">
+    Demo
+  </a>
+</div>
+{% endmacro %}
+
 {% macro code_example_link(path) %}
 <div class="my-4">
   <a class="btn-with-icon btn btn-outline-primary" href="https://github.com/MisoAI/miso-client-js-sdk/tree/main/examples/{{ path }}" role="button" target="_blank" rel="noopener">
