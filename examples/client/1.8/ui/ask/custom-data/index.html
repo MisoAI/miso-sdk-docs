@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src=https://www.unpkg.com/@miso.ai/doggoganger@0.9.0-beta.13/dist/umd/doggoganger-browser.min.js></script>
+    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.8.0/dist/umd/miso.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.8.0/dist/css/ui.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section>
+      <miso-ask>
+        <miso-query></miso-query>
+      </miso-ask>
+    </section>
+    <section>
+      <miso-ask visible-when="ready">
+        <div class="phrase">You asked about...</div>
+        <miso-question></miso-question>
+        <hr>
+        <miso-answer></miso-answer>
+        <miso-feedback></miso-feedback>
+        <hr>
+        <div class="phrase">My reply is based on the following:</div>
+        <miso-sources></miso-sources>
+        <div class="phrase" style="margin-top: 4rem;">Go beyond, and learn more about this topic:</div>
+        <miso-related-resources></miso-related-resources>
+      </miso-ask>
+    </section>
+    <script async src="/index.js"></script>
+  </body>
+</html>

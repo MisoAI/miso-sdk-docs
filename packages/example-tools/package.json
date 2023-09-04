@@ -1,0 +1,19 @@
+{
+  "name": "@miso.ai/miso-example-tools",
+  "description": "CLI tools for managing Miso examples",
+  "type": "module",
+  "main": "lib/index.js",
+  "bin": {
+    "miso-examples": "cli/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {},
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.4",
+    "rimraf": "^5.0.1",
+    "yargs": "^17.7.2"
+  }
+}

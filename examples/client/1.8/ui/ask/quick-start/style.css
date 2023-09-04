@@ -1,0 +1,16 @@
+body {
+  line-height: 1.5;
+  color: #212529;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+}
+.phrase {
+  font-size: .875rem;
+  line-height: 1.2;
+  margin: 1rem auto;
+  color: #999;
+}
+.miso-list {
+  --miso-list-item-height: 7rem;
+  --miso-list-item-gap: 0.65rem;
+  --miso-list-description-lines: 3;
+}
