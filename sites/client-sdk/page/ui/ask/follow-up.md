@@ -47,6 +47,10 @@ Make a render function to create new follow-up sections:
 function render({ parentQuestionId }) {
   return `
 <div class="container">
+  <miso-ask class="query-suggestions-container" visible-when="initial" parent-question-id="${parentQuestionId}">
+    <div class="phrase query-suggestions">Related questions you can explore</div>
+    <miso-query-suggestions></miso-query-suggestions>
+  </miso-ask>
   <miso-ask class="query-container" visible-when="initial loading" parent-question-id="${parentQuestionId}">
     <miso-query>
       <input class="input" data-role="input" placeholder="Ask a follow-up question">
@@ -172,6 +176,10 @@ Remove it from the template as well:
       return `
     <div class="container">
       <miso-ask class="query-container" visible-when="initial loading" parent-question-id="${parentQuestionId}">
+        <miso-ask class="query-suggestions-container" visible-when="initial" parent-question-id="${parentQuestionId}">
+          <div class="phrase query-suggestions">Related questions you can explore</div>
+          <miso-query-suggestions></miso-query-suggestions>
+        </miso-ask>
         <miso-query>
           <input class="input" data-role="input" placeholder="Ask a follow-up question">
           <div class="autocomplete" data-role="autocomplete">

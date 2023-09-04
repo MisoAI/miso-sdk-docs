@@ -26,6 +26,11 @@ Integrate Miso ask API in your webpage with the following elements:
   <!-- articles for further reading -->
   <miso-related-resources></miso-related-resources>
 </miso-ask>
+
+<!-- This element is only available for follow-up questions -->
+<miso-ask>
+  <miso-query-suggestions></miso-query-suggestions>
+</miso-ask>
 ```
 
 ### Elements
@@ -55,6 +60,8 @@ You can mix other elements into the section, split them into multiple sections, 
 </miso-ask>
 ```
 
+### Visibility
+
 You can make the section invisible until the search results are ready:
 
 ```html
@@ -62,6 +69,21 @@ You can make the section invisible until the search results are ready:
   ...
 </miso-ask>
 ```
+
+Or display an error message:
+
+```html
+<miso-ask visible-when="erroneous">
+  ...
+</miso-ask>
+```
+
+The following visibility states are available:
+
+* `initial`: The initial state, before the user enters a question.
+* `loading`: The user has entered a question, waiting for the API to return the results.
+* `ready`: The answer is ready to be displayed.
+* `erroneous`: An error occurred while fetching the results.
 
 ### Layouts
 
@@ -75,7 +97,8 @@ workflow.useLayouts({
   question: ...,
   answer: ...,
   sources: ...,
-  related_resources: ...
+  related_resources: ...,
+  query_suggestions: ...
 });
 ```
 
