@@ -86,7 +86,7 @@ Configure Miso logo display for each workflow element:
     <tr>
       <td><code>"auto"</code></td>
       <td style="text-align: center">✓</td>
-      <td>Append Miso logo at the end of container visible when data ready only if it contains <code>&lt;miso-results&gt;</code> or <code>&lt;miso-answer&gt;</code>.</td>
+      <td>Append Miso logo at the end of container visible when data ready only if it contains <code>&lt;miso-products&gt;</code> or <code>&lt;miso-answer&gt;</code>.</td>
     </tr>
   </tbody>
 </table>

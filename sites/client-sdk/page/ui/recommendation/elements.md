@@ -8,7 +8,7 @@ Build a recommendation section in your webpage with the following elements:
 
 ```html
 <miso-recommendation>
-  <miso-results></miso-results>
+  <miso-products></miso-products>
 </miso-recommendation>
 ```
 
@@ -21,7 +21,7 @@ You can mix other elements into the section:
   <h3>Recommendation Results</h3>
   <hr>
   <div>
-    <miso-results></miso-results>
+    <miso-products></miso-products>
   </div>
 </miso-recommendation>
 ```
@@ -30,7 +30,7 @@ To create a section of specific unit ID, put it on the attribute:
 
 ```html
 <miso-recommendation unit-id="after-article-1">
-  <miso-results></miso-results>
+  <miso-products></miso-products>
 </miso-recommendation>
 ```
 
@@ -38,7 +38,7 @@ You can make the section invisible until the recommendation results are ready:
 
 ```html
 <miso-recommendation visible-when="ready">
-  <miso-results></miso-results>
+  <miso-products></miso-products>
 </miso-recommendation>
 ```
 

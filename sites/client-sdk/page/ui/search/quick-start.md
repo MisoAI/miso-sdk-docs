@@ -30,7 +30,7 @@ In your webpage, add the following elements where you want to display the search
 
 <miso-search>
   <!-- results -->
-  <miso-results></miso-results>
+  <miso-products></miso-products>
 </miso-search>
 ```
 

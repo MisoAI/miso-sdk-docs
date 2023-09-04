@@ -14,7 +14,7 @@ Integrate search function in your webpage with the following elements:
 
 <!-- Place this section where you want to display search results -->
 <miso-search>
-  <miso-results></miso-results>
+  <miso-products></miso-products>
 </miso-search>
 ```
 
@@ -27,7 +27,7 @@ You can mix other elements into the section:
   <h3>Search Results</h3>
   <hr>
   <div>
-    <miso-results></miso-results>
+    <miso-products></miso-products>
   </div>
 </miso-search>
 ```
@@ -36,7 +36,7 @@ You can make the section invisible until the search results are ready:
 
 ```html
 <miso-search visible-when="ready">
-  <miso-results></miso-results>
+  <miso-products></miso-products>
 </miso-search>
 ```
 

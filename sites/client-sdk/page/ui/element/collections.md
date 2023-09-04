@@ -13,7 +13,7 @@ The following elements are classified as collection elements:
   </thead>
   <tbody>
     <tr>
-      <td><code>&lt;miso-results&gt;</code></td>
+      <td><code>&lt;miso-products&gt;</code></td>
       <td>
         <a href="{{ '/ui/search/elements/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/ui/recommendation/elements/' | url }}">Recommendation</a>
       </td>
