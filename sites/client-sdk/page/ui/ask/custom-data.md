@@ -14,7 +14,7 @@ To do so, we need to:
 
 #### Live demo
 
-{{ stackblitz_link('1.7/ui/ask/custom-data') }}
+{{ stackblitz_link('1.8/ui/ask/custom-data') }}
 
 ### Customize your data source
 

@@ -13,7 +13,7 @@ To do so, we need to:
 
 #### Live demo
 
-{{ stackblitz_link('1.7/ui/ask/follow-up') }}
+{{ stackblitz_link('1.8/ui/ask/follow-up') }}
 
 ### Create new follow-up questions
 

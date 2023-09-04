@@ -12,7 +12,7 @@ You can integrate Miso ask API in your website with a few simple steps:
 
 #### Live demo
 
-{{ stackblitz_link('1.7/ui/ask/quick-start') }}
+{{ stackblitz_link('1.8/ui/ask/quick-start') }}
 
 {% include 'section/ui-quick-start-setup.md' %}
 
