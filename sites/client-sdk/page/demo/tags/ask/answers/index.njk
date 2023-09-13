@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="{{ pginfo.asset_path }}/style.css" />
+<link rel="stylesheet" href="{{ pginfo.asset_path }}/debug.css" />
 <section class="question">
   <div class="hero">
     <div class="hero-inner">
       <a href="https://miso.ai" target="_blank" rel="noopener noreferrer" class="miso-logo-link">
-        <img class="miso-logo" src="{{ pginfo.asset_path }}/asset/miso-logo.svg" alt="Miso">
+        <img class="miso-logo" src="{{ pginfo.asset_path }}/logo.svg" alt="Miso">
       </a>
       <p class="miso-ask-slogan">“The language skills of GPT3, but with your content at the core”</p>
-      <span id="sdk-version" class="sdk-version">
-      <span>
+      <span id="sdk-version" class="sdk-version"></span>
+      <button id="save-log-btn">Save Log</button>
     </div>
   </div>
   <miso-ask class="query-container">
@@ -45,4 +46,5 @@
     </div>
   </div>
 </div>
+<script src="{{ pginfo.asset_path }}/debug.js"></script>
 <script async src="{{ pginfo.asset_path }}/index.js"></script>
