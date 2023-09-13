@@ -24,4 +24,4 @@ const { attributes } = await client.api.recommendation.userToAttributes(payload)
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#operation/user_to_attributes_v1_recommendation_user_to_attributes_post).
+For advanced usage, see [REST API](https://api.askmiso.com/#tag/Recommendation-APIs/operation/user_to_attributes_v1_recommendation_user_to_attributes_post).

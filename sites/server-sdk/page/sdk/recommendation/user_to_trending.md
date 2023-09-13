@@ -22,4 +22,4 @@ const { products } = await client.api.recommendation.userToTrending(payload);
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#operation/trending_items_v1_recommendation_user_to_trending_post).
+For advanced usage, see [REST API](https://api.askmiso.com/#tag/Recommendation-APIs/operation/trending_items_v1_recommendation_user_to_trending_post).

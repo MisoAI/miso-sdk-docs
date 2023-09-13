@@ -27,4 +27,4 @@ for (const { text, text_with_markups, product } of completions.title) {
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#operation/autocomplete_v1_search_autocomplete_post).
+For advanced usage, see [REST API](https://api.askmiso.com/#tag/Search-APIs/operation/autocomplete_v1_search_autocomplete_post).

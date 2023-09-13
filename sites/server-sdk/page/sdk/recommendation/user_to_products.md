@@ -22,4 +22,4 @@ const { products } = await client.api.recommendation.userToProducts(payload);
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#operation/user_to_products_v1_recommendation_user_to_products_post).
+For advanced usage, see [REST API](https://api.askmiso.com/#tag/Recommendation-APIs/operation/user_to_products_v1_recommendation_user_to_products_post).

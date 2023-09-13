@@ -23,4 +23,4 @@ const { products } = await client.api.search.search(payload);
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#operation/search_v1_search_search_post).
+For advanced usage, see [REST API](https://api.askmiso.com/#tag/Search-APIs/operation/search_v1_search_search_post).

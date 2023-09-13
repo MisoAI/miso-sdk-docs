@@ -58,3 +58,6 @@ for (const { answer, sources } of await client.api.ask.questions(payload)) {
   // ...
 }
 ```
+
+#### Learn more
+For advanced usage, see [REST API](https://api.askmiso.com/#tag/Ask-APIs/operation/questions_v1_ask_questions_post).
