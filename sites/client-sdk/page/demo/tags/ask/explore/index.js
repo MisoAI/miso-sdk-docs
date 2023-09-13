@@ -1,5 +1,6 @@
 const { doggoganger } = window;
 const paramsFromUrl = normalizeParamsFromUrl(Object.fromEntries(new URLSearchParams(window.location.search).entries()));
+const envParams = getEnvParams(paramsFromUrl);
 
 const elements = {
   article: {
@@ -42,7 +43,7 @@ async function start(product_id) {
 }
 
 function getLink(question) {
-  return `../answers/?${toSearchString({ ...paramsFromUrl, q: question })}`;
+  return `../answers/?${toSearchString({ ...envParams, q: question })}`;
 }
 
 // helpers //
@@ -62,6 +63,20 @@ function syncParamsToUrl(params) {
   const url = new URL(window.location);
   url.search = toSearchString(params);
   window.history.replaceState({}, '', url);
+  return params;
+}
+
+function getEnvParams({ api_key, debug, yearly_decay, fq }) {
+  const params = { api_key };
+  if (debug !== undefined) {
+    params.debug = debug;
+  }
+  if (yearly_decay !== undefined) {
+    params.yearly_decay = yearly_decay;
+  }
+  if (fq !== undefined) {
+    params.fq = fq;
+  }
   return params;
 }
 

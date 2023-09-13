@@ -1,6 +1,6 @@
 const paramsFromUrl = Object.fromEntries(new URLSearchParams(window.location.search).entries());
-const envParams = getEnvParams(paramsFromUrl);
 const apiParams = getApiParams(paramsFromUrl);
+const envParams = getEnvParams(paramsFromUrl);
 
 const elements = {
   login: document.getElementById('login'),
@@ -165,7 +165,7 @@ function mapLoremSource(source) {
   const { product_id } = source;
   return {
     ...source,
-    url: `../explore/?${toSearchString({ ...envParams, article: product_id })}`
+    url: `../explore/?${toSearchString({ ...envParams, ...apiParams, article: product_id })}`
   }
 }
 
