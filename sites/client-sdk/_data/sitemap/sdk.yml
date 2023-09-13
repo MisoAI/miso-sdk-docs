@@ -23,6 +23,9 @@ sections:
   - title: Questions
     path: /ask/questions
     desc: Answer user's question.
+  - title: Related questions
+    path: /ask/related_questions
+    desc: Generate related questions against an article.
 - title: Search
   path: /search
   desc: Search and autocomplete APIs.

@@ -80,6 +80,9 @@
   - fq
   - source_fl
   - related_resource_fl
+- key: related_questions.payload
+  props:
+  - product_id_1
 # response
 - key: search.response
   props:
@@ -110,3 +113,6 @@
   - related_resources
   - followup_questions
   - finished
+- key: related_questions.response
+  props:
+  - related_questions

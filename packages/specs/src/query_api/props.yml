@@ -45,6 +45,11 @@
   type: string
   desc: |
     The `product_id` of the anchor product to recommend against.
+- key: product_id_1
+  name: product_id
+  type: string
+  desc: |
+    The `product_id` of the article to generate questions against.
 - key: product_ids
   type: array of strings
   desc: |
@@ -163,3 +168,7 @@
   type: boolean
   desc: |
     Whether the answer is finished.
+- key: related_questions
+  type: array of strings
+  desc: |
+    An array of questions.
