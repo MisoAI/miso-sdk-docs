@@ -20,11 +20,11 @@ yargs(hideBin(process.argv))
     handler: runClean,
   })
   .command({
-    command: 'install [path]',
+    command: 'install [path]', // TODO: take --version
     handler: runInstall,
   })
   .command({
-    command: 'upgrade [path]',
+    command: 'upgrade [path]', // TODO: take --version
     handler: runUpgrade,
   })
   .command({

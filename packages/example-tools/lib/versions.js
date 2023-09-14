@@ -1,6 +1,9 @@
 import { exec } from './utils.js';
 
+// TODO: doggoganger as well
+
 export async function list(spec = 'latest') {
+  // TODO: server SDK
   const { stdout } = await exec(`npm show "@miso.ai/client-sdk@${spec}" version --json`);
   let versions = JSON.parse(stdout);
   if (!Array.isArray(versions)) {

@@ -10,6 +10,8 @@ export async function* list(path) {
   }
 }
 
+// TODO: doggoganger as well
+
 export async function upgrade(dir, version) {
   await upgradeSdkInHtml(dir, version);
 }
