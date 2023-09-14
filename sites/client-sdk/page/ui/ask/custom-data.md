@@ -38,11 +38,13 @@ See the following example:
 +       let intervalId;
 +       intervalId = setInterval(async () => {
 +         const value = await your.api.getAnswer(questionId); // your API call
-+         const { finished } = value;
-+         finished && clearInterval(intervalId);
-+         // 3. update data manually. make sure to pass in session and ongoing flag
-+         workflow.updateData({ session, value, ongoing: !finished });
++         value.finished && clearInterval(intervalId);
++         // 3. update data manually. make sure to pass in session
++         //    value.finished should reflect whether there will be more data coming
++         workflow.updateData({ session, value });
 +       }, 1000);
 +     });
     });
 ```
+
+Note that the object passed into `updateData` method needs to be aligned with the response of [Miso API](https://api.askmiso.com/#tag/Ask-APIs/operation/questions_answer_v1_ask_questions__question_id__answer_get).

@@ -2,7 +2,7 @@
 title: Ask UI - workflow
 ---
 
-Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. Use `ask` workflow to work with Miso [ask]({{ '/sdk/ask/' | url }}) API, which allows you:
+Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. Use `ask` workflow to work with Miso [ask/questions]({{ '/sdk/ask/questions/' | url }}) API, which allows you:
 
 * Configure API default payload.
 * Configure the look and feel of UI elements.

@@ -20,12 +20,28 @@ sections:
   - title: Elements
     path: /ask/elements
     desc: Configure look and feel of results
+  - title: Take question from URL
+    path: /ask/question-from-url
+    desc: Practices to take user question from URL parameters
   - title: Follow-up questions
     path: /ask/follow-up
     desc: Practices to work with follow-up questions
   - title: Customize data source
     path: /ask/custom-data
     desc: Practices to work with custom data sources
+- title: Explore
+  path: /explore
+  desc: UI for Miso related questions API
+  pages:
+  - title: Quick start
+    path: /explore/quick-start
+    desc: Explore UI - quick start
+  - title: Workflow
+    path: /explore/workflow
+    desc: Explore workflow API
+  - title: Linkless
+    path: /explore/linkless
+    desc: Practices to handle question selection without links
 - title: Recommendation
   path: /recommendation
   desc: UI for Miso recommendation

@@ -1,5 +1,5 @@
 {
-  "name": "@miso.ai/examples-client-ui-ask-quick-start",
+  "name": "@miso.ai/examples-client-ui-ask-question-from-url",
   "description": "Miso JavaScript SDK examples: UI ask - quick start",
   "private": true,
   "scripts": {
