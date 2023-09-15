@@ -18,10 +18,10 @@ const workflow = client.ui.explore;
 
 ### Specify product ID
 
-You need to supply a `product_id` to the API to generate questions against it. You can do it as the following:
+You need to supply a `productId` to the API to generate questions against it. You can do it as the following:
 
 ```js
-workflow.product_id = 'product_id_of_the_article';
+workflow.productId = 'product_id_of_the_article';
 ```
 
 ### Specify URL mapping

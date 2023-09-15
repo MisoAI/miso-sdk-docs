@@ -39,7 +39,7 @@ misocmd.push(() => {
   const workflow = client.ui.explore;
 
   // tell the workflow which article you want to generate questions against
-  workflow.product_id = 'product_id_of_the_article';
+  workflow.productId = 'product_id_of_the_article';
 
   // tell the workflow how to get to the answers page given a question
   workflow.useLink(question => `/answers?q=${encodeURIComponent(question)}`);
