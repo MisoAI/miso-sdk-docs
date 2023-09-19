@@ -29,6 +29,9 @@ sections:
   - title: Customize data source
     path: /ask/custom-data
     desc: Practices to work with custom data sources
+  - title: Customize elements
+    path: /ask/customize-element
+    desc: Practices to customize elements
 - title: Explore
   path: /explore
   desc: UI for Miso related questions API

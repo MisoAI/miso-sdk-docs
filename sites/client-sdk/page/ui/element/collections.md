@@ -37,7 +37,7 @@ To choose a layout for specified element:
 
 ```js
 workflow.useLayouts({
-  results: 'carousel'
+  products: 'carousel' // or sources, related_resources
 });
 ```
 
@@ -78,7 +78,7 @@ If you want to change the base class name of the elements, specify it in the opt
 
 ```js
 workflow.useLayouts({
-  results: ['list', {
+  products: ['list', {
     className: 'my-miso-list'
   }]
 });
@@ -90,7 +90,7 @@ In addition, to customize product item DOM structure, you can override the templ
 
 ```js
 workflow.useLayouts({
-  results: ['list', {
+  products: ['list', {
     templates: {
       product: renderProduct
     }

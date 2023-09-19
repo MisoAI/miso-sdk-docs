@@ -47,7 +47,7 @@ misocmd.push(() => {
 
   // use a different layout (optional)
   workflow.useLayouts({
-    results: 'cards' // default: 'list'
+    products: 'cards' // default: 'list'
   });
 
   // kick off the workflow

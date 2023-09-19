@@ -90,7 +90,7 @@ Available `apiName` values are:
   </tbody>
 </table>
 
-See the API reference for payload options.
+See the [REST API reference](https://api.askmiso.com/#tag/Ask-APIs/operation/questions_v1_ask_questions_post) for payload options.
 
 ### Configure UI
 

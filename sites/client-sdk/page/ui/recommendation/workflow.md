@@ -87,7 +87,7 @@ You can choose the layout for the recommendation results:
 
 ```js
 workflow.useLayouts({
-  results: 'cards', // or 'carousel', 'list' (default)
+  products: 'cards', // or 'carousel', 'list' (default)
 });
 ```
 
