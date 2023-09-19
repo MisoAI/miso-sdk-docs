@@ -1,6 +1,6 @@
 {
-  "name": "@miso.ai/examples-client-ui-ask-quick-start",
-  "description": "Miso JavaScript SDK examples: UI ask - quick start",
+  "name": "@miso.ai/examples-client-ui-ask-customize-element",
+  "description": "Miso JavaScript SDK examples: UI ask - customize element",
   "private": true,
   "scripts": {
     "start": "doggoganger -s -p 5000"
