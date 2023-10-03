@@ -8,7 +8,7 @@ misocmd.push(() => {
   const workflow = client.ui.ask;
   workflow.useApi(false);
   const api = window.doggoganger.buildApi();
-  workflow.on('input', async ({ session, payload }) => {
+  workflow.on('request', async ({ session, payload }) => {
     const { question_id } = await api.ask.questions(payload);
     let intervalId;
     intervalId = setInterval(async () => {

@@ -172,7 +172,7 @@ Events on individual workflow:
 ```js
 const workflow = client.ui.ask; // or other workflow
 
-workflow.on('input', ({ session, payload }) => {
+workflow.on('request', ({ session, payload }) => {
   // When user submits a question in search box.
 });
 
@@ -194,7 +194,7 @@ workflow.on('done', ({ session, status, ongoing }) => {
   </thead>
   <tbody>
     <tr>
-      <td><code>input</code></td>
+      <td><code>request</code></td>
       <td>
         <code>session</code>, <code>payload</code>
       </td>

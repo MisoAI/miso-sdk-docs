@@ -32,7 +32,7 @@ See the following example:
 +     // 1. disable the built-in data source
 +     workflow.useApi(false);
 +     // 2. listen to input event
-+     workflow.on('input', async ({ session, payload }) => {
++     workflow.on('request', async ({ session, payload }) => {
 +       // payload = { question: "test", source_fl: ["cover_image"] }
 +       const questionId = await your.api.getQuestionId(payload); // your API call
 +       let intervalId;
