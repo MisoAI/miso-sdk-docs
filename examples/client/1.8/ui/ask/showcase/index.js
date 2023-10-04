@@ -14,7 +14,7 @@ keyInput.addEventListener('keydown', (e) => {
 });
 
 const followUpsSection = document.getElementById('follow-ups');
-const relatedResourcesContainer = document.getElementById('related-resources');
+const relatedResourcesContainer = document.querySelector('#related-resources miso-ask');
 
 function render({ parentQuestionId }) {
   return `
