@@ -2,6 +2,8 @@
 title: Explore - workflow
 ---
 
+{%- from 'macros.njk' import since with context -%}
+
 Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. Use `explore` workflow to work with Miso [ask/related_questions]({{ '/sdk/ask/related_questions/' | url }}) API, which allows you:
 
 * Specify product ID to generate questions against.
@@ -14,14 +16,6 @@ You can access the workflow as the following:
 
 ```js
 const workflow = client.ui.explore;
-```
-
-### Specify product ID
-
-You need to supply a `productId` to the API to generate questions against it. You can do it as the following:
-
-```js
-workflow.productId = 'product_id_of_the_article';
 ```
 
 ### Specify URL mapping
@@ -40,23 +34,36 @@ workflow.useLink(false);
 
 ### Configure API
 
-You can configure the default search API payload:
+To configure the default related questions API payload:
 
 ```js
-workflow.useApi('related_questions', payload);
+workflow.useApi(payload);
 ```
 
-For example, to make the API return `8` products instead of the default value:
+You need to specify either a `product_id`, article `content` in the payload:
 
 ```js
-workflow.useApi('related_questions', { rows: 8 });
+workflow.useApi({
+  product_id: '...',
+});
+
+workflow.useApi({
+  title: '...', // optional
+  content: '...', // must be non-empty to be effective
+});
 ```
 
-Given a product ID `aaaa0000`, the API payload will be:
+For another example, to make the API return `8` products instead of the default value:
+
+```js
+workflow.useApi({ product_id: '...', rows: 8 });
+```
+
+Then, the API payload will be:
 
 ```json
 {
-  "product_id": "aaaa0000",
+  "product_id": "...",
   "rows": 8
 }
 ```
@@ -77,4 +84,14 @@ workflow.on('select', ({ session, question, element }) => {
   const { text } = question;
   // ...
 });
+```
+
+To remove an event listener, call the function returned by `on`:
+
+```js
+const off = workflow.on('select', ({ session, status, ongoing }) => {
+  // ...
+});
+
+off(); // remove the listener
 ```

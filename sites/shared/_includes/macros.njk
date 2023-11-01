@@ -104,3 +104,11 @@
   </a>
 </div>
 {% endmacro %}
+
+{% macro since(version) %}
+<p><div class="since">Since {{ version }}</div></p>
+{% endmacro %}
+
+{% macro deprecated(version) %}
+<p><div class="deprecated">Deprecated in {{ version }}</div></p>
+{% endmacro %}

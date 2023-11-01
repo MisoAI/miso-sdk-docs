@@ -2,6 +2,8 @@
 title: Ask UI - workflow
 ---
 
+{%- from 'macros.njk' import since with context -%}
+
 Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. Use `ask` workflow to work with Miso [ask/questions]({{ '/sdk/ask/questions/' | url }}) API, which allows you:
 
 * Configure API default payload.
@@ -18,11 +20,11 @@ const workflow = client.ui.ask;
 When there are multiple workflows, you can retrieve all of them or by question ID or by parent question ID:
 
 ```js
-const workflows = client.ui.asks.workflows; // returns an array of workflows
+const context = client.ui.asks;
 
-const workflow0 = client.ui.asks.getByQuestionId('...');
-
-const workflow1 = client.ui.asks.getByParentQuestionId('...');
+const workflows = context.workflows; // returns an array of workflows
+const workflow0 = context.getByQuestionId('...');
+const workflow1 = context.getByParentQuestionId('...');
 ```
 
 You can also navigate through the question chain:
@@ -47,13 +49,13 @@ const parentQuestionId = workflow.parentQuestionId;
 You can configure the default search API payload:
 
 ```js
-workflow.useApi('questions', payload);
+workflow.useApi(payload);
 ```
 
 For example, to make the API return `8` products instead of the default value:
 
 ```js
-workflow.useApi('questions', { rows: 8 });
+workflow.useApi({ rows: 8 });
 ```
 
 Given a question `What's the meaing of life?`, the API payload will be:
@@ -65,32 +67,31 @@ Given a question `What's the meaing of life?`, the API payload will be:
 }
 ```
 
-Available `apiName` values are:
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Value</th>
-      <th scope="col">API</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>"questions"</code></td>
-      <td>
-        <a href="{{ '/sdk/ask/questions/' | url }}">Questions</a>
-      </td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td>
-        Disable built-in data source. See <a href="{{ '/ui/ask/custom-data/' | url }}">customize data source</a>.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 See the [REST API reference](https://api.askmiso.com/#tag/Ask-APIs/operation/questions_v1_ask_questions_post) for payload options.
+
+You can configure the default API payload for all workflows:
+
+#### Configure API globally
+
+{{ since('1.8.2') }}
+
+```js
+const context = client.ui.asks;
+context.useApi(payload);
+```
+
+To disable the built-in data source:
+
+```js
+// to disable for a specific workflow
+workflow.useApi(false);
+
+// or to disable for all workflows
+const context = client.ui.asks;
+context.useApi(false);
+```
+
+See <a href="{{ '/ui/ask/custom-data/' | url }}">customize data source</a> for details.
 
 ### Configure UI
 
@@ -112,6 +113,19 @@ workflow.useLayouts({
 ```
 
 See [elements]({{ '/ui/ask/elements/' | url }}) section for details.
+
+#### Configure UI globally
+
+{{ since('1.8.2') }}
+
+You can configure the default layouts options for all workflows:
+
+```js
+const context = client.ui.asks;
+context.useLayouts({
+  //...
+});
+```
 
 ### Lifecycle
 
@@ -159,10 +173,12 @@ The data object has the following properties:
 
 ### Events
 
-Events on workflow collection:
+Events on workflow context:
 
 ```js
-client.ui.asks.on('create', (workflow) => {
+const context = client.ui.asks;
+
+context.on('create', (workflow) => {
   // When a new workflow is created
 });
 ```
@@ -258,3 +274,31 @@ workflow.on('done', ({ session, status, ongoing }) => {
     </tr>
   </tbody>
 </table>
+
+#### Listen events globally
+
+{{ since('1.8.2') }}
+
+You can also listen to workflow events for all workflows at once:
+
+```js
+const context = client.ui.asks;
+
+context.on('request', ({ workflow, session, payload }) => {
+  // When user submits a question in search box.
+});
+
+context.on('done', ({ workflow, session, status, ongoing }) => {
+  // When answer is fully populated
+});
+```
+
+To remove an event listener, call the function returned by `on`:
+
+```js
+const off = workflow.on('done', ({ session, status, ongoing }) => {
+  // ...
+});
+
+off(); // remove the listener
+```

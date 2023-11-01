@@ -2,6 +2,8 @@
 title: Recommendation UI - workflow
 ---
 
+{%- from 'macros.njk' import since with context -%}
+
 Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. A recommendation workflow is a type of workflow for Miso recommendation APIs, which allows you:
 
 * Configure API and its payload.
@@ -81,6 +83,17 @@ Available `apiName` values are:
 
 See the API reference for payload options.
 
+#### Configure API globally
+
+{{ since('1.8.2') }}
+
+You can configure the default API payload for all workflows:
+
+```js
+const context = client.ui.recommendations;
+context.useApi(apiName, payload);
+```
+
 ### Configure UI
 
 You can choose the layout for the recommendation results:
@@ -100,6 +113,19 @@ workflow.useLayouts({
 ```
 
 See [elements]({{ '/ui/recommendation/elements/' | url }}) section for details.
+
+#### Configure UI globally
+
+{{ since('1.8.2') }}
+
+You can configure the default layouts options for all workflows:
+
+```js
+const context = client.ui.recommendations;
+context.useLayouts({
+  //...
+});
+```
 
 ### Configure performance tracking
 
