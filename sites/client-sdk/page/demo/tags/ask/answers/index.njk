@@ -1,10 +1,12 @@
-<link rel="stylesheet" href="{{ pginfo.asset_path }}/style.css" />
-<link rel="stylesheet" href="{{ pginfo.asset_path }}/debug.css" />
+<link rel="stylesheet" href="{{ pginfo.src_path }}/style.css" />
+<link rel="stylesheet" href="{{ pginfo.src_path }}/debug.css" />
 
 <div class="hero">
-  <h1>Miso Answers</h1>
+  <img class="miso-logo" src="{{ pginfo.asset_path }}/img/miso.svg" />
+  <img class="site-logo" />
+  <div id="sdk-version"></div>
 </div>
 <miso-ask-combo></miso-ask-combo>
 
-<script src="{{ pginfo.asset_path }}/debug.js"></script>
-<script src="{{ pginfo.asset_path }}/index.js"></script>
+<script src="{{ pginfo.src_path }}/debug.js"></script>
+<script src="{{ pginfo.src_path }}/index.js"></script>
