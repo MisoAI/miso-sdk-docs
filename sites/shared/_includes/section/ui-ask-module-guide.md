@@ -2,7 +2,7 @@ There are three ways to build your ask module:
 
 #### The standard UI solution
 
-* Features are identical to the [demo]({{ '/demo/latest/ask/answers/' | url }}).
+* Features are identical to the [demo]({{ '/demo/latest/answers/ask/' | url }}).
 * Can be done with 2 lines of HTML.
 * Limited customization: CSS, texts.
 * Follow the [guide]({{ '/answers/ask/standard/quick-start/' | url }}).
