@@ -14,7 +14,7 @@ You can integrate Miso search in your website with a few simple steps:
 
 {{ stackblitz_link('1.8/ui/search/quick-start') }}
 
-{% include 'section/ui-quick-start-setup.md' %}
+{% include 'section/ui-setup.md' %}
 
 ### Place Miso elements in your webpage
 

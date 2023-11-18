@@ -6,17 +6,24 @@ title: Ask - quick start
 
 You can integrate Miso ask API in your website with a few simple steps:
 
-1. Add Miso SDK to your webpage
-1. Place Miso elements in your webpage
-1. Create a Miso client instance
+1. Obtain your API key from Miso [dashboard](https://dojo.askmiso.com/)
+2. Add Miso SDK to your webpage
+3. Place Miso elements in your webpage
+4. Configure the `ask` workflow
 
+{#
 #### Live demo
 
-{{ stackblitz_link('1.8/ui/ask/quick-start') }}
+{{ stackblitz_link('1.9/ui/ask/custom/quick-start') }}
+#}
 
-{% include 'section/ui-setup.md' %}
+{% set step = 1 %}
+{% include 'step/obtain-api-key.md' %}
 
-### Place Miso elements in your webpage
+{% set step = 2 %}
+{% include 'step/sdk-setup.md' %}
+
+### 3. Place Miso elements in your webpage
 
 In your webpage, add the following elements where you want to display the answer:
 
@@ -65,5 +72,3 @@ misocmd.push(() => {
   new MisoClient(`${apiKey}`);
 });
 ```
-
-See [workflow]({{ '/ui/ask/workflow/' | url }}) section for details.

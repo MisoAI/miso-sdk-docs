@@ -2,6 +2,7 @@
 layout: home.njk
 ---
 
+<!--
 <div id="hero" class="container-lg my-md-5">    
   <div class="row">
     <div class="col-md-8 mx-auto text-center">
@@ -15,17 +16,15 @@ layout: home.njk
       <p>
         <strong>Private AI for the Open Web.</strong>
       </p>
-      <p>
-        LLM answer / search / recommendation API
-      </p>
-      <a class="btn cta my-4" href="https://miso.ai/get-answers">Start for Free</a>
     </div>
   </div>
 </div>
+-->
 
-<div class="container-lg text-center">
-  <h2 class="my-md-4">Miso JavaScript SDK</h2>
-  <hr>
+<div class="container-lg">
+  <div id="hero">
+    <h1 class="hero-title">Miso JavaScript SDK<br>Documentation</h1>
+  </div>
 </div>
 
 <div id="components" class="container-lg my-md-4">
@@ -35,13 +34,11 @@ layout: home.njk
       {%- for component in intro.components -%}
         <li class="component">
           <a href="{{ [component.path, '/'] | join | url }}">
-            <div class="card">
-              <h5 class="title">
-                <span>{{ component.title }}</span>
-              </h5>
-              <p>{{ component.desc }}</p>
-            </div>
+            <h3 class="component-title">
+              <span>{{ component.title }}</span>
+            </h3>
           </a>
+          <p class="component-desc">{{ component.desc }}</p>
         </li>
       {%- endfor -%}
       </ul>

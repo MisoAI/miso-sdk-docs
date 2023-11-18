@@ -1,0 +1,49 @@
+title: Answers
+sections:
+- title: Overview
+  path:
+  desc: Overview for building your Answers UI
+- title: Ask (Stardard)
+  path: /ask/standard
+  desc: UI for Miso ask API (Stardard)
+  pages:
+  - title: Quick start
+    path: /ask/standard/quick-start
+    desc: Ask UI - quick start
+  - title: Configuration
+    path: /ask/standard/configuration
+    desc: Ask UI - configuration
+  - title: CSS styles
+    path: /ask/standard/styles
+    desc: Ask UI - customize CSS styles
+- title: Ask (Custom)
+  path: /ask/custom
+  desc: UI for Miso ask API (Custom)
+  status: wip
+  pages:
+  - title: Quick start
+    path: /ask/custom/quick-start
+    desc: Ask UI - quick start
+- title: Explore
+  path: /explore
+  desc: UI for Miso related questions API
+  pages:
+  - title: Quick start
+    path: /explore/quick-start
+    desc: Explore UI - quick start
+#  - title: Linkless
+#    path: /explore/linkless
+#    desc: Practices to handle question selection without links
+- title: API
+  path: /api
+  desc: Call Miso APIs directly
+  pages:
+  - title: Setup
+    path: /api/setup
+    desc: Setup SDK client for using Miso API.
+  - title: Questions
+    path: /api/questions
+    desc: Answer user's question.
+  - title: Related questions
+    path: /api/related_questions
+    desc: Generate related questions against an article.

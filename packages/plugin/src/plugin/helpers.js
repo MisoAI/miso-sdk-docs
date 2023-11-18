@@ -8,6 +8,8 @@ class Helpers {
     return pageUrl === '/' + chapter + (path || '') + '/';
   }
 
+  // TODO: get page info (from sitemap)
+
   /*
   getIndex(pageUrl) {
     const indicies = this._indicies;

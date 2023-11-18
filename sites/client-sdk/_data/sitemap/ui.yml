@@ -6,7 +6,7 @@ sections:
   pages:
   - title: Setup
     path: /setup
-    desc: How to setup the UI plugin.
+    desc: How to setup the UI plugin
 - title: Ask
   path: /ask
   desc: UI for Miso ask API

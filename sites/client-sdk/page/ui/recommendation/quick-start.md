@@ -14,7 +14,7 @@ You can integrate Miso recommendation results in your website with a few simple 
 
 {{ stackblitz_link('1.8/ui/recommendation/quick-start') }}
 
-{% include 'section/ui-quick-start-setup.md' %}
+{% include 'section/ui-setup.md' %}
 
 ### Place Miso elements in your webpage
 

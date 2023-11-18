@@ -11,11 +11,11 @@ You can integrate Miso related questions API in your website with a few simple s
 1. Create a Miso client instance
 1. Specify `product_id` and URL mapping
 
-{% include 'section/ui-quick-start-setup.md' %}
+{% include 'section/ui-setup.md' %}
 
 ### Place Miso elements in your webpage
 
-In an article page of your webpage, add the following elements where you want to display the answer:
+In an article page of your webpage, add the following elements where you want to display the related questions:
 
 ```html
 <miso-explore>
@@ -39,7 +39,9 @@ misocmd.push(() => {
   const workflow = client.ui.explore;
 
   // tell the workflow which article you want to generate questions against
-  workflow.productId = 'product_id_of_the_article';
+  workflow.useApi({
+    product_id: 'product_id_of_the_article',
+  });
 
   // tell the workflow how to get to the answers page given a question
   workflow.useLink(question => `/answers?q=${encodeURIComponent(question)}`);

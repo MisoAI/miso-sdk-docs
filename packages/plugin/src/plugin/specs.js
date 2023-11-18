@@ -21,6 +21,9 @@ class Specs {
   get data_api() {
     return this._data.data_api;
   }
+  get ui() {
+    return this._data.ui;
+  }
 }
 
 module.exports = Specs;
