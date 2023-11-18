@@ -14,4 +14,4 @@ There are three ways to build your ask module:
 
 #### Build from scratch
 
-You can also build your UI from scratch, with the help of [SDK]({{ '/sdk/' | url }}) to call Miso API.
+You can also build your UI from scratch, without the assistance of SDK UI elements. Read the [API]({{ '/answers/api/' | url }}) section for details.
