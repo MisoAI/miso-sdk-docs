@@ -1,0 +1,43 @@
+/* reset */
+body {
+  margin: 0;
+}
+body, button, input, optgroup, select, textarea {
+  font-family: "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/* hero */
+.hero {
+  --miso-ask-combo-half-input-height: calc(1px + var(--miso-search-box-font-size) * 0.5 + var(--miso-search-box-padding));
+
+  position: relative;
+  padding-bottom: var(--miso-ask-combo-half-input-height);
+  margin-bottom: calc(0px - var(--miso-ask-combo-half-input-height));
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-hero-background);
+  color: var(--theme-hero-color);
+}
+.hero .miso-logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}
+.hero .site-logo {
+  object-fit: contain;
+  max-height: 3.75rem;
+  width: 64%;
+}
+
+/* ask-combo */
+:root {
+  --miso-ask-combo-content-max-width: 48rem !important;
+}
+
+/* site */
+:root {
+  --theme-hero-background: #304153;
+  --theme-hero-color: #fff;
+}

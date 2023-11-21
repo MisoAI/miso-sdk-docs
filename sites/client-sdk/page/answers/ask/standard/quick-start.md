@@ -10,13 +10,9 @@ Build your ask module in simple steps:
 2. Add Miso SDK to your webpage
 3. Place an element in your webpage
 
-{#
-
 #### Live demo
 
-{{ stackblitz_link('1.9/ui/ask/standard/quick-start') }}
-
-#}
+{{ stackblitz_link('1.9/answers/ask/standard/basic') }}
 
 {% set step = 1 %}
 {% include 'step/obtain-api-key.md' %}
