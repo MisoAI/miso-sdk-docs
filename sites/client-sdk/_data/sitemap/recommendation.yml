@@ -1,0 +1,12 @@
+title: Recommendation
+sections:
+- title: Overview
+  path:
+  desc: Overview for building your recommendation UI
+- title: API
+  path: /api
+  desc: Call Miso APIs directly
+  pages:
+  - title: Setup
+    path: /api/setup
+    desc: Setup SDK client for using Miso API.

@@ -1,0 +1,12 @@
+title: Search
+sections:
+- title: Overview
+  path:
+  desc: Overview for building your search UI
+- title: API
+  path: /api
+  desc: Call Miso APIs directly
+  pages:
+  - title: Setup
+    path: /api/setup
+    desc: Setup SDK client for using Miso API.
