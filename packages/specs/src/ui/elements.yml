@@ -1,0 +1,29 @@
+containers:
+- name: ask
+  mains: answer
+  components:
+  - name: query
+  - name: feedback
+  - name: question
+  - name: answer
+    main: true
+  - name: sources
+  - name: related-resources
+  - name: query-suggestions
+- name: explore
+  mains: related-questions
+  components:
+  - name: related-questions
+    main: true
+components:
+- name: query
+  property: false
+- name: question
+- name: answer
+- name: feedback
+  property: false
+- name: sources
+- name: related-resources
+- name: query-suggestions
+  property: followup_questions
+- name: related-questions

@@ -1,5 +1,5 @@
 ---
-title: Miso Elements
+title: Component elements
 ---
 
 {% include 'section_toc.njk' %}

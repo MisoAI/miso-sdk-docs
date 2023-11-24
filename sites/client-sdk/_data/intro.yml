@@ -2,6 +2,9 @@ components:
 - path: /answers
   title: Answers
   desc: Guides for building your Answers UI
+- path: /elements
+  title: Custom elements
+  desc: Miso custom element reference
 - path: /plugins
   title: Plugins
   desc: Plugins for SDK

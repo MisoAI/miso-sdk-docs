@@ -24,6 +24,9 @@ function overrideConfigResult(config, result) {
 function buildMarkdown({ hostname, pathPrefix }) {
   const markdown = markdownIt({ html: true }).use(markdownItAnchor);
 
+  // add class to all tables
+  markdown.renderer.rules.table_open = () => `<table class="table">`;
+
   // add attributes on all external links
   // TODO: make it configurable by hostname
   // TODO: include pathPrefix
