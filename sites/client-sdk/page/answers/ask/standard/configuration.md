@@ -3,6 +3,7 @@ title: Ask module (standard) - configuration
 ---
 
 You can configure the ask module with the some options, including:
+* Features
 * Phrases
 
 {% include 'step/sdk-setup-combo-config.md' %}
@@ -15,7 +16,7 @@ Now you can access the configuration method:
 const misocmd = window.misocmd || (window.misocmd = []);
 misocmd.push(() => {
   const MisoClient = window.MisoClient;
-  const combo = MisoClient.ui.ask.combo;
+  const combo = MisoClient.ui.combo.ask;
 
   // pass the configuration options
   combo.config({
@@ -27,12 +28,34 @@ misocmd.push(() => {
 });
 ```
 
+## Features
+
+You can configure the features of the ask module:
+
+```js
+combo.config({
+  features: {
+    relatedResources: true,
+    followUpQuestions: true,
+    querySuggestions: true,
+  },
+});
+```
+
+The following table lists the available options:
+
+| Key | Description | Default |
+| --- | ----------- | ------- |
+{%- for feature in specs.ui.ask.combo.options.features %}
+| `{{ feature.key }}` | {{ feature.desc | markdown | safe | trim }} | `{{ feature.default | safe }}` |
+{%- endfor %}
+
 ## Phrases
 
 You can configure the phrases displayed in the ask module:
 
 ```js
-MisoClient.ui.ask.combo.config({
+combo.config({
   phrases: {
     question: 'You asked...',
     sources: 'My reply is based on the following',
@@ -44,21 +67,8 @@ MisoClient.ui.ask.combo.config({
 
 The following table lists the available options:
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Key</th>
-      <th scope="col">Description</th>
-      <th scope="col">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for phrase in specs.ui.ask.combo.options.phrases %}
-    <tr>
-      <td><code>{{ phrase.key }}</code></td>
-      <td>{{ phrase.desc | markdown | safe }}</td>
-      <td><code>{{ phrase.default }}</code></td>
-    </tr>
-  {%- endfor -%}
-  </tbody>
-</table>
+| Key | Description | Default |
+| --- | ----------- | ------- |
+{%- for phrase in specs.ui.ask.combo.options.phrases %}
+| `{{ phrase.key }}` | {{ phrase.desc | markdown | safe | trim }} | `{{ phrase.default | safe }}` |
+{%- endfor %}

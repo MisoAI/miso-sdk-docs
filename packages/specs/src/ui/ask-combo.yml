@@ -1,4 +1,17 @@
 options:
+  features:
+  - key: relatedResources
+    default: true
+    desc: |
+      Whether to show related resources section.
+  - key: followUpQuestions
+    default: true
+    desc: |
+      Whether to enable follow-up questions.
+  - key: querySuggestions
+    default: true
+    desc: |
+      Whether to show query suggestions for follow-up questions.
   phrases:
   - key: question
     default: "'You asked...'"

@@ -46,6 +46,7 @@ misocmd.push(async () => {
   await client.ui.ready;
 
   // render DOM and get element references
+  // default templates are available since 1.9.1
   const templates = MisoClient.ui.defaults.ask.templates;
   const rootElement = document.querySelector('#miso-ask-combo');
   rootElement.innerHTML = templates.root();
