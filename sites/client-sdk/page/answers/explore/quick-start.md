@@ -2,7 +2,7 @@
 title: Explore module - quick start
 ---
 
-{%- from 'macros.njk' import stackblitz_link with context -%}
+{%- from 'macros.njk' import stackblitz_link, since with context -%}
 
 Build your explore module in simple steps:
 
@@ -24,6 +24,8 @@ In an article page of your webpage, add the following elements where you want to
 ```html
 <miso-explore>
   <miso-related-questions></miso-related-questions>
+  <!-- <miso-query> support is available since 1.9.1 -->
+  <miso-query></miso-query>
 </miso-explore>
 ```
 

@@ -19,15 +19,38 @@ You can customize the styles with CSS by:
 }
 ```
 
-{#
+#### --miso-ask-combo-section-padding (A)<br>--miso-ask-combo-content-max-width (B)<br>--miso-ask-combo-content-padding (C)
 
-#### --miso-ask-combo-section-padding<br>--miso-ask-combo-content-max-width<br>--miso-ask-combo-content-padding
-
-#}
+<style>
+#ask-combo-css-variables {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: var(--color-code-background);;
+}
+#ask-combo-css-variables .frame {
+  position: relative;
+}
+#ask-combo-css-variables .svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+</style>
+<div id="ask-combo-css-variables">
+  <div class="frame">
+    <img class="svg" src="{{ '/img/ask-combo-css-variables-0.svg' | url }}">
+    <img src="{{ '/img/ask-combo-css-variables-0.png' | url }}">
+  </div>
+</div>
 
 #### --miso-ask-combo-question-phrase-color
 
-The color of the phrase text "You asked about...".
+The text color of the phrase right before the question ("You asked...").
 
 #### --miso-ask-combo-related-resources-background
 

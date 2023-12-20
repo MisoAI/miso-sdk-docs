@@ -21,9 +21,9 @@ sections:
   desc: UI for Miso ask API (Custom)
   status: wip
   pages:
-  - title: Quick start
-    path: /ask/custom/quick-start
-    desc: Ask UI - quick start
+  - title: Full implementation
+    path: /ask/custom/full
+    desc: Ask UI - full implementation
 - title: Explore
   path: /explore
   desc: UI for Miso related questions API
