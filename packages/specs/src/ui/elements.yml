@@ -1,6 +1,6 @@
 containers:
 - name: ask
-  mains: answer
+  main_component: answer
   components:
   - name: query
   - name: feedback
@@ -11,7 +11,7 @@ containers:
   - name: related-resources
   - name: query-suggestions
 - name: explore
-  mains: related-questions
+  main_component: related-questions
   components:
   - name: related-questions
     main: true

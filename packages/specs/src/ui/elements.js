@@ -24,13 +24,13 @@ export default Object.freeze({
 });
 
 function shimContainer(container = {}) {
-  const { name, tag } = container;
+  let { name, tag, main_component } = container;
+  main_component = lookup[main_component];
   const components = asArray(container.components).map(({ name, ...options }) => ({ component: lookup[name], ...options }));
-  const mains = components.filter(c => c.main);
   return Object.assign(container, {
     tag: tag || asTag(name),
+    main_component,
     components,
-    mains,
   });
 }
 
