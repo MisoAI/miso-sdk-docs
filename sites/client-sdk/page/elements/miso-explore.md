@@ -1,5 +1,5 @@
 ---
-title: Elements - <miso-ask>
+title: Elements - <miso-explore>
 ---
 
 {% set workflow = specs.ui.elements.lookup.explore %}
