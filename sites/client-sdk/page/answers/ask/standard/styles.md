@@ -22,13 +22,6 @@ You can customize the styles with CSS by:
 #### --miso-ask-combo-section-padding (A)<br>--miso-ask-combo-content-max-width (B)<br>--miso-ask-combo-content-padding (C)
 
 <style>
-#ask-combo-css-variables {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background: var(--color-code-background);;
-}
 #ask-combo-css-variables .frame {
   position: relative;
 }
@@ -41,7 +34,7 @@ You can customize the styles with CSS by:
   z-index: 10;
 }
 </style>
-<div id="ask-combo-css-variables">
+<div id="ask-combo-css-variables" class="screenshot-container">
   <div class="frame">
     <img class="svg" src="{{ '/img/ask-combo-css-variables-0.svg' | url }}">
     <img src="{{ '/img/ask-combo-css-variables-0.png' | url }}">
