@@ -2,9 +2,12 @@
 title: Ask module (standard) - configuration
 ---
 
+{%- from 'macros.njk' import since with context -%}
+
 You can configure the ask module with the some options, including:
 * Features
 * Phrases
+* API payload
 
 {% include 'step/sdk-setup-combo-config.md' %}
 
@@ -72,3 +75,19 @@ The following table lists the available options:
 {%- for phrase in specs.ui.ask.combo.options.phrases %}
 | `{{ phrase.key }}` | {{ phrase.desc | markdown | safe | trim }} | `{{ phrase.default | safe }}` |
 {%- endfor %}
+
+## API payload
+
+{{ since('1.9.2') }}
+
+You can pass or overwrite parameters in the API payload:
+
+```js
+combo.config({
+  api: {
+    //...
+  },
+});
+```
+
+See [API reference](https://api.askmiso.com/#tag/Ask-APIs/operation/questions_v1_ask_questions_post) for the available options.
