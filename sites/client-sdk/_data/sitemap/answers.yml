@@ -24,6 +24,12 @@ sections:
   - title: Full implementation
     path: /ask/custom/full
     desc: Ask UI - full implementation
+  - title: Workflow
+    path: /ask/custom/workflow
+    desc: Ask UI - workflow
+  - title: Data
+    path: /ask/custom/data
+    desc: Ask UI - data
 - title: Explore
   path: /explore
   desc: UI for Miso related questions API
