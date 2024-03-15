@@ -1,8 +1,12 @@
 title: Search
 sections:
-- title: Overview
+- title: Search UI
   path:
-  desc: Overview for building your search UI
+  desc: Guide for building your search UI
+  pages:
+  - title: Quick start
+    path: /quick-start
+    desc: Search UI - quick start
 - title: API
   path: /api
   desc: Call Miso APIs directly
@@ -10,3 +14,9 @@ sections:
   - title: Setup
     path: /api/setup
     desc: Setup SDK client for using Miso API.
+  - title: Search
+    path: /api/search
+    desc: Search against terms and conditions.
+  - title: Autocomplete
+    path: /api/autocomplete
+    desc: Autocomplete.

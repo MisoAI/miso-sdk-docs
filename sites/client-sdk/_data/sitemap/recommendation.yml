@@ -1,8 +1,12 @@
 title: Recommendation
 sections:
-- title: Overview
+- title: Recommendation UI
   path:
-  desc: Overview for building your recommendation UI
+  desc: Guide for building your recommendation UI
+  pages:
+  - title: Quick start
+    path: /quick-start
+    desc: Recommendation UI - quick start
 - title: API
   path: /api
   desc: Call Miso APIs directly
@@ -10,3 +14,15 @@ sections:
   - title: Setup
     path: /api/setup
     desc: Setup SDK client for using Miso API.
+  - title: Product to products
+    path: /api/product_to_products
+    desc: Recommend products based on a product and user interests.
+  - title: User to products
+    path: /api/user_to_products
+    desc: Recommend products based on user interests.
+  - title: User to attributes
+    path: /api/user_to_attributes
+    desc: Recommend product attributes based on user interests.
+  - title: User to trending
+    path: /api/user_to_trending
+    desc: Recommend trending products based on user interests.
