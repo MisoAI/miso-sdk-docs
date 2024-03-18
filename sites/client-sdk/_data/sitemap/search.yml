@@ -5,8 +5,11 @@ sections:
   desc: Guide for building your search UI
   pages:
   - title: Quick start
-    path: /quick-start
+    path: /ui/quick-start
     desc: Search UI - quick start
+  - title: Configure API
+    path: /ui/api
+    desc: Search UI - configure your API request.
 - title: API
   path: /api
   desc: Call Miso APIs directly
