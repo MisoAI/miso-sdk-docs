@@ -2,7 +2,7 @@
 title: Elements - collection elements
 ---
 
-The following elements are classified as collection elements:
+The following elements are classified as collection elements, which are used to display a collection of items in a list format.
 
 <table class="table">
   <thead>
@@ -15,16 +15,16 @@ The following elements are classified as collection elements:
     <tr>
       <td><code>&lt;miso-products&gt;</code></td>
       <td>
-        <a href="{{ '/ui/search/elements/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/ui/recommendation/elements/' | url }}">Recommendation</a>
+        <a href="{{ '/search/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/recommendation/' | url }}">Recommendation</a>
       </td>
     </tr>
     <tr>
       <td><code>&lt;miso-sources&gt;</code></td>
-      <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
+      <td><a href="{{ '/answers/ask/custom/' | url }}">Ask</a></td>
     </tr>
     <tr>
       <td><code>&lt;miso-related-resources&gt;</code></td>
-      <td><a href="{{ '/ui/ask/elements/' | url }}">Ask</a></td>
+      <td><a href="{{ '/answers/ask/custom/' | url }}">Ask</a></td>
     </tr>
   </tbody>
 </table>
@@ -36,8 +36,19 @@ They are bound to different parts of API response data, but they share the same 
 To choose a layout for specified element:
 
 ```js
+// Choose a layout for <miso-products>
 workflow.useLayouts({
-  products: 'carousel' // or sources, related_resources
+  products: 'carousel'
+});
+
+// Choose a layout for <miso-sources>
+workflow.useLayouts({
+  sources: 'carousel'
+});
+
+// Choose a layout for <miso-related-resources>
+workflow.useLayouts({
+  related_resources: 'carousel'
 });
 ```
 
@@ -84,7 +95,7 @@ workflow.useLayouts({
 });
 ```
 
-#### Customize DOM structure
+#### Customize DOM structure (products)
 
 In addition, to customize product item DOM structure, you can override the template function:
 
@@ -108,5 +119,30 @@ The render function takes the following arguments and should return an HTML stri
 * `layout`: the layout implementation widget
 * `state`: the whole data state in this rendering process
 * `product`: the product record to display
+
+#### Customize DOM structure (sources, related resources)
+
+to customize product item DOM structure, you can override the template function:
+
+```js
+workflow.useLayouts({
+  sources: ['list', {
+    templates: {
+      article: renderArticle
+    }
+  }]
+});
+
+function renderArticle(layout, state, article) {
+  const html = '...';
+  return html;
+}
+```
+
+The render function takes the following arguments and should return an HTML string.
+
+* `layout`: the layout implementation widget
+* `state`: the whole data state in this rendering process
+* `article`: the article record to display
 
 See also: [default templates](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/layout/templates.js).

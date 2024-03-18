@@ -13,6 +13,13 @@ sections:
   - title: <miso-explore>
     path: /miso-explore
     desc: Container element for explore workflow
-#- title: Components
-#  path: /components
-#  desc: Component elements
+- title: Components
+  path: /components
+  desc: Component elements
+  pages:
+  - title: Collections
+    path: /collections
+    desc: Collection elements
+  - title: <miso-query>
+    path: /miso-query
+    desc: Search box element

@@ -1,8 +1,8 @@
 ---
-title: Elements - search box
+title: Elements - <miso-query>
 ---
 
-The following elements are classified as search box elements:
+`<miso-query>` is the element for search or question input.
 
 <table class="table">
   <thead>
@@ -15,7 +15,7 @@ The following elements are classified as search box elements:
     <tr>
       <td><code>&lt;miso-query&gt;</code></td>
       <td>
-        <a href="{{ '/ui/search/elements/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/ui/ask/elements/' | url }}">Ask</a>
+        <a href="{{ '/search/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/answers/ask/custom/' | url }}">Ask</a>
       </td>
     </tr>
   </tbody>
@@ -25,6 +25,7 @@ The following elements are classified as search box elements:
 
 The only and default layout for this category is `search-box`.
 
+{#
 #### Autocomplete
 
 The search box elements enable autocomplete feature with `ask` workflow. You can disable it by:
@@ -36,6 +37,7 @@ workflow.useLayouts({
   }
 });
 ```
+#}
 
 #### Placeholder text
 
@@ -100,15 +102,29 @@ Simply leave elements inside `<miso-query>` element:
     <input type="text" data-role="input">
     <button type="submit">
   </div>
+</miso-query>
+```
+
+{#
+```html
+<miso-query>
+  <div>
+    <input type="text" data-role="input">
+    <button type="submit">
+  </div>
   <div data-role="autocomplete">
     <ol data-role="suggestion-list"></ol>
   </div>
 </miso-query>
 ```
+#}
 
 The layout handles DOM events by the following rules:
 
 1. The first `<input>` element with attribute `data-role="input"` holds the query text.
 1. When clicking on an element with attribute `type="submit"` or `data-role="button"`, it submits the query.
+
+{#
 1. If present, the element with attribute `data-role="autocomplete"` works an autocomplete container.
 1. If present, the element with attribute `data-role="suggestion-list"` holds option items of autocomplete suggestions.
+#}
