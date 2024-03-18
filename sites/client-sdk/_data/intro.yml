@@ -2,8 +2,14 @@ components:
 - path: /answers
   title: Answers
   desc: Guides for building your Answers UI
+- path: /search
+  title: Search
+  desc: Guides for building your Search UI
+- path: /recommendation
+  title: Recommendation
+  desc: Guides for building your Recommendation UI
 - path: /elements
-  title: Custom elements
+  title: Elements
   desc: Miso custom element reference
 - path: /plugins
   title: Plugins
