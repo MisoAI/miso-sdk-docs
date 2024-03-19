@@ -13,13 +13,19 @@ sections:
   - title: <miso-explore>
     path: /miso-explore
     desc: Container element for explore workflow
+  - title: <miso-search>
+    path: /miso-search
+    desc: Container element for search workflow
+  - title: <miso-recommendation>
+    path: /miso-recommendation
+    desc: Container element for recommendation workflow
 - title: Components
   path: /components
   desc: Component elements
   pages:
-  - title: Collections
-    path: /collections
-    desc: Collection elements
   - title: <miso-query>
     path: /miso-query
     desc: Search box element
+  - title: Collections
+    path: /collections
+    desc: Collection elements

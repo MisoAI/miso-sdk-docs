@@ -6,15 +6,23 @@ containers:
   - name: feedback
   - name: question
   - name: answer
-    main: true
   - name: sources
   - name: related-resources
   - name: query-suggestions
 - name: explore
   main_component: related-questions
   components:
+  - name: query
   - name: related-questions
-    main: true
+- name: search
+  main_component: products
+  components:
+  - name: query
+  - name: products
+- name: recommendation
+  main_component: products
+  components:
+  - name: products
 components:
 - name: query
   property: false
@@ -22,6 +30,7 @@ components:
 - name: answer
 - name: feedback
   property: false
+- name: products
 - name: sources
 - name: related-resources
 - name: query-suggestions

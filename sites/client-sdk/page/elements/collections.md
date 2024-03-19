@@ -130,6 +130,11 @@ workflow.useLayouts({
     templates: {
       article: renderArticle
     }
+  }],
+  related_resources: ['list', {
+    templates: {
+      article: renderArticle
+    }
   }]
 });
 

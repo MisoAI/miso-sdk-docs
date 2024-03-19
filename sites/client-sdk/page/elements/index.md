@@ -1,5 +1,5 @@
 ---
-title: Miso custom element reference
+title: Miso element reference
 ---
 
 {% include 'chapter_toc.njk' %}

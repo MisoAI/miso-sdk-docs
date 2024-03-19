@@ -9,7 +9,10 @@ sections:
     desc: Recommendation UI - quick start
   - title: Configure API
     path: /ui/api
-    desc: Recommendation UI - configure your API request.
+    desc: Recommendation UI - configure your API request
+  - title: Multiple units
+    path: /ui/multiple
+    desc: Recommendation UI - multiple units
 - title: API
   path: /api
   desc: Call Miso APIs directly

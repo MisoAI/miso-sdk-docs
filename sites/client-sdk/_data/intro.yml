@@ -10,7 +10,7 @@ components:
   desc: Guides for building your Recommendation UI
 - path: /elements
   title: Elements
-  desc: Miso custom element reference
+  desc: Miso element reference
 - path: /plugins
   title: Plugins
   desc: Plugins for SDK
