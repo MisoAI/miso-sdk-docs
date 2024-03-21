@@ -10,6 +10,9 @@ sections:
   - title: Configure API
     path: /ui/api
     desc: Search UI - configure your API request.
+  - title: Tracking
+    path: /ui/tracking
+    desc: Search UI - performance tracking.
 - title: API
   path: /api
   desc: Call Miso APIs directly
@@ -23,3 +26,6 @@ sections:
   - title: Autocomplete
     path: /api/autocomplete
     desc: Autocomplete.
+  - title: Interactions
+    path: /api/interactions
+    desc: Send user interaction events for analytics.

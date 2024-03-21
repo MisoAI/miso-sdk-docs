@@ -1,0 +1,27 @@
+ask:
+- label: Ask
+- context:
+  - api_group: ask
+  - api_name:
+    - questions
+explore:
+- label: Explore
+- context:
+  - api_group: ask
+  - api_name:
+    - related_questions
+search:
+- label: Search
+- context:
+  - api_group: search
+  - api_name:
+    - search
+recommendation:
+- label: Recommendation
+- context:
+  - api_group: recommendation
+  - api_name:
+    - product_to_products
+    - user_to_products
+    - user_to_attributes
+    - user_to_trending

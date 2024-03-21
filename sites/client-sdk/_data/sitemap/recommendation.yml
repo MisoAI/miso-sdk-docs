@@ -13,6 +13,9 @@ sections:
   - title: Multiple units
     path: /ui/multiple
     desc: Recommendation UI - multiple units
+  - title: Tracking
+    path: /ui/tracking
+    desc: Recommendation UI - performance tracking.
 - title: API
   path: /api
   desc: Call Miso APIs directly
@@ -32,3 +35,6 @@ sections:
   - title: User to trending
     path: /api/user_to_trending
     desc: Recommend trending products based on user interests.
+  - title: Interactions
+    path: /api/interactions
+    desc: Send user interaction events for analytics.
