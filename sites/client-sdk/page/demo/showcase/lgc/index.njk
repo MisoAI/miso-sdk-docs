@@ -1,0 +1,18 @@
+---
+layout: raw
+---
+<head>
+  {% include 'meta.njk' %}
+  {% include 'favicon.njk' %}
+  {% include 'font_inter.njk' %}
+  <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.9.8-beta.2/dist/umd/miso.min.js?autostart=false"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="hero">
+    <img class="miso-logo" src="/miso-client-js-sdk/demo/asset/img/miso.svg" />
+    <img class="site-logo" />
+  </div>
+  <miso-ask-combo class="miso-circled-citation-index-dark"></miso-ask-combo>
+  <script src="./index.js"></script>
+</body>
