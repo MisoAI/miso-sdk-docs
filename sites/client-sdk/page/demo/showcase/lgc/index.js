@@ -126,7 +126,6 @@ function getType(source) {
       typeDefsListElement.innerHTML = '';
     });
     context.on('data', (event) => {
-      const workflow = event.workflow;
       const data = event.value;
       if (!data) {
         return;
@@ -135,7 +134,7 @@ function getType(source) {
       if (!sources || sources.length === 0) {
         return;
       }
-      const { typeDefsListElement } = getElements(workflow);
+      const { typeDefsListElement } = getElements(event.workflow);
       // insert type definitions block if not already present
       for (const type of sources.map(getType)) {
         // add to <ul> if not already present
