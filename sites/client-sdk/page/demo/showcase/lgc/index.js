@@ -4,9 +4,6 @@ if (!apiKey) {
   alert(`No API key found in the URL. Please provide an API key in the URL query`);
 }
 
-const TYPES = [
-  'type-a', 'type-b', 'type-c', 'type-d', 'type-e',
-];
 function getType(source) {
   const custom_attributes = source.custom_attributes || {};
   return custom_attributes.type && custom_attributes.type[0] || undefined;
@@ -69,6 +66,7 @@ function getType(source) {
   }
   MisoClient.on('create', (client) => {
     const context = client.ui.asks;
+    // Tell the API to include custom_attributes.type for source items in response
     context.useApi({
       source_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.type'],
     });
