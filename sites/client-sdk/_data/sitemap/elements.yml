@@ -26,6 +26,9 @@ sections:
   - title: <miso-query>
     path: /miso-query
     desc: Search box element
+  - title: <miso-answer>
+    path: /miso-answer
+    desc: Answer text element
   - title: Collections
     path: /collections
     desc: Collection elements

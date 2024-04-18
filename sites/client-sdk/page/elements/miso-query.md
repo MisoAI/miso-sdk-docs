@@ -2,24 +2,11 @@
 title: Elements - <miso-query>
 ---
 
+{% set components = [specs.ui.elements.lookup.query] %}
+
 `<miso-query>` is the element for search or question input.
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Element tag name</th>
-      <th scope="col">Used in</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>&lt;miso-query&gt;</code></td>
-      <td>
-        <a href="{{ '/search/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/answers/ask/custom/' | url }}">Ask</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{% include './_component-containers.md' %}
 
 ### Layouts
 

@@ -7,5 +7,5 @@ export default Object.freeze({
     combo: Object.freeze(askCombo),
   }),
   elements,
-  workflows: Object.freeze(workflows),
+  workflows,
 });

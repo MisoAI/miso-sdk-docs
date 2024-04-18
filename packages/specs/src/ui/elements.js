@@ -1,4 +1,5 @@
 import elements from './elements.yml';
+import workflows from './workflows.yml';
 
 let { containers, components, ...rest } = elements;
 const lookup = {};
@@ -12,6 +13,7 @@ containers = containers.map(shimContainer);
 for (const container of containers) {
   for (const component of container.components) {
     component.container = container;
+    (component.component.workflows || (component.component.workflows = [])).push(workflows[container.name]);
   }
   lookup[container.name] = container;
 }

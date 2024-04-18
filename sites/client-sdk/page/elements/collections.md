@@ -2,32 +2,11 @@
 title: Elements - collection elements
 ---
 
+{% set components = [specs.ui.elements.lookup.products, specs.ui.elements.lookup.sources, specs.ui.elements.lookup['related-resources']] %}
+
 The following elements are classified as collection elements, which are used to display a collection of items in a list format.
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Element tag name</th>
-      <th scope="col">Used in</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>&lt;miso-products&gt;</code></td>
-      <td>
-        <a href="{{ '/search/' | url }}">Search</a>&nbsp; | &nbsp;<a href="{{ '/recommendation/' | url }}">Recommendation</a>
-      </td>
-    </tr>
-    <tr>
-      <td><code>&lt;miso-sources&gt;</code></td>
-      <td><a href="{{ '/answers/ask/custom/' | url }}">Ask</a></td>
-    </tr>
-    <tr>
-      <td><code>&lt;miso-related-resources&gt;</code></td>
-      <td><a href="{{ '/answers/ask/custom/' | url }}">Ask</a></td>
-    </tr>
-  </tbody>
-</table>
+{% include './_component-containers.md' %}
 
 They are bound to different parts of API response data, but they share the same layout options.
 
