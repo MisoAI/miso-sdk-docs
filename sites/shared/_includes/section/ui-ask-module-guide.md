@@ -10,7 +10,7 @@ There are three ways to build your ask module:
 #### The custom UI solution
 
 * Fully customizable: HTML, CSS, texts, logic.
-* Follow the [guide]({{ '/answers/ask/custom/quick-start/' | url }}).
+* Follow the [guide]({{ '/answers/ask/custom/full/' | url }}).
 
 #### Build from scratch
 
