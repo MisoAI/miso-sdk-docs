@@ -26,7 +26,7 @@ function compute() {
   return Object.freeze({
     props: utils.props.buildDir(join(DATA_DIR, 'prop')),
     comparisons: computeComparisons(),
-    pageMeta: utils.sitemap(join(DATA_DIR, 'sitemap')),
+    page_meta: utils.sitemap(join(DATA_DIR, 'sitemap')),
   });
 }
 
@@ -43,8 +43,8 @@ class Data {
   get comparisons() {
     return this._data.comparisons;
   }
-  get pageMeta() {
-    return this._data.pageMeta;
+  get page_meta() {
+    return this._data.page_meta;
   }
 }
 

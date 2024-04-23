@@ -14,3 +14,6 @@ You can integrate Miso Answers into your website in two steps:
 ## Build your explore module
 
 Follow the [guide]({{ '/answers/explore/' | url }}).
+
+## Advanced topics
+* [Technology stack]({{ '/advanced/technology/' | url }})

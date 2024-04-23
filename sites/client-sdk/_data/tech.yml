@@ -1,0 +1,23 @@
+layers:
+- title: SDK (UI)
+  desc: The UI components in SDK
+  features:
+  - Workflow for ask, explore, search, and recommendation
+  - Custom elements to render Miso API responses
+  - Transform markdown to HTML and render it incrementally (typewriter effect)
+  - Add meta data to API payload for Miso analytics
+  - Measure performance events (impression, viewable impression, and click) and send interactions automatically
+- title: SDK (core)
+  desc: The MisoClient in SDK
+  features:
+  - Programmatic interface for calling Miso API
+  - Async iterable interface for answer API polling
+  - Manage anonymous_id automatically
+  - Capture page info (URL, title, referrer) and send with interactions
+  - Capture UTM parameters and send with interactions
+  - Helper functions to measure viewable impression
+- title: Miso API
+  desc: Miso REST API service
+  features:
+  - Data API for sending catalog and interaction data
+  - Query API for retrieving answers, related questions, recommendation and search results

@@ -8,4 +8,4 @@ The UI elements automatically tracks the following performance events on recomme
 * Viewable impression
 * Click
 
-See [Performance measurement]({{ '/common/performance/' | url }}) for detailed definitions.
+See [Performance measurement]({{ '/advanced/performance/' | url }}) for detailed definitions.

@@ -1,0 +1,12 @@
+title: Advanced topics
+sections:
+- title: Advanced topics
+  path:
+  desc: Advanced topics
+  pages:
+  - title: Tecknology stack
+    path: /technology
+    desc: The technology stack of the SDK solution
+  - title: Performance measurement
+    path: /performance
+    desc: How SDK measures performance events (impression, viewable impression, and click)

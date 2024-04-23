@@ -8,7 +8,7 @@ To generate performance measurement data for analytics, you can send the followi
 * Viewable impression
 * Click
 
-See [Performance measurement]({{ '/common/performance/' | url }}) for detailed definitions.
+See [Performance measurement]({{ '/advanced/performance/' | url }}) for detailed definitions.
 
 #### Syntax
 

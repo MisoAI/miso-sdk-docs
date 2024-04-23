@@ -27,8 +27,9 @@ function compute() {
   return Object.freeze({
     env: process.env.ENV,
     props: utils.props.buildDir(join(DATA_DIR, 'prop')),
+    tech_stack: Object.freeze(utils.readYamlSync(join(DATA_DIR, 'tech.yml'))),
     comparisons: computeComparisons(),
-    pageMeta: utils.sitemap(join(DATA_DIR, 'sitemap')),
+    page_meta: utils.sitemap(join(DATA_DIR, 'sitemap')),
   });
 }
 
@@ -45,11 +46,14 @@ class Data {
   get props() {
     return this._data.props;
   }
+  get tech_stack() {
+    return this._data.tech_stack;
+  }
   get comparisons() {
     return this._data.comparisons;
   }
-  get pageMeta() {
-    return this._data.pageMeta;
+  get page_meta() {
+    return this._data.page_meta;
   }
 }
 

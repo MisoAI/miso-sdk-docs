@@ -1,13 +1,13 @@
-{%- set pageMeta = data.pageMeta[page.url] -%}
+{%- set page_meta = data.page_meta[page.url] -%}
 {%- set canonicalUrl = [ "https://", hostname, page.url | url ] | join -%}
 
-{%- if pageMeta.title -%}
-  {%- set title = [site.title, " - ", pageMeta.title] | join -%}
+{%- if page_meta.title -%}
+  {%- set title = [site.title, " - ", page_meta.title] | join -%}
 {%- else -%}
   {%- set title = site.title -%}
 {%- endif -%}
 
-{%- set description = pageMeta.desc -%}
+{%- set description = page_meta.desc -%}
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />

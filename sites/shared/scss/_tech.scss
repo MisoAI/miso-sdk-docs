@@ -1,0 +1,35 @@
+.miso-tech-stack {
+  .layer-info-cell {
+    vertical-align: top;
+    border: 2px dashed #333;
+  }
+  .layer:last-child .layer-info-cell {
+    border-color: transparent;
+  }
+  .layer-row-spacing {
+    height: 2rem;
+  }
+  .layer-column-spacing {
+    width: 3rem;
+  }
+  .layer-features-cell {
+    vertical-align: top;
+    padding-bottom: 1rem;
+  }
+  .layer-box {
+    border: 2px solid #333;
+    margin: -3px;
+    padding: 1rem;
+  }
+  .layer-title {
+    text-align: center;
+  }
+  .layer-desc {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  .layer-features-list {
+    margin-bottom: 0;
+    padding-left: 1em;
+  }
+}
