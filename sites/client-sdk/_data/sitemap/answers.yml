@@ -19,7 +19,6 @@ sections:
 - title: Ask (Custom)
   path: /ask/custom
   desc: UI for Miso ask API (Custom)
-  status: wip
   pages:
   - title: Full implementation
     path: /ask/custom/full
