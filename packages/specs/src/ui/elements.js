@@ -34,7 +34,6 @@ function shimContainer(container = {}) {
     slug,
     tag: tag || toTag(name),
     url: url || toUrl(slug),
-    url: `/elements/${name}`,
     main_component,
     components,
   });
