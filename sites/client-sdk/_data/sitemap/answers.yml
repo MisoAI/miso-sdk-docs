@@ -26,6 +26,9 @@ sections:
   - title: Workflow
     path: /ask/custom/workflow
     desc: Ask UI - workflow
+  - title: Elements
+    path: /ask/custom/elements
+    desc: Ask UI - elements
   - title: Data
     path: /ask/custom/data
     desc: Ask UI - data
@@ -36,6 +39,9 @@ sections:
   - title: Quick start
     path: /explore/quick-start
     desc: Explore UI - quick start
+  - title: Elements
+    path: /explore/elements
+    desc: Explore UI - elements
 #  - title: Linkless
 #    path: /explore/linkless
 #    desc: Practices to handle question selection without links

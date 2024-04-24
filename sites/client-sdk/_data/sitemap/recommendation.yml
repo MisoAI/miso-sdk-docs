@@ -10,6 +10,9 @@ sections:
   - title: Configure API
     path: /ui/api
     desc: Recommendation UI - configure your API request
+  - title: Elements
+    path: /ui/elements
+    desc: Recommendation UI - elements
   - title: Multiple units
     path: /ui/multiple
     desc: Recommendation UI - multiple units

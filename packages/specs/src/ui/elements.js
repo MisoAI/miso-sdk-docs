@@ -26,26 +26,40 @@ export default Object.freeze({
 });
 
 function shimContainer(container = {}) {
-  let { name, tag, main_component } = container;
+  let { name, tag, slug, url, main_component } = container;
   main_component = lookup[main_component];
+  slug = slug || toSlug(name);
   const components = asArray(container.components).map(({ name, ...options }) => ({ component: lookup[name], ...options }));
   return Object.assign(container, {
-    tag: tag || asTag(name),
+    slug,
+    tag: tag || toTag(name),
+    url: url || toUrl(slug),
+    url: `/elements/${name}`,
     main_component,
     components,
   });
 }
 
 function shimComponent(component = {}) {
-  const { name, tag, property } = component;
+  const { name, tag, slug, url, property } = component;
   return Object.assign(component, {
-    tag: tag || asTag(name),
+    slug,
+    tag: tag || toTag(name),
+    url: url || toUrl(slug),
     property: property || property === false ? property : name.replaceAll('-', '_'),
   });
 }
 
-function asTag(name) {
+function toSlug(name) {
+  return `miso-${name}`;
+}
+
+function toTag(name) {
   return `<miso-${name}>`;
+}
+
+function toUrl(slug) {
+  return slug ? `/elements/${slug}/` : false;
 }
 
 function asArray(value) {

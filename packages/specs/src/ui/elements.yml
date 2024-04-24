@@ -26,13 +26,18 @@ containers:
 components:
 - name: query
   property: false
+  slug: miso-query
 - name: question
 - name: answer
+  slug: miso-answer
 - name: feedback
   property: false
 - name: products
+  slug: collections
 - name: sources
+  slug: collections
 - name: related-resources
+  slug: collections
 - name: query-suggestions
   property: followup_questions
 - name: related-questions
