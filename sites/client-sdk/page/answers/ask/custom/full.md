@@ -39,45 +39,32 @@ misocmd.push(async () => {
   // setup client
   const MisoClient = window.MisoClient;
   const client = new MisoClient('your_api_key');
-  const context = client.ui.asks;
   const rootWorkflow = client.ui.ask;
 
   // wait for styles to be loaded
   await client.ui.ready;
 
   // render DOM and get element references
-  // default templates are available since 1.9.1
-  const templates = MisoClient.ui.defaults.ask.templates;
+  // default templates are available since v1.9.1
+  // wireFollowUps() and wireRelatedResources() are available since v1.9.9
+  const defaults = MisoClient.ui.defaults.ask;
+  const templates = defaults.templates;
+  const wireFollowUps = defaults.wireFollowUps;
+  const wireRelatedResources = defaults.wireRelatedResources;
+
   const rootElement = document.querySelector('#miso-ask-combo');
   rootElement.innerHTML = templates.root();
-  const followUpsSection = rootElement.querySelector(`.miso-ask-combo__follow-ups`);
-  const relatedResourcesContainer = rootElement.querySelector(`.miso-ask-combo__related-resources miso-ask`);
 
   // setup workflows
-  if (followUpsSection) {
-    // 1. when an answer is fully populated, insert a new section for the follow-up question
-    context.on('done', (event) => {
-      followUpsSection.insertAdjacentHTML('beforeend', templates.followUp({ parentQuestionId: event.workflow.questionId }));
-    });
-    // 2. if user starts over, clean up existing follow-up questions
-    rootWorkflow.on('loading', () => {
-      // clean up the entire follow-ups section
-      followUpsSection.innerHTML = '';
-      // destroy all follow-up workflows
-      context.reset({ root: false });
-    });
-  }
-  if (relatedResourcesContainer) {
-    // 3. when a new query starts, associate the last section container (for related resources) to that workflow
-    context.on('loading', (event) => {
-      relatedResourcesContainer.workflow = event.workflow;
-    });
-  }
+  wireFollowUps(client, rootElement.querySelector(`.miso-ask-combo__follow-ups`));
+  wireRelatedResources(client, rootElement.querySelector(`.miso-ask-combo__related-resources`));
 
   // start query if specified in URL parameters
   rootWorkflow.autoQuery();
 });
 ```
+
+* See the [implementation](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/defaults/ask/controls.js) of the helper functions `wireFollowUps` and `wireRelatedResources` for more details.
 
 ## Default templates
 
