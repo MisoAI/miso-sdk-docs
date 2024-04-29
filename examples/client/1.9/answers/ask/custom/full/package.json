@@ -1,0 +1,11 @@
+{
+  "name": "@miso.ai/examples-client-ui-ask-custom",
+  "description": "Miso JavaScript SDK example: Ask UI (custom)",
+  "private": true,
+  "scripts": {
+    "start": "npx serve -nL -p 5000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

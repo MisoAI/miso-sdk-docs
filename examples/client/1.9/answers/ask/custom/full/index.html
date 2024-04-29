@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@1.9.9/dist/umd/miso.min.js?api_key=eEQnZdeEMfuuvJXTdJ4u1ELjKgk0Ryx61j1zIYS7"></script>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <img class="miso-logo" src="/asset/miso.svg" />
+      <img class="site-logo" src="/asset/propublica.svg" />
+    </div>
+    <div id="miso-ask-combo" class="miso-ask-combo"></div>
+    <script aysnc>
+      const misocmd = window.misocmd || (window.misocmd = []);
+      misocmd.push(async () => {
+        // setup client
+        const MisoClient = window.MisoClient;
+        const client = new MisoClient('eEQnZdeEMfuuvJXTdJ4u1ELjKgk0Ryx61j1zIYS7');
+        const rootWorkflow = client.ui.ask;
+        // render DOM and get elements
+        await client.ui.ready;
+        const { templates, wireFollowUps, wireRelatedResources } = MisoClient.ui.defaults.ask;
+        const rootElement = document.querySelector('#miso-ask-combo');
+        rootElement.innerHTML = templates.root();
+        // setup workflows
+        wireFollowUps(client, rootElement.querySelector(`.miso-ask-combo__follow-ups`));
+        wireRelatedResources(client, rootElement.querySelector(`.miso-ask-combo__related-resources`));
+        // start query if specified in URL
+        rootWorkflow.autoQuery();
+      });
+    </script>
+  </body>
+</html>
