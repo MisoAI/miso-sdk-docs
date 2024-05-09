@@ -85,7 +85,14 @@ To send an `impression` event with SDK:
 ```js
 client.api.interactions.upload({
   type: 'impression',
-  product_ids: [...]
+  product_ids: [...],
+  context: {
+    custom_context: {
+      api_group: '...',
+      api_name: '...',
+      property: '...'
+    }
+  }
 });
 ```
 
@@ -113,7 +120,14 @@ To send an `viewable_impression` event with SDK:
 ```js
 client.api.interactions.upload({
   type: 'viewable_impression',
-  product_ids: [...]
+  product_ids: [...],
+  context: {
+    custom_context: {
+      api_group: '...',
+      api_name: '...',
+      property: '...'
+    }
+  }
 });
 ```
 
@@ -124,6 +138,13 @@ To send an `click` event with SDK:
 ```js
 client.api.interactions.upload({
   type: 'click',
-  product_ids: [...]
+  product_ids: [...],
+  context: {
+    custom_context: {
+      api_group: '...',
+      api_name: '...',
+      property: '...'
+    }
+  }
 });
 ```
