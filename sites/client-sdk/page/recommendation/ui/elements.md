@@ -6,4 +6,4 @@ title: Recommendation UI - elements
 
 {% set workflow = specs.ui.elements.lookup.recommendation %}
 
-{% include '../../elements/_workflow-elements.md' %}
+{% include '../../_shared/_workflow-elements.md' %}

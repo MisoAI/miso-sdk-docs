@@ -6,4 +6,4 @@ title: Explore module - elements
 
 {% set workflow = specs.ui.elements.lookup.explore %}
 
-{% include '../../elements/_workflow-elements.md' %}
+{% include '../../_shared/_workflow-elements.md' %}

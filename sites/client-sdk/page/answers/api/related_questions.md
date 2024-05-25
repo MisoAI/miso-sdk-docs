@@ -1,6 +1,6 @@
 ---
 api: related_questions
-title: Related questions
+title: Ask API - related questions
 description: Generate related questions against an article.
 ---
 

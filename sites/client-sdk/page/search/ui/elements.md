@@ -6,4 +6,4 @@ title: Search UI - elements
 
 {% set workflow = specs.ui.elements.lookup.search %}
 
-{% include '../../elements/_workflow-elements.md' %}
+{% include '../../_shared/_workflow-elements.md' %}

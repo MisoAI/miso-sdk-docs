@@ -1,5 +1,5 @@
 import elements from './elements.yml';
-import workflows from './workflows.yml';
+import workflows from './workflows.js';
 
 let { containers, components, ...rest } = elements;
 const lookup = {};

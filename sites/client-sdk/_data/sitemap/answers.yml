@@ -58,3 +58,9 @@ sections:
   - title: Related questions
     path: /api/related_questions
     desc: Generate related questions against an article.
+  - title: Interactions (ask)
+    path: /api/interactions-ask
+    desc: Send user interaction events for analytics regarding ask module.
+  - title: Interactions (explore)
+    path: /api/interactions-explore
+    desc: Send user interaction events for analytics regarding explore module.

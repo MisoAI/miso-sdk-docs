@@ -3,29 +3,55 @@ ask:
   url: /answers/ask/custom/
   context:
     api_group: ask
-    api_name:
-    - questions
+    apis:
+    - api_name: questions
+      properties:
+      - name: sources
+        in_catalog: true
+        item_term: article
+      - name: related_resources
+        in_catalog: true
+        item_term: article
 explore:
   label: Explore
   url: /answers/explore/
   context:
     api_group: ask
-    api_name:
-    - related_questions
+    apis:
+    - api_name: related_questions
+      properties:
+      - name: related_questions
+        in_catalog: false
+        item_term: question
 search:
   label: Search
   url: /search/
   context:
     api_group: search
-    api_name:
-    - search
+    apis:
+    - api_name: search
+      properties:
+      - name: products
+        in_catalog: true
+        item_term: product
 recommendation:
   label: Recommendation
   url: /recommendation/
   context:
     api_group: recommendation
-    api_name:
-    - product_to_products
-    - user_to_products
-    - user_to_attributes
-    - user_to_trending
+    apis:
+    - api_name: product_to_products
+      properties:
+      - name: products
+        in_catalog: true
+        item_term: product
+    - api_name: user_to_products
+      properties:
+      - name: products
+        in_catalog: true
+        item_term: product
+    - api_name: user_to_trending
+      properties:
+      - name: products
+        in_catalog: true
+        item_term: product

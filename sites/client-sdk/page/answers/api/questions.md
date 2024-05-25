@@ -1,6 +1,6 @@
 ---
 api: questions
-title: Questions
+title: Ask API - questions
 description: Answer a question using LLM technology.
 ---
 
