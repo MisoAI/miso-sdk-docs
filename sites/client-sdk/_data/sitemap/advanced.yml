@@ -10,6 +10,9 @@ sections:
   - title: Performance measurement
     path: /performance
     desc: How SDK measures performance events (impression, viewable impression, and click)
-  - title: Progressive markdown
+  - title: Progressive markdown mechanism
     path: /progressive-markdown
     desc: How SDK handles progressive markdown rendering
+  - title: Progressive markdown tools
+    path: /progressive-markdown-tools
+    desc: Tools for standalone progressive markdown rendering

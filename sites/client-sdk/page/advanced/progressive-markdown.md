@@ -1,5 +1,5 @@
 ---
-title: Progressive markdown rendering
+title: Progressive markdown rendering mechanism
 ---
 
 In this page, we are going to explain how the SDK handles progressive markdown rendering in `ask` workflow.
@@ -160,21 +160,3 @@ There are some details additional to the main architecture that you may want to 
 * The SDK acquires animation frames aggresively to keep the rendering smooth.
 
 You can find all the details in the source code mentioned above.
-
-## Build your own progressive markdown renderer
-
-If you don't use the built-in UI elements in SDK, you may want to build your own progressive markdown renderer. The following parts are available in a separate NPM package [@miso.ai/progressive-markdown](https://www.npmjs.com/package/@miso.ai/progressive-markdown):
-
-* Parser
-* Query
-* Operations
-* Renderer
-
-Some other parts are available in the SDK UI package that you could read as a reference:
-
-* [Pacer](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/layout/text/typewriter/progress.js)
-* [Typewriter element](https://github.com/MisoAI/miso-client-js-sdk/tree/main/packages/client-sdk-ui/src/layout/text/typewriter/index.js).
-
-#### A potential React adaption
-
-In case you want to build a React component/hook, you may want to update the DOM through React's virtual DOM. In that case, you could reuse the `Parser` and extend `Query` so that instead of computing DOM operations, it computes the left slice of the AST by the cursor, and then you can transform the AST slice to React components and pass to the React renderer. However, you may need to mind the performance.
