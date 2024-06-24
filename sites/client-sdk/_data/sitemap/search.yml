@@ -32,3 +32,6 @@ sections:
   - title: Interactions
     path: /api/interactions
     desc: Send user interaction events for analytics.
+  - title: Context
+    path: /api/context
+    desc: Context values that are included by all to API payloads.

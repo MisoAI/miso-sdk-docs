@@ -14,8 +14,6 @@ const response = await client.api.search.autocomplete(payload, options);
 #### Examples
 ```js
 const payload = {
-  user_id: '...',
-  user_hash: '...',
   q: 'shiba ',
   fl: ['title', 'sale_price'],
   completion_fields: ['title', 'tags', 'custom_attributes.author']
@@ -27,4 +25,5 @@ for (const { text, text_with_markups, product } of completions.title) {
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#tag/Search-APIs/operation/autocomplete_v1_search_autocomplete_post).
+* For advanced usage, see [REST API](https://api.askmiso.com/#tag/Search-APIs/operation/autocomplete_v1_search_autocomplete_post).
+* For passing user data, see [Context]({{ '/search/api/context/' | url }}).

@@ -40,6 +40,10 @@ const context = client.ui.asks;
 context.useApi(payload);
 ```
 
+#### User data
+
+To pass user data to the API, see [API - context]({{ '/answers/api/context/' | url }}).
+
 ### Use a custom data source
 
 You can use a custom data source in place of the built-in Miso API by the following steps:

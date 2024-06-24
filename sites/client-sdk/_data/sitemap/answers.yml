@@ -65,3 +65,6 @@ sections:
   - title: Interactions (explore)
     path: /api/interactions-explore
     desc: Send user interaction events for analytics regarding explore module.
+  - title: Context
+    path: /api/context
+    desc: Context values that are included by all to API payloads.

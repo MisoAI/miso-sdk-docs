@@ -14,7 +14,7 @@
 - key: user_hash
   type: string
   desc: |
-    The hash of `user_id` (or `anonymous_id`) encrypted by your [Secret API Key](https://api.askmiso.com/#section/Authentication/Secret%20API%20Key).
+    The hash of `user_id` encrypted by your [Secret API Key](https://api.askmiso.com/#section/Authentication/Secret%20API%20Key).
 - key: miso_id
   type: string
   desc: |

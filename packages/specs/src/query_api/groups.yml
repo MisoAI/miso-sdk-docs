@@ -2,9 +2,9 @@
 - key: _config
   props:
   - engine_id
-  - user_id
-  - anonymous_id
-  - user_hash
+#  - user_id
+#  - anonymous_id
+#  - user_hash
 - key: _product
   props:
   - fq
@@ -30,8 +30,8 @@
   - event.product_group_ids
 - key: _event.context
   props:
-  - user_id
-  - anonymous_id
+#  - user_id
+#  - anonymous_id
   - event.timestamp
   - miso_id
   - event.context

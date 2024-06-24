@@ -1,6 +1,7 @@
 ask:
   label: Ask
-  url: /answers/ask/custom/
+  url: /answers/ask/
+  chapter_url: /answers/
   context:
     api_group: ask
     apis:
@@ -15,6 +16,7 @@ ask:
 explore:
   label: Explore
   url: /answers/explore/
+  chapter_url: /answers/
   context:
     api_group: ask
     apis:
@@ -26,6 +28,7 @@ explore:
 search:
   label: Search
   url: /search/
+  chapter_url: /search/
   context:
     api_group: search
     apis:
@@ -37,6 +40,7 @@ search:
 recommendation:
   label: Recommendation
   url: /recommendation/
+  chapter_url: /recommendation/
   context:
     api_group: recommendation
     apis:

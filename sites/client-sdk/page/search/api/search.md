@@ -14,8 +14,6 @@ const response = await client.api.search.search(payload, options);
 #### Examples
 ```js
 const payload = {
-  user_id: '...',
-  user_hash: '...',
   q: 'doge',
   fl: ['title', 'sale_price', 'custom_attributes.*']
 };
@@ -23,4 +21,5 @@ const { products } = await client.api.search.search(payload);
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#tag/Search-APIs/operation/search_v1_search_search_post).
+* For advanced usage, see [REST API](https://api.askmiso.com/#tag/Search-APIs/operation/search_v1_search_search_post).
+* For passing user data, see [Context]({{ '/search/api/context/' | url }}).

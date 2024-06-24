@@ -14,8 +14,6 @@ const response = await client.api.recommendation.productToProducts(payload, opti
 #### Examples
 ```js
 const payload = {
-  user_id: '...',
-  user_hash: '...',
   product_id: '...',
   buy_together: true,
   fl: ['title', 'sale_price', 'custom_attributes.*']
@@ -24,4 +22,5 @@ const { products } = await client.api.recommendation.productToProducts(payload);
 ```
 
 #### Learn more
-For advanced usage, see [REST API](https://api.askmiso.com/#tag/Recommendation-APIs/operation/product_to_products_v1_recommendation_product_to_products_post).
+* For advanced usage, see [REST API](https://api.askmiso.com/#tag/Recommendation-APIs/operation/product_to_products_v1_recommendation_product_to_products_post).
+* For passing user data, see [Context]({{ '/recommendation/api/context/' | url }}).
