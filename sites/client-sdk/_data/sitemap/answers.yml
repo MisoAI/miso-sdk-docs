@@ -3,34 +3,21 @@ sections:
 - title: Overview
   path:
   desc: Overview for building your Answers UI
-- title: Ask (Stardard)
-  path: /ask/standard
-  desc: UI for Miso ask API (Stardard)
+- title: Ask
+  path: /ask
+  desc: UI for Miso ask API
   pages:
   - title: Quick start
-    path: /ask/standard/quick-start
+    path: /ask/quick-start
     desc: Ask UI - quick start
-  - title: Configuration
-    path: /ask/standard/configuration
-    desc: Ask UI - configuration
-  - title: CSS styles
-    path: /ask/standard/styles
-    desc: Ask UI - customize CSS styles
-- title: Ask (Custom)
-  path: /ask/custom
-  desc: UI for Miso ask API (Custom)
-  pages:
-  - title: Full implementation
-    path: /ask/custom/full
-    desc: Ask UI - full implementation
   - title: Workflow
-    path: /ask/custom/workflow
+    path: /ask/workflow
     desc: Ask UI - workflow
   - title: Elements
-    path: /ask/custom/elements
+    path: /ask/elements
     desc: Ask UI - elements
   - title: Data
-    path: /ask/custom/data
+    path: /ask/data
     desc: Ask UI - data
 - title: Explore
   path: /explore
@@ -45,6 +32,20 @@ sections:
 #  - title: Linkless
 #    path: /explore/linkless
 #    desc: Practices to handle question selection without links
+- title: Ask (Combo)
+  path: /ask/combo
+  desc: UI for Miso ask API (Combo)
+  conceal: true
+  pages:
+  - title: Quick start
+    path: /ask/combo/quick-start
+    desc: Ask UI - quick start
+  - title: Configuration
+    path: /ask/combo/configuration
+    desc: Ask UI - configuration
+  - title: CSS styles
+    path: /ask/combo/styles
+    desc: Ask UI - customize CSS styles
 - title: API
   path: /api
   desc: Call Miso APIs directly

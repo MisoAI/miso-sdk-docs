@@ -1,0 +1,22 @@
+# /ask/standard -> /ask/combo
+- from: /answers/ask/standard
+  to: /answers/ask/combo
+- from: /answers/ask/standard/quick-start
+  to: /answers/ask/combo/quick-start
+- from: /answers/ask/standard/configuration
+  to: /answers/ask/combo/configuration
+- from: /answers/ask/standard/styles
+  to: /answers/ask/combo/styles
+# /ask/custom -> /ask
+- from: /answers/ask/custom
+  to: /answers/ask
+- from: /answers/ask/custom/full
+  to: /answers/ask/quick-start
+- from: /answers/ask/custom/quick-start
+  to: /answers/ask/quick-start
+- from: /answers/ask/custom/data
+  to: /answers/ask/data
+- from: /answers/ask/custom/elements
+  to: /answers/ask/elements
+- from: /answers/ask/custom/workflow
+  to: /answers/ask/workflow

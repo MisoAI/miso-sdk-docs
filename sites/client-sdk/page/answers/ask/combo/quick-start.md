@@ -1,5 +1,5 @@
 ---
-title: Ask module (standard) - quick start
+title: Ask module (combo) - quick start
 ---
 
 {%- from 'macros.njk' import stackblitz_link with context -%}
@@ -12,7 +12,7 @@ Build your ask module in simple steps:
 
 #### Live demo
 
-{{ stackblitz_link('1.9/answers/ask/standard/basic') }}
+{{ stackblitz_link('1.9/answers/ask/combo/basic') }}
 
 {% set step = 1 %}
 {% include 'step/obtain-api-key.md' %}
@@ -32,5 +32,5 @@ In your webpage, add the following elements where you want to display the ask mo
 
 ## Customization
 
-* [Configuration]({{ '/answers/ask/custom/configuration/' | url }})
-* [CSS Styles]({{ '/answers/ask/custom/styles/' | url }})
+* [Configuration]({{ '/answers/ask/combo/configuration/' | url }})
+* [CSS Styles]({{ '/answers/ask/combo/styles/' | url }})

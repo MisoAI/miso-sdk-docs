@@ -1,6 +1,6 @@
 {
-  "name": "@miso.ai/examples-client-ui-ask-standard",
-  "description": "Miso JavaScript SDK example: Ask UI (standard)",
+  "name": "@miso.ai/examples-client-ui-ask-combo",
+  "description": "Miso JavaScript SDK example: Ask UI (combo)",
   "private": true,
   "scripts": {
     "start": "npx serve -nL -p 5000"

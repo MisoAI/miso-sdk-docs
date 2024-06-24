@@ -1,5 +1,5 @@
 ---
-title: Ask module (standard) - configuration
+title: Ask module (combo) - configuration
 ---
 
 {%- from 'macros.njk' import since with context -%}

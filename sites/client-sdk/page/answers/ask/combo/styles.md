@@ -1,5 +1,5 @@
 ---
-title: Ask module (standard) - customize CSS styles
+title: Ask module (combo) - customize CSS styles
 ---
 
 You can customize the styles with CSS by:

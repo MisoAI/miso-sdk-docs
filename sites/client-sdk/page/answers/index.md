@@ -13,7 +13,7 @@ You can integrate Miso Answers into your website in two steps:
 
 ## Build your explore module
 
-Follow the [guide]({{ '/answers/explore/' | url }}).
+Follow the [guide]({{ '/answers/explore/quick-start' | url }}).
 
 ## Advanced topics
 * [Technology stack]({{ '/advanced/technology/' | url }})

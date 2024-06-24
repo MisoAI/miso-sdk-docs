@@ -112,3 +112,9 @@
 {% macro deprecated(version) %}
 <p><div class="deprecated">Deprecated in {{ version }}</div></p>
 {% endmacro %}
+
+{% macro redirect(path) %}
+<script>
+window.location.replace("{{ path | url }}");
+</script>
+{% endmacro %}

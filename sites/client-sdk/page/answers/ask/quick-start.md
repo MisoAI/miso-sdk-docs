@@ -1,5 +1,5 @@
 ---
-title: Ask module (custom) - full implementation
+title: Ask module - quick start
 ---
 
 {%- from 'macros.njk' import stackblitz_link with context -%}
