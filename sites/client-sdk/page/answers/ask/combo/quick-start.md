@@ -2,7 +2,9 @@
 title: Ask module (combo) - quick start
 ---
 
-{%- from 'macros.njk' import stackblitz_link with context -%}
+{%- from 'macros.njk' import stackblitz_link, deprecated with context -%}
+
+{{ deprecated('1.10.0') }}
 
 Build your ask module in simple steps:
 
