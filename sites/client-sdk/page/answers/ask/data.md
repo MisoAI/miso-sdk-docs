@@ -29,11 +29,25 @@ Given a question `What's the meaing of life?`, the API payload will be:
 
 See the [REST API reference](https://api.askmiso.com/#tag/Ask-APIs/operation/questions_v1_ask_questions_post) for payload options.
 
-You can configure the default API payload for all workflows:
+#### Sources and related resources fields
+
+You can specify the list of fields of source and related resource records returned in the API responses respectively:
+
+```js
+workflow.useApi({
+  source_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
+  related_resource_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
+});
+```
+
+* `product_id` and `title` are always included in the response.
+* See [source code](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/workflow/ask.js#L14-L15) for the default values of `source_fl` and `related_resource_fl`.
 
 #### Configure API request globally
 
 {{ since('1.8.2') }}
+
+You can configure the default API payload for all workflows:
 
 ```js
 const context = client.ui.asks;

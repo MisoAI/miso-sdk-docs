@@ -6,7 +6,7 @@ title: Recommendation UI - data
 
 {% set workflow = specs.ui.workflows.recommendation %}
 
-## Configure API request
+### Configure API request
 
 You can configure the API and its payload (request body):
 

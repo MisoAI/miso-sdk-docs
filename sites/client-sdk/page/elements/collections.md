@@ -37,6 +37,25 @@ Available built-in layouts are:
 * `cards`
 * `carousel`
 
+#### Layout options
+
+You can customize the layout by specifying additional options in the following way:
+
+```js
+workflow.useLayouts({
+  products: ['list', {
+    // additional options
+  }]
+});
+
+// or with default layout type
+workflow.useLayouts({
+  products: {
+    // additional options
+  }
+});
+```
+
 #### Customize styles
 
 You can customize the look-and-feel of any layouts by adding additional CSS rules. The built-in layouts have the following base class names:
@@ -45,20 +64,24 @@ You can customize the look-and-feel of any layouts by adding additional CSS rule
   <thead>
     <tr>
       <th scope="col">Layout</th>
+      <th scope="col">Key</th>
       <th scope="col">CSS class name</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>List</td>
+      <td><code>list</code></td>
       <td><code>miso-list</code></td>
     </tr>
     <tr>
       <td>Cards</td>
+      <td><code>cards</code></td>
       <td><code>miso-cards</code></td>
     </tr>
     <tr>
       <td>Carousel</td>
+      <td><code>carousel</code></td>
       <td><code>miso-carousel</code></td>
     </tr>
   </tbody>
@@ -99,14 +122,6 @@ The render function takes the following arguments and should return an HTML stri
 * `state`: the whole data state in this rendering process
 * `product`: the product record to display
 
-Note that the properties of the product record are limited to the fields returned by the API. If you need additional fields, you need to specify `fl` in the API payload.
-
-```js
-workflow.useApi({
-  fl: [],
-});
-```
-
 #### Customize DOM structure (sources, related resources)
 
 to customize product item DOM structure, you can override the template function:
@@ -138,3 +153,15 @@ The render function takes the following arguments and should return an HTML stri
 * `article`: the article record to display
 
 See also: [default templates](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/layout/templates.js).
+
+Note that the properties of the article record are limited to the fields returned by the API. If you need additional fields, you need to specify `source_fl` or `related_resource_fl` in the API payload:
+
+```js
+const context = client.ui.asks;
+context.useApi({
+  source_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
+  related_resource_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
+});
+```
+
+See [Ask UI: data]({{ '/answers/ask/data/' | url }}) for details.

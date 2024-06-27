@@ -6,7 +6,7 @@ title: Search UI - data
 
 {% set workflow = specs.ui.workflows.search %}
 
-## Configure API request
+### Configure API request
 
 You can configure the base API payload (request body) for the search workflow:
 
