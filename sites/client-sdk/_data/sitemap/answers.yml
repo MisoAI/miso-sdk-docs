@@ -10,6 +10,9 @@ sections:
   - title: Quick start
     path: /ask/quick-start
     desc: Ask UI - quick start
+  - title: Template helpers
+    path: /ask/templates
+    desc: Ask UI - templates
   - title: Elements
     path: /ask/elements
     desc: Ask UI - elements
