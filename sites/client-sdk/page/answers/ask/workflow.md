@@ -6,9 +6,6 @@ title: Ask UI - workflow
 
 Workflows are JavaScript objects that control the process of the entire data flow from SDK API request to UI display. 
 
-* Configure API default payload.
-* Configure the look and feel of UI elements.
-
 ### Access workflow
 
 You can access the (root) workflow as the following:

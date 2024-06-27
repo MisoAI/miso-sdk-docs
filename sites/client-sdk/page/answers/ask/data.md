@@ -57,6 +57,27 @@ context.useApi(payload);
 
 {% include '../../_shared/_ui-user.md' %}
 
+### Modify API response
+
+You can modify the API response before rendering the UI:
+
+```js
+// for individual workflow
+workflow.useDataProcessor(data => {
+  const response = data.value; // the API response
+  const { answer, sources, related_resources } = response;
+  // ...modify the response
+  return data;
+});
+
+// or for all workflows
+const context = client.ui.asks;
+context.useDataProcessor(data => {
+  // ...
+  return data;
+});
+```
+
 ### Use a custom data source
 
 You can use a custom data source in place of the built-in Miso API by the following steps:
@@ -83,7 +104,14 @@ context.useApi(false);
 To listen to request event:
 
 ```js
+// for individual workflow
 workflow.on('request', ({ session, payload }) => {
+  // ...
+});
+
+// or for all workflows
+const context = client.ui.asks;
+context.on('request', ({ workflow, session, payload }) => {
   // ...
 });
 ```
@@ -140,11 +168,11 @@ See the following example:
 const misocmd = window.misocmd || (window.misocmd = []);
 misocmd.push(() => {
   const client = new MisoClient(`${apiKey}`);
-  const workflow = client.ui.ask;
+  const context = client.ui.asks;
   // 1. disable the built-in data source
-  workflow.useApi(false);
+  context.useApi(false);
   // 2. listen to input event
-  workflow.on('request', async ({ session, payload }) => {
+  context.on('request', async ({ workflow, session, payload }) => {
     const questionId = await your.api.getQuestionId(payload); // your API call
     let intervalId;
     intervalId = setInterval(async () => {
