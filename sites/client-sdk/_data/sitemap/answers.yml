@@ -10,15 +10,15 @@ sections:
   - title: Quick start
     path: /ask/quick-start
     desc: Ask UI - quick start
-  - title: Workflow
-    path: /ask/workflow
-    desc: Ask UI - workflow
   - title: Elements
     path: /ask/elements
     desc: Ask UI - elements
   - title: Data
     path: /ask/data
     desc: Ask UI - data
+  - title: Workflow
+    path: /ask/workflow
+    desc: Ask UI - workflow
 - title: Explore
   path: /explore
   desc: UI for Miso related questions API

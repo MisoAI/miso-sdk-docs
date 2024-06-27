@@ -4,9 +4,9 @@ title: Ask UI - data
 
 {%- from 'macros.njk' import since with context -%}
 
-### Configure API payload
+### Configure API request
 
-You can configure the default question API payload:
+You can configure the base question API payload (request body):
 
 ```js
 workflow.useApi(payload);
@@ -22,7 +22,7 @@ Given a question `What's the meaing of life?`, the API payload will be:
 
 ```json
 {
-  "q": "What's the meaing of life?",
+  "question": "What's the meaing of life?",
   "yearly_decay": 0.9
 }
 ```
@@ -31,7 +31,7 @@ See the [REST API reference](https://api.askmiso.com/#tag/Ask-APIs/operation/que
 
 You can configure the default API payload for all workflows:
 
-#### Configure API globally
+#### Configure API request globally
 
 {{ since('1.8.2') }}
 
@@ -40,9 +40,7 @@ const context = client.ui.asks;
 context.useApi(payload);
 ```
 
-#### User data
-
-To pass user data to the API, see [API - context]({{ '/answers/api/context/' | url }}).
+{% include '../../_shared/_ui-user.md' %}
 
 ### Use a custom data source
 

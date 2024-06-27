@@ -99,6 +99,14 @@ The render function takes the following arguments and should return an HTML stri
 * `state`: the whole data state in this rendering process
 * `product`: the product record to display
 
+Note that the properties of the product record are limited to the fields returned by the API. If you need additional fields, you need to specify `fl` in the API payload.
+
+```js
+workflow.useApi({
+  fl: [],
+});
+```
+
 #### Customize DOM structure (sources, related resources)
 
 to customize product item DOM structure, you can override the template function:

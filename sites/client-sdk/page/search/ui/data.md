@@ -1,10 +1,14 @@
 ---
-title: Search UI - configure API
+title: Search UI - data
 ---
 
 {%- from 'macros.njk' import stackblitz_link, since with context -%}
 
-You can configure the base API payload for the search workflow:
+{% set workflow = specs.ui.workflows.search %}
+
+## Configure API request
+
+You can configure the base API payload (request body) for the search workflow:
 
 ```js
 const workflow = client.ui.search;
@@ -27,3 +31,5 @@ When user submit a keyword `shiba`, the API payload will be:
 ```
 
 See the [API reference]({{ '/search/api/search/' | url }}) for more payload options.
+
+{% include '../../_shared/_ui-user.md' %}

@@ -1,10 +1,14 @@
 ---
-title: Recommendation UI - configure API
+title: Recommendation UI - data
 ---
 
 {%- from 'macros.njk' import stackblitz_link, since with context -%}
 
-You can configure the API and its payload:
+{% set workflow = specs.ui.workflows.recommendation %}
+
+## Configure API request
+
+You can configure the API and its payload (request body):
 
 ```js
 const workflow = client.ui.recommendation;
@@ -50,7 +54,7 @@ Available `apiName` values are:
 
 See the API reference pages for more payload options.
 
-#### Configure API globally
+#### Configure API request globally
 
 {{ since('1.8.2') }}
 
@@ -60,3 +64,5 @@ You can configure the API payload for all workflows:
 const context = client.ui.recommendations;
 context.useApi(apiName, payload);
 ```
+
+{% include '../../_shared/_ui-user.md' %}

@@ -20,3 +20,9 @@
   to: /answers/ask/elements
 - from: /answers/ask/custom/workflow
   to: /answers/ask/workflow
+# /search/ui/api -> /search/ui/data
+- from: /search/ui/api
+  to: /search/ui/data
+# /recommendation/ui/api -> /recommendation/ui/data
+- from: /recommendation/ui/api
+  to: /recommendation/ui/data

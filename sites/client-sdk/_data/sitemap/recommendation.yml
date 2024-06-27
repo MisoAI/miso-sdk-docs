@@ -7,12 +7,12 @@ sections:
   - title: Quick start
     path: /ui/quick-start
     desc: Recommendation UI - quick start
-  - title: Configure API
-    path: /ui/api
-    desc: Recommendation UI - configure your API request
   - title: Elements
     path: /ui/elements
     desc: Recommendation UI - elements
+  - title: Data
+    path: /ui/data
+    desc: Recommendation UI - data
   - title: Multiple units
     path: /ui/multiple
     desc: Recommendation UI - multiple units

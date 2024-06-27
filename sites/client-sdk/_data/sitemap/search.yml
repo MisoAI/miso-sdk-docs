@@ -7,15 +7,15 @@ sections:
   - title: Quick start
     path: /ui/quick-start
     desc: Search UI - quick start
-  - title: Configure API
-    path: /ui/api
-    desc: Search UI - configure your API request.
   - title: Elements
     path: /ui/elements
     desc: Search UI - elements
+  - title: Data
+    path: /ui/data
+    desc: Search UI - data
   - title: Tracking
     path: /ui/tracking
-    desc: Search UI - performance tracking.
+    desc: Search UI - performance tracking
 - title: API
   path: /api
   desc: Call Miso APIs directly
