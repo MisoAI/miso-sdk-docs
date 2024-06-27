@@ -165,3 +165,22 @@ context.useApi({
 ```
 
 See [Ask UI: data]({{ '/answers/ask/data/' | url }}) for details.
+
+#### Customize DOM structure (related questions)
+
+To customize related question item DOM structure, you can override the template function:
+
+```js
+workflow.useLayouts({
+  related_questions: ['list', {
+    templates: {
+      question: renderQuestion
+    }
+  }]
+});
+
+function renderQuestion(layout, state, question) {
+  const html = '...';
+  return html;
+}
+```
