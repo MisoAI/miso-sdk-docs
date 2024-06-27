@@ -41,6 +41,7 @@ workflow.useApi({
 ```
 
 * `product_id` and `title` are always included in the response.
+* The fields override the default settings, rather than adding to the default fields. It's very likely you may want to keep `url` and `cover_image` fields in the list if they are used in your templates.
 * See [source code](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/workflow/ask.js#L14-L15) for the default values of `source_fl` and `related_resource_fl`.
 
 #### Configure API request globally
