@@ -2,36 +2,36 @@ title: Search
 sections:
 - title: Search UI
   path:
-  desc: Guide for building your search UI
+  summary: Guide for building your search UI
   pages:
   - title: Quick start
     path: /ui/quick-start
-    desc: Search UI - quick start
+    summary: Search UI - quick start
   - title: Elements
     path: /ui/elements
-    desc: Search UI - elements
+    summary: Search UI - elements
   - title: Data
     path: /ui/data
-    desc: Search UI - data
+    summary: Search UI - data
   - title: Tracking
     path: /ui/tracking
-    desc: Search UI - performance tracking
+    summary: Search UI - performance tracking
 - title: API
   path: /api
-  desc: Call Miso APIs directly
+  summary: Call Miso APIs directly
   pages:
   - title: Setup
     path: /api/setup
-    desc: Setup SDK client for using Miso API.
+    summary: Setup SDK client for using Miso API.
   - title: Search
     path: /api/search
-    desc: Search against terms and conditions.
+    summary: Search against terms and conditions.
   - title: Autocomplete
     path: /api/autocomplete
-    desc: Autocomplete.
+    summary: Autocomplete.
   - title: Interactions
     path: /api/interactions
-    desc: Send user interaction events for analytics.
+    summary: Send user interaction events for analytics.
   - title: Context
     path: /api/context
-    desc: Context values that are included by all to API payloads.
+    summary: Context values that are included by all to API payloads.

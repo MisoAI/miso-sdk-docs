@@ -2,45 +2,45 @@ title: Recommendation
 sections:
 - title: Recommendation UI
   path:
-  desc: Guide for building your recommendation UI
+  summary: Guide for building your recommendation UI
   pages:
   - title: Quick start
     path: /ui/quick-start
-    desc: Recommendation UI - quick start
+    summary: Recommendation UI - quick start
   - title: Elements
     path: /ui/elements
-    desc: Recommendation UI - elements
+    summary: Recommendation UI - elements
   - title: Data
     path: /ui/data
-    desc: Recommendation UI - data
+    summary: Recommendation UI - data
   - title: Multiple units
     path: /ui/multiple
-    desc: Recommendation UI - multiple units
+    summary: Recommendation UI - multiple units
   - title: Tracking
     path: /ui/tracking
-    desc: Recommendation UI - performance tracking.
+    summary: Recommendation UI - performance tracking.
 - title: API
   path: /api
-  desc: Call Miso APIs directly
+  summary: Call Miso APIs directly
   pages:
   - title: Setup
     path: /api/setup
-    desc: Setup SDK client for using Miso API.
+    summary: Setup SDK client for using Miso API.
   - title: Product to products
     path: /api/product_to_products
-    desc: Recommend products based on a product and user interests.
+    summary: Recommend products based on a product and user interests.
   - title: User to products
     path: /api/user_to_products
-    desc: Recommend products based on user interests.
+    summary: Recommend products based on user interests.
   - title: User to attributes
     path: /api/user_to_attributes
-    desc: Recommend product attributes based on user interests.
+    summary: Recommend product attributes based on user interests.
   - title: User to trending
     path: /api/user_to_trending
-    desc: Recommend trending products based on user interests.
+    summary: Recommend trending products based on user interests.
   - title: Interactions
     path: /api/interactions
-    desc: Send user interaction events for analytics.
+    summary: Send user interaction events for analytics.
   - title: Context
     path: /api/context
-    desc: Context values that are included by all to API payloads.
+    summary: Context values that are included by all to API payloads.

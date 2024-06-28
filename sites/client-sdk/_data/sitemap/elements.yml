@@ -2,33 +2,33 @@ title: Elements
 sections:
 - title: Overview
   path:
-  desc: Miso custom elements overview
+  summary: Miso custom elements overview
 - title: Containers
   path: /containers
-  desc: Container elements
+  summary: Container elements
   pages:
   - title: <miso-ask>
     path: /miso-ask
-    desc: Container element for ask workflow
+    summary: Container element for ask workflow
   - title: <miso-explore>
     path: /miso-explore
-    desc: Container element for explore workflow
+    summary: Container element for explore workflow
   - title: <miso-search>
     path: /miso-search
-    desc: Container element for search workflow
+    summary: Container element for search workflow
   - title: <miso-recommendation>
     path: /miso-recommendation
-    desc: Container element for recommendation workflow
+    summary: Container element for recommendation workflow
 - title: Components
   path: /components
-  desc: Component elements
+  summary: Component elements
   pages:
   - title: <miso-query>
     path: /miso-query
-    desc: Search box element
+    summary: Search box element
   - title: <miso-answer>
     path: /miso-answer
-    desc: Answer text element
+    summary: Answer text element
   - title: Collections
     path: /collections
-    desc: Collection elements
+    summary: Collection elements

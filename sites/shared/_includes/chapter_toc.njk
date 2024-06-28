@@ -14,10 +14,16 @@
             <div>
               <a href="{{ ['/', chapter, p.path, '/'] | join | url }}">{{ p.title }}</a>
             </div>
-            {%- if p.desc -%}
+            {%- if p.summary -%}
             <p class="mb-0 ps-3">
-              {{ p.desc }}
+              {{ p.summary }}
             </p>
+            {%- endif -%}
+            {%- if p.outline -%}
+            <ul class="outline-list ps-3">
+            {%- for o in p.outline -%}
+              <li class="outline-item">{{ o }}</li>
+            {%- endfor -%}
             {%- endif -%}
           </li>
         {%- endfor -%}
@@ -27,10 +33,16 @@
       <h5 class="title mb-2">
         <a href="{{ ['/', chapter, section.path, '/'] | join | url }}">{{ section.title }}</a>
       </h5>
-      {%- if section.desc -%}
+      {%- if section.summary -%}
       <p class="mb-0">
-        {{ section.desc }}
+        {{ section.summary }}
       </p>
+      {%- endif -%}
+      {%- if section.outline -%}
+      <ul class="outline-list">
+      {%- for o in section.outline -%}
+        <li class="outline-item">{{ o }}</li>
+      {%- endfor -%}
       {%- endif -%}
     {%- endif -%}
     </li>

@@ -41,3 +41,4 @@ components:
 - name: query-suggestions
   property: followup_questions
 - name: related-questions
+  slug: collections

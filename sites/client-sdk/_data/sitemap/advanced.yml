@@ -2,17 +2,17 @@ title: Advanced topics
 sections:
 - title: Advanced topics
   path:
-  desc: Advanced topics
+  summary: Advanced topics
   pages:
   - title: Tecknology stack
     path: /technology
-    desc: The technology stack of the SDK solution
+    summary: The technology stack of the SDK solution
   - title: Performance measurement
     path: /performance
-    desc: How SDK measures performance events (impression, viewable impression, and click)
+    summary: How SDK measures performance events (impression, viewable impression, and click)
   - title: Progressive markdown
     path: /progressive-markdown
-    desc: How SDK handles progressive markdown rendering
+    summary: How SDK handles progressive markdown rendering
   - title: Progressive markdown tools
     path: /progressive-markdown-tools
-    desc: Tools for standalone progressive markdown rendering
+    summary: Tools for standalone progressive markdown rendering

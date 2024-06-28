@@ -2,72 +2,94 @@ title: Answers
 sections:
 - title: Overview
   path:
-  desc: Overview for building your Answers UI
+  summary: Overview for building your Answers UI
 - title: Ask
   path: /ask
-  desc: UI for Miso ask API
+  summary: UI for Miso ask API
   pages:
   - title: Quick start
     path: /ask/quick-start
-    desc: Ask UI - quick start
+    summary: Get started to build your own ask UI in a few steps.
+    outline:
+    - Get your API key.
+    - Access the SDK.
+    - Build your ask UI.
   - title: Template helpers
     path: /ask/templates
-    desc: Ask UI - templates
+    summary: How to customize the content of ask UI module.
+    outline:
+    - Add custom contents to the application.
+    - Change the arrangement of the elements.
   - title: Elements
     path: /ask/elements
-    desc: Ask UI - elements
+    summary: How to customize each custom element in ask UI.
+    outline:
+    - A list of elements that are used in ask UI.
   - title: Data
     path: /ask/data
-    desc: Ask UI - data
+    summary: How to customize data used in ask UI.
+    outline:
+    - Configure API request
+    - Modify API response
+    - Use your own data source
   - title: Workflow
     path: /ask/workflow
-    desc: Ask UI - workflow
+    summary: Introduce the workflow objects that manages the life cycle of ask UI.
+    outline:
+    - Access workflow objects
+    - Listen to lifecycle events
 - title: Explore
   path: /explore
-  desc: UI for Miso related questions API
+  summary: UI for Miso related questions API
   pages:
   - title: Quick start
     path: /explore/quick-start
-    desc: Explore UI - quick start
+    summary: Get started to build your own explore module in a few steps.
+    outline:
+    - Get your API key.
+    - Access the SDK.
+    - Build your explore UI module.
   - title: Elements
     path: /explore/elements
-    desc: Explore UI - elements
+    summary: How to customize each custom element in ask UI.
+    outline:
+    - A list of elements that are used in ask UI.
 #  - title: Linkless
 #    path: /explore/linkless
-#    desc: Practices to handle question selection without links
+#    summary: Practices to handle question selection without links
 - title: Ask (Combo)
   path: /ask/combo
-  desc: UI for Miso ask API (Combo)
+  summary: UI for Miso ask API (Combo)
   conceal: true
   pages:
   - title: Quick start
     path: /ask/combo/quick-start
-    desc: Ask UI - quick start
+    summary: Ask UI - quick start
   - title: Configuration
     path: /ask/combo/configuration
-    desc: Ask UI - configuration
+    summary: Ask UI - configuration
   - title: CSS styles
     path: /ask/combo/styles
-    desc: Ask UI - customize CSS styles
+    summary: Ask UI - customize CSS styles
 - title: API
   path: /api
-  desc: Call Miso APIs directly
+  summary: Call Miso APIs directly
   pages:
   - title: Setup
     path: /api/setup
-    desc: Setup SDK client for using Miso API.
+    summary: Setup SDK client for using Miso API.
   - title: Questions
     path: /api/questions
-    desc: Answer user's question.
+    summary: Answer user's question.
   - title: Related questions
     path: /api/related_questions
-    desc: Generate related questions against an article.
+    summary: Generate related questions against an article.
   - title: Interactions (ask)
     path: /api/interactions-ask
-    desc: Send user interaction events for analytics regarding ask module.
+    summary: Send user interaction events for analytics regarding ask module.
   - title: Interactions (explore)
     path: /api/interactions-explore
-    desc: Send user interaction events for analytics regarding explore module.
+    summary: Send user interaction events for analytics regarding explore module.
   - title: Context
     path: /api/context
-    desc: Context values that are included by all to API payloads.
+    summary: Context values that are included by all to API payloads.
