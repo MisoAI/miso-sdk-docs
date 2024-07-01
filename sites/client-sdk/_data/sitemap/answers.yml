@@ -32,12 +32,18 @@ sections:
     - Configure API request
     - Modify API response
     - Use your own data source
+  - title: Events
+    path: /ask/events
+    summary: Lifecycle events in ask UI.
+    outline:
+    - Listen and unlisten to events
+    - A list of all lifecycle events
   - title: Workflow
     path: /ask/workflow
     summary: Introduce the workflow objects that manages the life cycle of ask UI.
     outline:
     - Access workflow objects
-    - Listen to lifecycle events
+    - Properties of workflow objects
 - title: Explore
   path: /explore
   summary: UI for Miso related questions API

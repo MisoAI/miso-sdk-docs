@@ -3,6 +3,7 @@ ask:
   url: /answers/ask/
   chapter_url: /answers/
   context:
+    context_name: asks
     api_group: ask
     apis:
     - api_name: questions
@@ -42,6 +43,7 @@ recommendation:
   url: /recommendation/
   chapter_url: /recommendation/
   context:
+    context_name: recommendations
     api_group: recommendation
     apis:
     - api_name: product_to_products

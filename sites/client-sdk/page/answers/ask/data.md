@@ -4,6 +4,8 @@ title: Ask UI - data
 
 {%- from 'macros.njk' import since with context -%}
 
+{% set workflow = specs.ui.workflows.ask %}
+
 ### Configure API request
 
 You can configure the base question API payload (request body):

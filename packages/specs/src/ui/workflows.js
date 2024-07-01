@@ -1,4 +1,7 @@
 import workflows from './workflows.yml';
+import events from './events.js';
+
+console.log(events);
 
 for (const name in workflows) {
   const workflow = workflows[name];
@@ -6,6 +9,7 @@ for (const name in workflows) {
   for (const api of workflow.context.apis) {
     api.api_name_camel_case = snakeToCamel(api.api_name);
   }
+  workflow.context.events = events[name];
 }
 
 export default Object.freeze(workflows);
