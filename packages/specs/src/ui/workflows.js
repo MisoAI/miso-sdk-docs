@@ -1,8 +1,6 @@
 import workflows from './workflows.yml';
 import events from './events.js';
 
-console.log(events);
-
 for (const name in workflows) {
   const workflow = workflows[name];
   workflow.name = name;
