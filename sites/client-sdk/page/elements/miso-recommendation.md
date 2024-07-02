@@ -2,7 +2,7 @@
 title: Elements - <miso-recommendation>
 ---
 
-{% set workflow = specs.ui.elements.lookup.recommendation %}
+{% set container = specs.ui.elements.recommendation %}
 
 {% include './_container-intro.md' %}
 

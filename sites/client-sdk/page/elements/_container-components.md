@@ -4,6 +4,6 @@ The following table lists the components that are available in the container. Ea
 
 | Tag | Property in API response | Description |
 | --- | --- | --- |
-{%- for en in workflow.components %}
-| `{{ en.component.tag | safe }}` | {%- if en.component.property -%}`{{ en.component.property }}`{%- else -%}--{%- endif -%} |
+{%- for component in container.components %}
+| `{{ component.tag | safe }}` | {%- if component.property -%}`{{ component.property }}`{%- else -%}--{%- endif -%} |
 {%- endfor -%}

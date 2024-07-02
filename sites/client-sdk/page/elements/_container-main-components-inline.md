@@ -1,0 +1,1 @@
+`{{ container.main_component.tag | safe }}`

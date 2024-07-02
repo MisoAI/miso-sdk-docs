@@ -1,63 +1,59 @@
-ask:
+- name: ask
   label: Ask
   url: /answers/ask/
   chapter_url: /answers/
-  context:
-    context_name: asks
-    api_group: ask
-    apis:
-    - api_name: questions
-      properties:
-      - name: sources
-        in_catalog: true
-        item_term: article
-      - name: related_resources
-        in_catalog: true
-        item_term: article
-explore:
+  context_name: asks
+  api_group: ask
+  apis:
+  - api_name: questions
+    properties:
+    - name: sources
+      in_catalog: true
+      item_term: article
+    - name: related_resources
+      in_catalog: true
+      item_term: article
+- name: explore
   label: Explore
   url: /answers/explore/
   chapter_url: /answers/
-  context:
-    api_group: ask
-    apis:
-    - api_name: related_questions
-      properties:
-      - name: related_questions
-        in_catalog: false
-        item_term: question
-search:
+  api_group: ask
+  apis:
+  - api_name: related_questions
+    properties:
+    - name: related_questions
+      in_catalog: false
+      item_term: question
+- name: search
   label: Search
   url: /search/
   chapter_url: /search/
-  context:
-    api_group: search
-    apis:
-    - api_name: search
-      properties:
-      - name: products
-        in_catalog: true
-        item_term: product
-recommendation:
+  api_group: search
+  apis:
+  - api_name: search
+    properties:
+    - name: products
+      in_catalog: true
+      item_term: product
+- name: recommendation
   label: Recommendation
   url: /recommendation/
   chapter_url: /recommendation/
-  context:
-    context_name: recommendations
-    api_group: recommendation
-    apis:
-    - api_name: product_to_products
-      properties:
-      - name: products
-        in_catalog: true
-        item_term: product
-    - api_name: user_to_products
-      properties:
-      - name: products
-        in_catalog: true
-        item_term: product
-    - api_name: user_to_trending
-      properties:
-      - name: products
-        in_catalog: true
-        item_term: product
+  context_name: recommendations
+  api_group: recommendation
+  apis:
+  - api_name: product_to_products
+    properties:
+    - name: products
+      in_catalog: true
+      item_term: product
+  - api_name: user_to_products
+    properties:
+    - name: products
+      in_catalog: true
+      item_term: product
+  - api_name: user_to_trending
+    properties:
+    - name: products
+      in_catalog: true
+      item_term: product

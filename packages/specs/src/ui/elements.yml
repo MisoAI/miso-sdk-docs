@@ -2,27 +2,27 @@ containers:
 - name: ask
   main_component: answer
   components:
-  - name: query
-  - name: feedback
-  - name: question
-  - name: answer
-  - name: sources
-  - name: related-resources
-  - name: query-suggestions
+  - query
+  - feedback
+  - question
+  - answer
+  - sources
+  - related-resources
+  - query-suggestions
 - name: explore
   main_component: related-questions
   components:
-  - name: query
-  - name: related-questions
+  - query
+  - related-questions
 - name: search
   main_component: products
   components:
-  - name: query
-  - name: products
+  - query
+  - products
 - name: recommendation
   main_component: products
   components:
-  - name: products
+  - products
 components:
 - name: query
   property: false

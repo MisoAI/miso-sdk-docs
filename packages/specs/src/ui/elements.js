@@ -1,52 +1,69 @@
-import elements from './elements.yml';
-import workflows from './workflows.js';
+import _elements from './elements.yml';
+import { addContainer, getWorkflow } from './relations.js';
 
-let { containers, components, ...rest } = elements;
-const lookup = {};
+const containerToComponents = {};
+const componentToContainers = {};
+const elements = {};
 
-components = components.map(shimComponent);
-for (const component of components) {
-  lookup[component.name] = component;
-}
+class Container {
 
-containers = containers.map(shimContainer);
-for (const container of containers) {
-  for (const component of container.components) {
-    component.container = container;
-    (component.component.workflows || (component.component.workflows = [])).push(workflows[container.name]);
+  constructor({ components = [], ...args }) {
+    let { name, tag, slug, url, main_component } = args;
+    tag = tag || toTag(name);
+    slug = slug || toSlug(name);
+    url = url || toUrl(slug);
+    main_component = elements[main_component];
+    Object.assign(this, { ...args, tag, slug, url, main_component });
+    Object.freeze(this);
+    addContainer(this);
   }
-  lookup[container.name] = container;
+
+  get components() {
+    return (containerToComponents[this.name] || []).map(name => elements[name]);
+  }
+
+  get workflow() {
+    return getWorkflow(this.name);
+  }
+
 }
 
-export default Object.freeze({
-  containers,
-  components,
-  lookup,
-  ...rest,
-});
+class Component {
+  
+  constructor(args) {
+    let { name, slug, tag, url, property } = args;
+    tag = tag || toTag(name);
+    url = url || toUrl(slug);
+    property = property || property === false ? property : name.replaceAll('-', '_');
+    Object.assign(this, { ...args, tag, url, property });
+    Object.freeze(this);
+  }
 
-function shimContainer(container = {}) {
-  let { name, tag, slug, url, main_component } = container;
-  main_component = lookup[main_component];
-  slug = slug || toSlug(name);
-  const components = asArray(container.components).map(({ name, ...options }) => ({ component: lookup[name], ...options }));
-  return Object.assign(container, {
-    slug,
-    tag: tag || toTag(name),
-    url: url || toUrl(slug),
-    main_component,
-    components,
-  });
+  get containers() {
+    return (componentToContainers[this.name] || []).map(name => elements[name]);
+  }
+
+  get workflows() {
+    return this.containers.map(container => container.workflow);
+  }
+
 }
 
-function shimComponent(component = {}) {
-  const { name, tag, slug, url, property } = component;
-  return Object.assign(component, {
-    slug,
-    tag: tag || toTag(name),
-    url: url || toUrl(slug),
-    property: property || property === false ? property : name.replaceAll('-', '_'),
-  });
+let { containers, components } = _elements;
+
+for (const { name: container, components } of containers) {
+  (containerToComponents[container] || (containerToComponents[container] = [])).push(...components);
+  for (const component of components) {
+    (componentToContainers[component] || (componentToContainers[component] = [])).push(container);
+  }
+}
+
+for (const component of components) {
+  elements[component.name] = new Component(component);
+}
+
+for (const container of containers) {
+  elements[container.name] = new Container(container);
 }
 
 function toSlug(name) {
@@ -61,6 +78,4 @@ function toUrl(slug) {
   return slug ? `/elements/${slug}/` : false;
 }
 
-function asArray(value) {
-  return !value ? [] : Array.isArray(value) ? value : [value];
-}
+export default Object.freeze(elements);

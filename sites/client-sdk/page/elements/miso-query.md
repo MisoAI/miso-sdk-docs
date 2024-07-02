@@ -2,7 +2,7 @@
 title: Elements - <miso-query>
 ---
 
-{% set components = [specs.ui.elements.lookup.query] %}
+{% set components = [specs.ui.elements.query] %}
 
 `<miso-query>` is the element for search or question input.
 

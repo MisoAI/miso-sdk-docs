@@ -2,7 +2,7 @@
 
 | Name | Properties | Triggered when |
 | --- | --- | --- |
-{%- for event in workflow.context.events %}
+{%- for event in workflow.events %}
 | `{{ event.name }}` | {% for property in event.properties %}{% if not loop.first %}, {% endif %}`{{ property.name }}`{% endfor %} | {{ event.definition }} |
 {%- endfor %}
 

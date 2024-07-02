@@ -1,1 +1,0 @@
-`{{ workflow.main_component.tag | safe }}`

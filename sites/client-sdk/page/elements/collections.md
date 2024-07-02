@@ -2,7 +2,7 @@
 title: Elements - collection elements
 ---
 
-{% set components = [specs.ui.elements.lookup.products, specs.ui.elements.lookup.sources, specs.ui.elements.lookup['related-resources'], specs.ui.elements.lookup['related-questions']] %}
+{% set components = [specs.ui.elements.products, specs.ui.elements.sources, specs.ui.elements['related-resources'], specs.ui.elements['related-questions']] %}
 
 The following elements are classified as collection elements, which are used to display a collection of items in a list format.
 

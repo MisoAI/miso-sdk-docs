@@ -2,7 +2,7 @@
 title: Elements - <miso-answer>
 ---
 
-{% set components = [specs.ui.elements.lookup.answer] %}
+{% set components = [specs.ui.elements.answer] %}
 
 `<miso-answer>` is the element for answer text in ask workflow.
 

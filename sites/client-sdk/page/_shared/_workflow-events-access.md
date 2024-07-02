@@ -1,14 +1,16 @@
+{%- from 'macros.njk' import since with context -%}
+
 ### Listen to events
 
 You can listen to several events on the `{{ workflow.name }}` workflow. 
 
-{% if workflow.context.context_name %}
+{% if workflow.context_name %}
 #### Listen to events on all workflows
 
 {{ since('1.8.2') }}
 
 ```js
-const context = client.ui.{{ workflow.context.context_name }};
+const context = client.ui.{{ workflow.context_name }};
 
 context.on('request', ({ workflow, session, payload }) => {
   // When user submits a question in search box.

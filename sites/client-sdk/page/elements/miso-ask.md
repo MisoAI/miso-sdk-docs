@@ -2,7 +2,7 @@
 title: Elements - <miso-ask>
 ---
 
-{% set workflow = specs.ui.elements.lookup.ask %}
+{% set container = specs.ui.elements.ask %}
 
 {% include './_container-intro.md' %}
 

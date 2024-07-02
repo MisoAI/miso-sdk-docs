@@ -2,13 +2,14 @@
 title: Elements - <miso-explore>
 ---
 
-{% set workflow = specs.ui.elements.lookup.explore %}
+{% set container = specs.ui.elements.explore %}
 
 {% include './_container-intro.md' %}
 
 ```html
 <miso-explore>
   <miso-related-questions></miso-related-questions>
+  <miso-query></miso-query>
 </miso-explore>
 ```
 

@@ -4,6 +4,6 @@ title: Ask UI - elements
 
 {%- from 'macros.njk' import since with context -%}
 
-{% set workflow = specs.ui.elements.lookup.ask %}
+{% set workflow = specs.ui.workflows.ask %}
 
 {% include '../../_shared/_workflow-elements.md' %}

@@ -1,5 +1,5 @@
-{% if workflow %}
-A container element for the **{{ workflow.name }}** workflow.
+{% if container %}
+A container element for the **{{ container.name }}** workflow.
 {% else %}
 Container elements are used to serve as root elements that associates with workflows.
 {% endif %}

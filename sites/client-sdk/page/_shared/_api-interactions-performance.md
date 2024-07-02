@@ -18,8 +18,8 @@ client.api.interactions.upload({
   product_ids: [...], // if subjects are catalog items
   context: {
     custom_context: {
-      api_group: '{{ workflow.context.api_group }}',
-      api_name: {% for api in workflow.context.apis -%}'{{ api.api_name }}'{{ ', ' if not loop.last or loop.first }}{{ '// or ' if loop.first and not loop.last }}{%- endfor %}
+      api_group: '{{ workflow.api_group }}',
+      api_name: {% for api in workflow.apis -%}'{{ api.api_name }}'{{ ', ' if not loop.last or loop.first }}{{ '// or ' if loop.first and not loop.last }}{%- endfor %}
 {%- if workflow.name == 'ask' %}
       question_id: '...',
       root_question_id: '...',
@@ -48,13 +48,13 @@ client.api.interactions.upload({
 
 | API | Property | Is catalog item? |
 | --- | --- | --- |
-{%- for api in workflow.context.apis %}
+{%- for api in workflow.apis %}
 {%- for property in api.properties %}
 | {% if loop.first %}`{{ api.api_name }}`{% endif %} | `{{ property.name }}` | {% if property.in_catalog %}✓{% else %}✗{% endif %} |
 {%- endfor %}
 {%- endfor %}
 
-{% set api = workflow.context.apis[0] %}
+{% set api = workflow.apis[0] %}
 {% set property = api.properties[0] %}
 
 #### Examples
@@ -68,7 +68,7 @@ for await (const response of answer) {
   // ...
 }
 {%- else %}
-const response = await client.api.{{ workflow.context.api_group }}.{{ api.api_name_camel_case }}(payload);
+const response = await client.api.{{ workflow.api_group }}.{{ api.api_name_camel_case }}(payload);
 {%- endif %}
 
 // response
@@ -101,7 +101,7 @@ client.api.interactions.upload({
 {%- endif %}
   context: {
     custom_context: {
-      api_group: '{{ workflow.context.api_group }}',
+      api_group: '{{ workflow.api_group }}',
       api_name: '{{ api.api_name }}',
 {%- if workflow.name == 'ask' %}
       root_question_id: '...',
