@@ -25,7 +25,9 @@ client.context.user_id = '...';
 client.context.user_type = '...';
 ```
 
-The `user_type` value is passed into API calls only when `user_id` is also set. When including `user_type`, you must modify your `user_hash` generation process. Instead of hashing only the `user_id`, you should hash the combination of `user_type` and `user_id` in the format `user_type:user_id`. Here's a Python script demonstrating how to generate the `user_hash`:
+The `user_type` value is passed into API calls only when `user_id` is also set. 
+
+When including `user_type`, you must modify your `user_hash` generation process. Instead of hashing only the `user_id`, you should hash the combination of `user_type` and `user_id` in the format `user_type:user_id`. Here's a Python script demonstrating how to generate the `user_hash`:
 
 ```python
 import hashlib
