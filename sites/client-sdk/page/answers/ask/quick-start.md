@@ -11,7 +11,7 @@ title: Ask module - quick start
 
 #### Live demo
 
-{{ stackblitz_link('1.9/ask/custom/full') }}
+{{ stackblitz_link('1.9/answers/ask/custom/full') }}
 
 {% set step = 1 %}
 {% include 'step/obtain-api-key.md' %}
