@@ -29,6 +29,9 @@ sections:
   - title: <miso-answer>
     path: /miso-answer
     summary: Answer text element
+  - title: <miso-affiliation>
+    path: /miso-affiliation
+    summary: Affiliated products element
   - title: Collections
     path: /collections
     summary: Collection elements

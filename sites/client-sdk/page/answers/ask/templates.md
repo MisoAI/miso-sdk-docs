@@ -81,11 +81,13 @@ The `root` template is a function that returns the following HTML:
     <miso-answer></miso-answer>
     <miso-feedback></miso-feedback>
   </miso-ask>
+  <miso-ask class="miso-ask-combo__affiliation-container miso-circled-citation-index" logo="false" visible-when="nonempty">
+    <miso-affiliation></miso-affiliation>
+  </miso-ask>
   <miso-ask class="miso-ask-combo__sources-container miso-circled-citation-index" logo="false" visible-when="nonempty">
     <hr>
     <h3 class="miso-ask-combo__phrase miso-ask-combo__sources-phrase">My reply is based on the following</h3>
     <miso-sources></miso-sources>
-  </miso-ask>
   <miso-ask class="miso-ask-combo__bottom-spacing-container" visible-when="ongoing"></miso-ask>
 </section>
 <div id="miso-ask-combo__follow-ups" class="miso-ask-combo__follow-ups"></div>
@@ -120,6 +122,9 @@ The `followUp` template is a function that returns the following HTML:
     <miso-question></miso-question>
     <miso-answer></miso-answer>
     <miso-feedback></miso-feedback>
+  </miso-ask>
+  <miso-ask class="miso-ask-combo__affiliation-container miso-circled-citation-index" logo="false" visible-when="nonempty">
+    <miso-affiliation></miso-affiliation>
   </miso-ask>
   <miso-ask class="miso-ask-combo__sources-container miso-circled-citation-index" logo="false" visible-when="nonempty" parent-question-id="${parentQuestionId}">
     <hr>

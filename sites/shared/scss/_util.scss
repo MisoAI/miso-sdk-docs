@@ -89,6 +89,19 @@
   padding: 2rem;
   background: var(--color-code-background);
 
+  img {
+    max-width: 100%;
+  }
+
+  &.medium {
+    max-width: 44rem;
+    margin: 0 auto;
+  }
+  &.small {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+
   /*
   .frame {
     position: relative;

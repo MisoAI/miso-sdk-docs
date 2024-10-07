@@ -44,6 +44,12 @@ sections:
     outline:
     - Access workflow objects
     - Properties of workflow objects
+  - title: Affiliation
+    path: /ask/affiliation
+    summary: How to setup and customize the affiliation element in ask UI.
+    outline:
+    - Setup affiliation
+    - Customize the appearance
 - title: Explore
   path: /explore
   summary: UI for Miso related questions API

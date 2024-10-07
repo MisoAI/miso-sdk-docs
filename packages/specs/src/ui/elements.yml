@@ -6,6 +6,7 @@ containers:
   - feedback
   - question
   - answer
+  - affiliation
   - sources
   - related-resources
   - query-suggestions
@@ -42,3 +43,6 @@ components:
   property: followup_questions
 - name: related-questions
   slug: collections
+- name: affiliation
+  slug: miso-affiliation
+  property: '*'
