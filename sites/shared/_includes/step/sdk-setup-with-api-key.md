@@ -4,7 +4,7 @@ Add the SDK JavaScript to your webpage:
 
 ```html
 <head>
-  <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@{{sdk.latest_version}}/dist/umd/miso.min.js?api_key={{'{{api_key}}'}}"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@latest/dist/umd/miso.min.js?api_key={{'{{api_key}}'}}"></script>
 </head>
 ```
 

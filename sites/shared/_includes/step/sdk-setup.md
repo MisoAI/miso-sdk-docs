@@ -20,11 +20,8 @@ import MisoClient from '@miso.ai/client-sdk';
 
 Add the SDK script tag to your webpage:
 
-```html
-<head>
-  <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@{{sdk.latest_version}}/dist/umd/miso.min.js"></script>
-</head>
-```
+{% from 'macros.njk' import sdk_script_tag %}
+{{ sdk_script_tag() }}
 
 * You can put the script tag anywhere in the document.
 

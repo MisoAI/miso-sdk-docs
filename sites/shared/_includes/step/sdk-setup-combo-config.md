@@ -3,7 +3,7 @@
 The combo element automatically starts the routine when the SDK is loaded. Thus, to configure the module in time, we want to disable the auto-start feature by setting `autostart` to `false` in the script URL:
 
 ```html
-<script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@{{sdk.latest_version}}/dist/umd/miso.min.js?api_key=...&autostart=false"></script>
+<script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@latest/dist/umd/miso.min.js?api_key=...&autostart=false"></script>
 ```
 
 ### {% if step %}{{ step + 1 }}. {% endif %}Access MisoClient

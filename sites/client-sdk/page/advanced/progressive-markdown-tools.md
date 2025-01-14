@@ -29,11 +29,8 @@ import { Controller, presetMiso, loadStyles } from '@miso.ai/progressive-markdow
 
 Alternatively, you can add the script tag to your webpage:
 
-```html
-<head>
-  <script async src="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@{{sdk.latest_version}}/dist/umd/miso-markdown.min.js"></script>
-</head>
-```
+{% from 'macros.njk' import sdk_script_tag, sdk_styles_tag %}
+{{ sdk_script_tag('miso-markdown.min.js') }}
 
 * You can put the script tag anywhere in the document.
 
@@ -59,11 +56,7 @@ loadStyles();
 
 Or, alternatively, you can include the stylesheet by your own:
 
-```html
-<head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@miso.ai/client-sdk@{{sdk.latest_version}}/dist/css/markdown.css">
-</head>
-```
+{{ sdk_styles_tag('markdown.css') }}
 
 #### Use the controller to render markdown
 

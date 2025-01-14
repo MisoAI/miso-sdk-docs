@@ -75,7 +75,7 @@ module.exports = function MisoDocsPlugin(config, {
     '../shared/asset': '/',
     'asset': '/'
   });
-  config.addWatchTarget('./scss/');
+  config.addWatchTarget('./scss/', './src/');
   config.addGlobalData('layout', 'base.njk');
   overrideConfigResult(config, {
     dir: {
