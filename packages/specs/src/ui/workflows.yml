@@ -24,6 +24,20 @@
     - name: related_questions
       in_catalog: false
       item_term: question
+- name: hybrid-search
+  label: Hybrid search
+  url: /answers/hybrid-search/
+  chapter_url: /answers/
+  api_group: ask
+  apis:
+  - api_name: search
+    properties:
+    - name: products
+      in_catalog: true
+      item_term: article
+    - name: sources
+      in_catalog: true
+      item_term: article
 - name: search
   label: Search
   url: /search/

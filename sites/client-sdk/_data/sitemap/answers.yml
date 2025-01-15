@@ -63,12 +63,28 @@ sections:
     - Build your explore UI module.
   - title: Elements
     path: /explore/elements
-    summary: How to customize each custom element in ask UI.
+    summary: How to customize each custom element in explore UI.
     outline:
-    - A list of elements that are used in ask UI.
+    - A list of elements that are used in explore UI.
 #  - title: Linkless
 #    path: /explore/linkless
 #    summary: Practices to handle question selection without links
+- title: Hybrid search
+  path: /hybrid-search
+  summary: UI for Miso hybrid search API
+  pages:
+  - title: Quick start
+    path: /hybrid-search/quick-start
+    summary: Get started to build your own hybrid search module in a few steps.
+    outline:
+    - Get your API key.
+    - Access the SDK.
+    - Build your hybrid search UI module.
+  - title: Elements
+    path: /hybrid-search/elements
+    summary: How to customize each custom element in hybrid search UI.
+    outline:
+    - A list of elements that are used in hybrid search UI.
 - title: Ask (Combo)
   path: /ask/combo
   summary: UI for Miso ask API (Combo)

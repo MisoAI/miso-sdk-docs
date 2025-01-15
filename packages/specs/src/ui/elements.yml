@@ -15,6 +15,15 @@ containers:
   components:
   - query
   - related-questions
+- name: hybrid-search
+  main_component: products
+  components:
+  - query
+  - products
+  - feedback
+  - question
+  - answer
+  - sources
 - name: search
   main_component: products
   components:
