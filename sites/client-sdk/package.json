@@ -18,8 +18,11 @@
     "debug": "DEBUG=* npx eleventy"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
     "@miso.ai/eleventy-plugin-miso-docs": "file:../../packages/plugin",
-    "@miso.ai/miso-specs": "file:../../packages/specs",
-    "@11ty/eleventy": "^2.0.0"
+    "@miso.ai/miso-specs": "file:../../packages/specs"
+  },
+  "dependencies": {
+    "htmlfy": "^0.5.1"
   }
 }

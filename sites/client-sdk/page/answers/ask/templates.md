@@ -1,5 +1,5 @@
 ---
-title: Ask UI - template helpers
+title: Ask module - template helpers
 ---
 
 The SDK offers some helper templates for the Ask UI. You can leverage these templates to quickly set up the Ask UI in your application by either using the them directly or modifying the HTML string to suit your needs.

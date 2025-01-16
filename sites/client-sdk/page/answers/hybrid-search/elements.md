@@ -1,5 +1,5 @@
 ---
-title: Explore module - elements
+title: Hybrid search module - elements
 ---
 
 {%- from 'macros.njk' import since with context -%}

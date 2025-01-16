@@ -1,5 +1,5 @@
 ---
-title: Ask UI - affiliation
+title: Ask module - affiliation
 ---
 
 {%- from 'macros.njk' import since with context -%}

@@ -1,5 +1,5 @@
 ---
-title: Ask UI - events
+title: Ask module - events
 ---
 
 {% set workflow = specs.ui.workflows.ask %}

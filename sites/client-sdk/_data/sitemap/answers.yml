@@ -80,6 +80,12 @@ sections:
     - Get your API key.
     - Access the SDK.
     - Build your hybrid search UI module.
+  - title: Template helpers
+    path: /hybrid-search/templates
+    summary: How to customize the content of hybrid search UI module.
+    outline:
+    - Add custom contents to the application.
+    - Change the arrangement of the elements.
   - title: Elements
     path: /hybrid-search/elements
     summary: How to customize each custom element in hybrid search UI.

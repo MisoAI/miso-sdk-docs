@@ -1,5 +1,5 @@
 ---
-title: Ask UI - data
+title: Ask module - data
 ---
 
 {%- from 'macros.njk' import since with context -%}

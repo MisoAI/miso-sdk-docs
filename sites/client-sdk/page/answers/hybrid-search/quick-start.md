@@ -55,7 +55,5 @@ misocmd.push(async () => {
 });
 ```
 
-{#
 * See [template helpers]({{ '/answers/hybrid-search/templates/' | url }}) for template customization.
-#}
 * See the [implementation](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/defaults/hybrid-search/answer-box.js) of the logic helper functions `wireAnswerBox` for more details.
