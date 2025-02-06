@@ -44,6 +44,7 @@ sections:
     outline:
     - Access workflow objects
     - Properties of workflow objects
+    - Methods of workflow objects
   - title: Affiliation
     path: /ask/affiliation
     summary: How to setup and customize the affiliation element in ask UI.
@@ -91,6 +92,13 @@ sections:
     summary: How to customize each custom element in hybrid search UI.
     outline:
     - A list of elements that are used in hybrid search UI.
+  - title: Workflow
+    path: /hybrid-search/workflow
+    summary: Introduce the workflow objects that manages the life cycle of hybrid search UI.
+    outline:
+    - Access workflow objects
+    - Properties of workflow objects
+    - Methods of workflow objects
 - title: Ask (Combo)
   path: /ask/combo
   summary: UI for Miso ask API (Combo)

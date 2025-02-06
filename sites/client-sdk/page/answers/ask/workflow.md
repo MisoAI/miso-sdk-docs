@@ -48,3 +48,21 @@ context.on('create', (workflow) => {
 const questionId = workflow.questionId;
 const parentQuestionId = workflow.parentQuestionId;
 ```
+
+### Methods
+
+Takes the question from URL parameter `q` and starts the query:
+
+```js
+workflow.autoQuery();
+```
+
+{{ since('1.11.4') }}
+
+You can use a parameter other than `q`:
+
+```js
+workflow.autoQuery({
+  param: 's',
+});
+```
