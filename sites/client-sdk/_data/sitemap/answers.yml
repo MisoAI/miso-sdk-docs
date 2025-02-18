@@ -51,6 +51,11 @@ sections:
     outline:
     - Setup affiliation
     - Customize the appearance
+  - title: Advanced usages
+    path: /ask/advanced
+    summary: Advanced usages of ask UI.
+    outline:
+    - Image results
 - title: Explore
   path: /explore
   summary: UI for Miso related questions API
