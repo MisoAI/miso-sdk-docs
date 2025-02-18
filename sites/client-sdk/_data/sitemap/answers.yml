@@ -72,6 +72,12 @@ sections:
     summary: How to customize each custom element in explore UI.
     outline:
     - A list of elements that are used in explore UI.
+  - title: Workflow
+    path: /explore/workflow
+    summary: Introduce the workflow object that manages the life cycle of explore UI.
+    outline:
+    - Access the workflow object.
+    - Link function.
 #  - title: Linkless
 #    path: /explore/linkless
 #    summary: Practices to handle question selection without links
