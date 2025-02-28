@@ -34,3 +34,17 @@ workflow.useLink((question, args) => {
   return `/answers?q=${encodeURIComponent(question)}}`;
 });
 ```
+
+{{ since('1.11.5') }}
+
+You can specify link options:
+
+```js
+workflow.useLink(linkFn, {
+  open: true, // whether to open the link in a new tab
+  target: '_blank', // the target attribute of the link
+  rel: 'noopener nofollow', // the rel attribute of the link
+});
+```
+
+The settings will be applied to both related question links and user input submission.
