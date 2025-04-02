@@ -11,13 +11,23 @@ title: Ask module - data
 You can configure the base question API payload (request body):
 
 ```js
+// for individual workflow
 workflow.useApi(payload);
+
+// or for all workflows
+const context = client.ui.asks;
+context.useApi(payload);
 ```
 
 For example, to call the API with `yearly_decay` value `0.9`:
 
 ```js
+// for individual workflow
 workflow.useApi({ yearly_decay: 0.9 });
+
+// or for all workflows
+const context = client.ui.asks;
+context.useApi({ yearly_decay: 0.9 });
 ```
 
 Given a question `What's the meaing of life?`, the API payload will be:
@@ -36,7 +46,15 @@ See the [REST API reference](https://api.askmiso.com/#tag/Ask-APIs/operation/que
 You can specify the list of fields of source and related resource records returned in the API responses respectively:
 
 ```js
+// for individual workflow
 workflow.useApi({
+  source_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
+  related_resource_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
+});
+
+// or for all workflows
+const context = client.ui.asks;
+context.useApi({
   source_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
   related_resource_fl: ['cover_image', 'url', 'created_at', 'updated_at', 'published_at', 'custom_attributes.my_prop'],
 });
