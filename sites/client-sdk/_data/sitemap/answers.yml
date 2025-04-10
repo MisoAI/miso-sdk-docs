@@ -78,6 +78,11 @@ sections:
     outline:
     - Access the workflow object.
     - Link function.
+  - title: Configuration
+    path: /explore/configuration
+    summary: Configure the explore module settings and behavior.
+    outline:
+    - Configure the number of questions to display
 #  - title: Linkless
 #    path: /explore/linkless
 #    summary: Practices to handle question selection without links
