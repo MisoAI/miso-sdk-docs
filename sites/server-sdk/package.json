@@ -1,6 +1,7 @@
 {
   "name": "@miso.ai/server-sdk-docs",
   "private": true,
+  "type": "module",
   "scripts": {
     "clean": "npx rimraf dist",
     "build:shared": "cp -a ../shared/dist dist",
@@ -14,8 +15,8 @@
     "debug": "DEBUG=* npx eleventy"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
     "@miso.ai/eleventy-plugin-miso-docs": "file:../../packages/plugin",
-    "@miso.ai/miso-specs": "file:../../packages/specs",
-    "@11ty/eleventy": "^2.0.0"
+    "@miso.ai/miso-specs": "file:../../packages/specs"
   }
 }

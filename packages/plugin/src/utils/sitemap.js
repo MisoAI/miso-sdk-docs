@@ -1,7 +1,7 @@
-const { readdirSync } = require('fs');
-const { join } = require('path');
-const { readYamlSync } = require('./files');
-const { removeExt } = require('./misc');
+import { readdirSync } from 'fs';
+import { join } from 'path';
+import { readYamlSync } from './files.js';
+import { removeExt } from './misc.js';
 
 function buildChapter(dir, file) {
   const chapterPath = removeExt(file);
@@ -21,9 +21,14 @@ function buildChapter(dir, file) {
       addPageInfo(page);
     }
   }
+
   return result;
 }
 
-module.exports = function build(dir) {
-  return Object.freeze(readdirSync(dir).reduce((acc, file) => ({ ...acc, ...buildChapter(dir, file) }), {}));
+export default function buildSitemap(dir) {
+  const result = {};
+  for (const file of readdirSync(dir)) {
+    Object.assign(result, buildChapter(dir, file));
+  }
+  return Object.freeze(result);
 }

@@ -1,16 +1,11 @@
-const { readFile } = require('fs/promises');
-const { readFileSync } = require('fs');
-const { load: loadYaml } = require('js-yaml');
+import { readFile } from 'fs/promises';
+import { readFileSync } from 'fs';
+import { load as loadYaml } from 'js-yaml';
 
-async function readYaml(file) {
+export async function readYaml(file) {
   return loadYaml(await readFile(file, 'utf8'));
 }
 
-function readYamlSync(file) {
+export function readYamlSync(file) {
   return loadYaml(readFileSync(file, 'utf8'));
 }
-
-module.exports = {
-  readYaml,
-  readYamlSync,
-};

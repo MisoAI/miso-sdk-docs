@@ -1,10 +1,10 @@
-const specs = require('@miso.ai/miso-specs');
+import specs from '@miso.ai/miso-specs';
 
 function compute() {
   return Object.freeze(specs);
 }
 
-class Specs {
+export default class Specs {
   constructor() {
     this.refresh();
   }
@@ -25,5 +25,3 @@ class Specs {
     return this._data.ui;
   }
 }
-
-module.exports = Specs;

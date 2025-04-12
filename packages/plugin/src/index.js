@@ -1,9 +1,3 @@
-const MisoDocsPlugin = require('./plugin');
-const utils = require('./utils');
-const eleventyComputed = require('./eleventy-computed');
-
-module.exports = {
-  MisoDocsPlugin,
-  utils,
-  eleventyComputed,
-};
+export * from './plugin/index.js';
+export * as utils from './utils/index.js';
+export * as eleventyComputed from './eleventy-computed.js';

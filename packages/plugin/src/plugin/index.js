@@ -1,25 +1,12 @@
-const { EleventyRenderPlugin } = require('@11ty/eleventy');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const mila = require('markdown-it-link-attributes');
-const yaml = require('js-yaml');
+import { EleventyRenderPlugin } from '@11ty/eleventy';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+import mila from 'markdown-it-link-attributes';
+import yaml from 'js-yaml';
 
-const Specs = require('./specs.js');
-const Helpers = require('./helpers.js');
-
-const overrides = [];
-const listeners = new WeakSet();
-
-function overrideConfigResult(config, result) {
-  if (!listeners.has(config)) {
-    config.on('eleventy.config', (c) => {
-      Object.assign(c.config, ...overrides);
-    });
-    listeners.add(config);
-  }
-  overrides.push(result);
-}
+import Specs from './specs.js';
+import Helpers from './helpers.js';
 
 function buildMarkdown({ hostname, pathPrefix }) {
   const markdown = markdownIt({ html: true }).use(markdownItAnchor);
@@ -45,13 +32,9 @@ function configMarkdown(config, options) {
   const markdown = buildMarkdown(options);
   config.setLibrary('md', markdown);
   config.addNunjucksFilter('markdown', value => markdown.renderInline(value));
-
-  overrideConfigResult(config, {
-    markdownTemplateEngine: 'njk', // 11ty offers stronger context support with njk toolchain
-  });
 }
 
-module.exports = function MisoDocsPlugin(config, {
+export function setupMisoDocs(config, {
   hostname = 'misoai.github.io',
   pathPrefix,
   site,
@@ -73,36 +56,29 @@ module.exports = function MisoDocsPlugin(config, {
   // site structure
   config.addPassthroughCopy({
     '../shared/asset': '/',
-    'asset': '/'
+    'asset': '/',
   });
   config.addWatchTarget('./scss/', './src/');
   config.addGlobalData('layout', 'base.njk');
-  overrideConfigResult(config, {
-    dir: {
-      input: 'page',
-      includes: '../../shared/_includes',
-      layouts: '../../shared/_layouts',
-      data: '../_data',
-      output: 'dist'
-    },
-    templateFormats: [
-      'njk',
-      'md',
-      'html',
-      'js',
-      'css',
-      'svg',
-      'png',
-      'jpg',
-    ],
-  });
+
+  // directories
+  config.setInputDirectory('page');
+  config.setIncludesDirectory('../../shared/_includes');
+  config.setLayoutsDirectory('../../shared/_layouts');
+  config.setDataDirectory('../_data');
+  config.setOutputDirectory('dist');
+
+  // template
+  config.setTemplateFormats(['njk', 'md', 'html', 'js', 'css', 'svg', 'png', 'jpg']);
 
   // site parameters
   config.addGlobalData('hostname', hostname);
   config.addGlobalData('site', site);
-  overrideConfigResult(config, {
-    pathPrefix,
-  });
 
   //config.on('eleventy.config', (c) => console.log(c));
-}
+
+  return {
+    pathPrefix,
+    markdownTemplateEngine: 'njk',
+  };
+};

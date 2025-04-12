@@ -1,4 +1,4 @@
-class Helpers {
+export default class Helpers {
 
   constructor() {
     this._indicies = {};
@@ -21,5 +21,3 @@ class Helpers {
   */
 
 }
-
-module.exports = Helpers;

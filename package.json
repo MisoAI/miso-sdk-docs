@@ -9,7 +9,7 @@
     "sites/server-sdk"
   ],
   "scripts": {
-    "version": "node ./bin/version.mjs",
+    "version": "node ./bin/version.js",
     "build:deps:specs": "npm run build -w packages/specs",
     "build:deps:shared": "npm run build -w sites/shared",
     "build:deps": "npm-run-all --parallel build:deps:*",

@@ -1,13 +1,14 @@
 {
   "name": "@miso.ai/client-sdk-docs",
   "private": true,
+  "type": "module",
   "scripts": {
     "clean": "npx rimraf dist",
     "build:shared": "cp -a ../shared/dist dist",
     "build:sass": "npx sass scss:dist/css",
     "watch:sass": "npx sass --watch scss:dist/css",
-    "build:js": "npx rollup -c rollup.config.mjs",
-    "watch:js": "npx rollup -w -c rollup.config.mjs",
+    "build:js": "npx rollup -c rollup.config.js",
+    "watch:js": "npx rollup -w -c rollup.config.js",
     "build:11ty": "npx eleventy",
     "watch:11ty": "npx eleventy --serve --port=10101",
     "_watch:preview:11ty": "ENV=preview npx eleventy --serve --port=10101",
@@ -18,7 +19,7 @@
     "debug": "DEBUG=* npx eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^3.0.0",
     "@miso.ai/eleventy-plugin-miso-docs": "file:../../packages/plugin",
     "@miso.ai/miso-specs": "file:../../packages/specs"
   },

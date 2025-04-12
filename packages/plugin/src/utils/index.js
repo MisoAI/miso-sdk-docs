@@ -1,6 +1,4 @@
-const files = require('./files');
-const misc = require('./misc');
-const sitemap = require('./sitemap');
-const props = require('./props');
-
-module.exports = Object.assign({ sitemap, props }, files, misc);
+export * from './files.js';
+export * from './misc.js';
+export { default as sitemap } from './sitemap.js';
+export * as props from './props.js';

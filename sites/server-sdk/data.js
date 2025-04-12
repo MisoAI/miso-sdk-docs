@@ -1,6 +1,9 @@
-const { join } = require('path');
-const { utils } = require('@miso.ai/eleventy-plugin-miso-docs');
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { utils } from '@miso.ai/eleventy-plugin-miso-docs';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const DATA_DIR = join(__dirname, '_data');
 
 function getComparisonGroup(file) {
@@ -30,7 +33,7 @@ function compute() {
   });
 }
 
-class Data {
+export default class Data {
   constructor() {
     this.refresh();
   }
@@ -47,5 +50,3 @@ class Data {
     return this._data.page_meta;
   }
 }
-
-module.exports = Data;

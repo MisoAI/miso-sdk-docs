@@ -1,5 +1,5 @@
-const { eleventyComputed } = require('@miso.ai/eleventy-plugin-miso-docs');
+import { eleventyComputed } from '@miso.ai/eleventy-plugin-miso-docs';
 
-module.exports = {
+export default {
   ...eleventyComputed,
 };
