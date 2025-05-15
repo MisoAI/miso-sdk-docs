@@ -78,6 +78,11 @@ sections:
     outline:
     - Access the workflow object.
     - Link function.
+  - title: Trending questions
+    path: /explore/trending
+    summary: Retrieve trending questions.
+    outline:
+    - Retrieve trending questions
   - title: Configuration
     path: /explore/configuration
     summary: Configure the explore module settings and behavior.
