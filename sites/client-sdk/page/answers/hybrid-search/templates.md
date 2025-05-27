@@ -10,7 +10,7 @@ The `root` template is all to you to set up the hybrid search UI. It contains a 
 
 ```js
 const templates = MisoClient.ui.defaults.hybridSearch.templates;
-const html = templates.root({ answerBox: true });
+const html = templates.root();
 ```
 
 {# TODO: talk about answer box #}
@@ -21,23 +21,28 @@ The easiest way to customize the hybrid search UI is to modify the HTML string r
 
 ```js
 const templates = MisoClient.ui.defaults.hybridSearch.templates;
+const html = templates.root();
+```
+
+The template function above gives you the following result:
+
+<miso-sdk-html-template request="ui.defaults.hybridSearch.templates.root()"></miso-sdk-html-template>
+
+You can turn on the answer box:
+
+```js
+const templates = MisoClient.ui.defaults.hybridSearch.templates;
 const html = templates.root({ answerBox: true });
+
+const { wireAnswerBox } = MisoClient.ui.defaults.hybridSearch;
+wireAnswerBox(client, rootElement);
 ```
 
 The template function above gives you the following result:
 
 <miso-sdk-html-template request="ui.defaults.hybridSearch.templates.root({ answerBox: true })"></miso-sdk-html-template>
 
-You can turn off the answer box:
-
-```js
-const templates = MisoClient.ui.defaults.hybridSearch.templates;
-const html = templates.root({ answerBox: false });
-```
-
-The template function above gives you the following result:
-
-<miso-sdk-html-template request="ui.defaults.hybridSearch.templates.root({ answerBox: false })"></miso-sdk-html-template>
+* See the [implementation](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/defaults/hybrid-search/answer-box.js) of the logic helper functions `wireAnswerBox` for more details.
 
 #### Visibility Control for Unanswerable Questions
 

@@ -43,12 +43,9 @@ misocmd.push(async () => {
   // render DOM and get element references
   const defaults = MisoClient.ui.defaults.hybridSearch;
   const templates = defaults.templates;
-  const wireAnswerBox = defaults.wireAnswerBox;
 
   const rootElement = document.querySelector('#miso-hybrid-search-combo');
-  rootElement.innerHTML = templates.root({ answerBox: true });
-
-  wireAnswerBox(client, rootElement);
+  rootElement.innerHTML = templates.root();
 
   // start query if specified in URL parameters
   workflow.autoQuery();
@@ -56,4 +53,4 @@ misocmd.push(async () => {
 ```
 
 * See [template helpers]({{ '/answers/hybrid-search/templates/' | url }}) for template customization.
-* See the [implementation](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/defaults/hybrid-search/answer-box.js) of the logic helper functions `wireAnswerBox` for more details.
+
