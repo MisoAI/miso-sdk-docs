@@ -78,3 +78,9 @@ client.ui.ask.restart();
 ```
 
 Note that all event listeners and configurations on the context will still be available after the reset, so you don't need to reinitialize the context.
+
+If you use an older version of SDK, try the following:
+
+```js
+client.ui.asks.reset({ events: false });
+```
