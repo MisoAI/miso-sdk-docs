@@ -69,6 +69,8 @@ workflow.autoQuery({
 
 ### Reset
 
+{{ since('1.12.3') }}
+
 In SPA scenario, you can reset all the workflows by calling `restart()` on the root workflow:
 
 ```js
