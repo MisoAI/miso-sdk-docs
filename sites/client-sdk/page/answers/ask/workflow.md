@@ -66,3 +66,13 @@ workflow.autoQuery({
   param: 's',
 });
 ```
+
+### Reset
+
+In SPA scenario, you can reset all the workflows by calling `restart()` on the root workflow:
+
+```js
+client.ui.ask.restart();
+```
+
+Note that all event listeners and configurations on the context will still be available after the reset, so you don't need to reinitialize the context.
