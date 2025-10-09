@@ -46,18 +46,16 @@ misocmd.push(async () => {
 
   // render DOM and get element references
   // default templates are available since v1.9.1
-  // wireFollowUps() and wireRelatedResources() are available since v1.9.9
   const defaults = MisoClient.ui.defaults.ask;
   const templates = defaults.templates;
-  const wireFollowUps = defaults.wireFollowUps;
-  const wireRelatedResources = defaults.wireRelatedResources;
 
   const rootElement = document.querySelector('#miso-ask-combo');
   rootElement.innerHTML = templates.root();
 
   // setup workflows
-  wireFollowUps(client, rootElement.querySelector(`.miso-ask-combo__follow-ups`));
-  wireRelatedResources(client, rootElement.querySelector(`.miso-ask-combo__related-resources`));
+  // uncomment the following lines if your SDK version is older than v1.12.5
+  //defaults.wireFollowUps(client, rootElement.querySelector(`.miso-ask-combo__follow-ups`));
+  //defaults.wireRelatedResources(client, rootElement.querySelector(`.miso-ask-combo__related-resources`));
 
   // start query if specified in URL parameters
   rootWorkflow.autoQuery();
@@ -65,4 +63,3 @@ misocmd.push(async () => {
 ```
 
 * See [template helpers]({{ '/answers/ask/templates/' | url }}) for template customization.
-* See the [implementation](https://github.com/MisoAI/miso-client-js-sdk/blob/main/packages/client-sdk-ui/src/defaults/ask/controls.js) of the logic helper functions `wireFollowUps` and `wireRelatedResources` for more details.

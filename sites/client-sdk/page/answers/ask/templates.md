@@ -2,6 +2,8 @@
 title: Ask module - template helpers
 ---
 
+{%- from 'macros.njk' import since with context -%}
+
 The SDK offers some helper templates for the Ask UI. You can leverage these templates to quickly set up the Ask UI in your application by either using the them directly or modifying the HTML string to suit your needs.
 
 #### Root
@@ -27,7 +29,9 @@ rootElement.innerHTML = html;
 
 #### Follow-up
 
-Suppose you wire up the follow-up feature using the `wireFollowUp` helper function, you can pass in your own `followUp` template function as an option to customize it:
+{{ since('1.12.5') }}
+
+Specify follow-up template function on the workflow context:
 
 ```js
 function followUpTemplate({ parentQuestionId }) {
@@ -36,6 +40,14 @@ function followUpTemplate({ parentQuestionId }) {
   return html;
 }
 
+client.ui.asks.useTemplates({
+  followUp: followUpTemplate
+});
+```
+
+In SDK version older than `1.12.5`, suppose you wire up the follow-up feature using the `wireFollowUps` helper function, you can pass in your own `followUp` template function as an option to customize it:
+
+```js
 wireFollowUps(client, rootElement.querySelector(`.miso-ask-combo__follow-ups`), {
   template: followUpTemplate
 });
