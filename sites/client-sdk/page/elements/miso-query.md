@@ -108,7 +108,7 @@ Simply leave elements inside `<miso-query>` element:
 
 The layout handles DOM events by the following rules:
 
-1. The first `<input>` element with attribute `data-role="input"` holds the query text.
+1. The first `<input>` or `<textarea>` element with attribute `data-role="input"` holds the query text.
 1. When clicking on an element with attribute `type="submit"` or `data-role="button"`, it submits the query.
 
 {#
