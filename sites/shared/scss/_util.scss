@@ -40,10 +40,10 @@
   input:checked + label.btn,
   label.btn.active,
   label.btn:active {
+    background-color: var(--color-primary-l6) !important;
     > * {
       color: var(--color-primary) !important;
     }
-    background-color: var(--color-primary-l6) !important;
   }
   .labeled-input > label {
     width: 100%;

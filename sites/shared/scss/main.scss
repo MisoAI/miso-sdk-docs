@@ -1,10 +1,10 @@
-@import './code';
-@import './diagram';
-@import './tech';
-@import './util';
-@import './home';
-@import './base';
-@import './preview';
+@use './code';
+@use './diagram';
+@use './tech';
+@use './util';
+@use './home';
+@use './base';
+@use './preview';
 
 /* layout */
 body.base .miso-body-container {
