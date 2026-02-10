@@ -39,6 +39,7 @@ jobs:
           target-branch: main
           target-directory: miso-client-js-sdk
   publish-server:
+    needs: publish-client
     environment: production
     runs-on: ubuntu-latest
     steps:
