@@ -18,3 +18,7 @@ npm-debug.log*
 
 .DS_Store
 local/
+
+# claude
+.claude/settings.local.json
+*.local.md

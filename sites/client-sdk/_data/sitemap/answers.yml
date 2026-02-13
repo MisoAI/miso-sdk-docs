@@ -83,6 +83,11 @@ sections:
     summary: Retrieve trending questions.
     outline:
     - Retrieve trending questions
+  - title: Search box only
+    path: /explore/search-box-only
+    summary: Use the explore module with only a search box.
+    outline:
+    - Display only the search box without related questions
   - title: Configuration
     path: /explore/configuration
     summary: Configure the explore module settings and behavior.
