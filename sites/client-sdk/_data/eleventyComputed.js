@@ -1,4 +1,4 @@
-import { eleventyComputed } from '@miso.ai/eleventy-plugin-miso-docs';
+import * as eleventyComputed from '../lib/eleventy-computed.js';
 
 export default {
   ...eleventyComputed,

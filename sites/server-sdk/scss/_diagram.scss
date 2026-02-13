@@ -1,0 +1,127 @@
+$arrow-length: 12px;
+$arrow-width: 8px;
+
+:root {
+  --color-diagram-text: #444;
+  --color-diagram-line: #666;
+  --color-diagram-shadow: #EEE;
+}
+
+table.miso-diagram {
+  margin: 2rem auto;
+
+  .box {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0.75em;
+    margin: 0.5rem;
+    color: var(--color-diagram-text);
+    border-color: var(--color-diagram-line);
+    box-shadow: 0 0 5px var(--color-diagram-shadow);
+    text-align: center;
+  }
+
+  td {
+    position: relative;
+  }
+
+  .line,
+  .arrow {
+    &.green {
+      --color-diagram-line: #009900;
+    }
+    &.blue {
+      --color-diagram-line: #000099;
+    }
+  }
+  .line {
+    position: absolute;
+    background-color: var(--color-diagram-line);
+
+    &.hor {
+      left: 2px;
+      right: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2px;
+    }
+    &.ver {
+      top: 2px;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+    }
+  }
+  .arrow {
+    position: absolute;
+    border: 0px solid transparent;
+
+    &.left,
+    &.right {
+      top: 50%;
+      transform: translateY(-50%);
+      width: $arrow-length;
+      height: $arrow-width;
+      border-width: calc($arrow-width / 2) 0;
+    }
+    &.right {
+      right: 0;
+      border-left-color: var(--color-diagram-line);
+      border-left-width: $arrow-length;
+    }
+    &.left {
+      left: 0;
+      border-right-color: var(--color-diagram-line);
+      border-right-width: $arrow-length;
+    }
+    &.top,
+    &.bottom {
+      left: 50%;
+      transform: translateX(-50%);
+      width: $arrow-width;
+      height: $arrow-length;
+      border-width: 0 calc($arrow-width / 2);
+    }
+    &.top {
+      top: 0;
+      border-bottom-color: var(--color-diagram-line);
+      border-bottom-width: $arrow-length;
+    }
+    &.bottom {
+      bottom: 0;
+      border-top-color: var(--color-diagram-line);
+      border-top-width: $arrow-length;
+    }
+  }
+  .label {
+    font-size: 0.8rem;
+    text-align: center;
+
+    &.top,
+    &.bottom {
+      display: block;
+      padding: 0.5em 1rem;
+    }
+    &.top {
+      transform: translateY(-50%);
+    }
+    &.bottom {
+      transform: translateY(50%);
+    }
+    &.left,
+    &.right {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      padding: 1rem 0.9em;
+    }
+    &.left {
+      transform: translate(-100%, -50%);
+    }
+    &.right {
+      transform: translateY(-50%);
+    }
+  }
+}

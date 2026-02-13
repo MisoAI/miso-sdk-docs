@@ -1,4 +1,4 @@
-import { setupMisoDocs } from '@miso.ai/eleventy-plugin-miso-docs';
+import { setupMisoDocs } from './lib/setup.js';
 import Data from './data.js';
 
 export default function(config) {

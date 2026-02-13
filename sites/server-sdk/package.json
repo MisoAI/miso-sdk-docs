@@ -6,19 +6,21 @@
     "clean:dist": "npx rimraf dist",
     "clean:index": "npx rimraf index",
     "clean": "npm run clean:dist ; npm run clean:index",
-    "build:shared": "cp -a ../shared/dist dist",
     "build:sass": "npx sass scss:dist/css",
     "watch:sass": "npx sass --watch scss:dist/css",
     "build:11ty": "npx eleventy",
     "watch:11ty": "npx eleventy --serve --port=10101",
-    "_build": "npm run clean:dist && npm run build:shared && npm run build:sass",
+    "_build": "npm run clean:dist && npm run build:sass",
     "build": "npm run _build && npm run build:11ty",
     "start": "npm run _build && npm-run-all --parallel watch:*",
     "debug": "DEBUG=* npx eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@miso.ai/eleventy-plugin-miso-docs": "file:../../packages/plugin",
-    "@miso.ai/miso-specs": "file:../../packages/specs"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^12.3.2",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-link-attributes": "^4.0.0"
   }
 }

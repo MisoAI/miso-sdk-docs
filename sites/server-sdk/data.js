@@ -1,6 +1,6 @@
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { utils } from '@miso.ai/eleventy-plugin-miso-docs';
+import * as utils from './lib/utils/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

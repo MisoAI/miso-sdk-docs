@@ -1,0 +1,51 @@
+<h3>Table of Content</h3>
+<div class="chapter-toc">
+  <ul class="section-list list-unstyled">
+  {%- for section in sitemap[chapter].sections -%}
+    <li class="section mb-4 {{ '__preview__' if section.preview }}">
+    {%- if helpers.isCurrentPage(page.url, chapter, section.path) -%}
+      <h5 class="title mb-2">
+        {{ section.title }}
+      </h5>
+      <div>
+        <ul class="page-list list-unstyled ps-3">
+        {%- for p in section.pages -%}
+          <li class="page {{ '__preview__' if p.preview }}">
+            <div>
+              <a href="{{ ['/', chapter, p.path, '/'] | join | url }}">{{ p.title }}</a>
+            </div>
+            {%- if p.summary -%}
+            <p class="mb-0 ps-3">
+              {{ p.summary }}
+            </p>
+            {%- endif -%}
+            {%- if p.outline -%}
+            <ul class="outline-list ps-3">
+            {%- for o in p.outline -%}
+              <li class="outline-item">{{ o }}</li>
+            {%- endfor -%}
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+        </ul>
+      </div>
+    {%- else -%}
+      <h5 class="title mb-2">
+        <a href="{{ ['/', chapter, section.path, '/'] | join | url }}">{{ section.title }}</a>
+      </h5>
+      {%- if section.summary -%}
+      <p class="mb-0">
+        {{ section.summary }}
+      </p>
+      {%- endif -%}
+      {%- if section.outline -%}
+      <ul class="outline-list">
+      {%- for o in section.outline -%}
+        <li class="outline-item">{{ o }}</li>
+      {%- endfor -%}
+      {%- endif -%}
+    {%- endif -%}
+    </li>
+  {%- endfor -%}
+  </ul>
+</div>
