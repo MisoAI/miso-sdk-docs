@@ -1,0 +1,31 @@
+options:
+  features:
+  - key: relatedResources
+    default: true
+    desc: |
+      Whether to show related resources section.
+  - key: followUpQuestions
+    default: true
+    desc: |
+      Whether to enable follow-up questions.
+  - key: querySuggestions
+    default: true
+    desc: |
+      Whether to show query suggestions for follow-up questions.
+  phrases:
+  - key: question
+    default: "'You asked...'"
+    desc: |
+      The phrases preceeding users' question.
+  - key: sources
+    default: "'My reply is based on the following'"
+    desc: |
+      The title for citation sources section.
+  - key: relatedQuestions
+    default: "'Related questions you can explore'"
+    desc: |
+      The title for related questions section.
+  - key: relatedResources
+    default: "'Go beyond, and learn more about this topic'"
+    desc: |
+      The title for related resources section.

@@ -1,0 +1,172 @@
+# payload: generic
+- key: created_at
+  type: string
+  desc: |
+    The created time of the item, in ISO-8601 date or datetime format.
+- key: updated_at
+  type: string
+  desc: |
+    The last updated time of the item, in ISO-8601 date or datetime format.
+- key: published_at
+  type: string
+  desc: |
+    The last published time of the item, in ISO-8601 date or datetime format.
+- key: custom_attributes
+  type: object
+  desc: |
+    An free-schema object to keep additional information. Note that the data schema must be consistent across all records.
+# payload: catalog
+- key: product_id
+  required: true
+  type: string
+  desc: |
+    The unique identifier of a catalog item.
+- key: type
+  type: string
+  desc: |
+    The type of catalog item. For instance, a travel agency may have hotels and flights in its catalog.
+- key: product_group_id
+  type: string
+  desc: |
+    When each of your products has multiple variants (color, size, etc.), assign a `product_group_id` to the product and assign a unique `product_id` to each variant.
+- key: parent_id
+  type: string
+  desc: |
+    A non-empty string referring to the `product_id` of another catalog item. The parent item does not need to exist when you upload this item.
+- key: related_ids
+  type: array of strings
+  desc: |
+    A list of `product_id` or `product_group_id` of other items related to this one.
+# payload: catalog: information
+- key: title
+  type: string
+  desc: |
+    The title of the item. This property weights more than the others in a search query.
+- key: description_c
+  name: description
+  type: string
+  desc: |
+    The description of the item. Miso makes semantic understanding from this property and extract rich information to search against.
+- key: html
+  type: string
+  desc: |
+    The HTML content of the item. Miso will search against this property and apply semantic understanding in a way similar to the `description` property, but with HTML tags removed. 
+- key: language
+  type: string
+  desc: |
+    The language in which the item's `description` was written, in the two-letter [ISO_639-1](https://en.wikipedia.org/wiki/ISO_639-1) code.
+- key: categories
+  type: array of array of strings
+  desc: |
+    A double array of strings representing multiple structured categories of an item. For example, the categories of a collectible stuffed toy can be `[['Toy', 'Stuffed Animals'], ['Art', 'Collectibles']]`.
+- key: tags
+  type: array of strings
+  desc: |
+    A list of tags on the item.
+- key: url
+  type: URL string
+  desc: |
+    A URL to the item (product) page.
+- key: cover_image
+  type: URL string
+  desc: |
+    A URL of the cover image of the item.
+# payload: catalog: sales
+- key: original_price
+  type: number
+  desc: |
+    The original price of the product item.
+- key: sale_price
+  type: number
+  desc: |
+    The sales price of the product item.
+- key: margin
+  type: number
+  desc: |
+    The margin of the product item.
+- key: availability
+  type: string (enum)
+  desc: |
+    The availability of the product, useful in search/recommendation filters. Valid values are: `IN_STOCK`, `OUT_OF_STOCK`, `PRE_ORDER`. Default: `IN_STOCK`.
+# payload: catalog: property
+- key: size
+  type: string
+  desc: |
+    The size of the product item.
+- key: color
+  type: string
+  desc: |
+    The color of the product item.
+- key: material
+  type: string
+  desc: |
+    The material of the product item.
+- key: condition
+  type: string (enum)
+  desc: |
+    The condition of the product item. Valid values are: `NEW`, `USED`, `REFURBISHED`. Default: `NEW`.
+- key: brand
+  type: string
+  desc: |
+    The brand of the product item.
+# payload: catalog: content
+- key: authors
+  type: array of strings
+  desc: |
+    The author(s) of the product/content.
+- key: publishers
+  type: array of strings
+  desc: |
+    The publisher(s) of the product/content.
+- key: collections
+  type: array of strings
+  desc: |
+    The collection(s) the product/content belongs to.
+# payload: catalog: other
+- key: location
+  type: object
+  desc: |
+    An object with `lat` and `lon` values. Miso support geolocation filtering and sorting when creating search and recommendation results if location information is given. 
+# payload: users
+- key: user_id
+  required: true
+  type: string
+  desc: |
+    The unique identifier of a user.
+- key: name
+  type: string
+  desc: |
+    The user's full name.
+- key: profile_image
+  type: URL string
+  desc: |
+    A URL of the profile image of the user.
+- key: age
+  type: number
+  desc: |
+    Age of the user. Miso internally converts it to year of birth.
+- key: gender
+  type: string
+  desc: |
+    The user's gender.
+- key: city
+  type: string
+  desc: |
+    City or zipcode the user is based in.
+- key: state
+  type: string
+  desc: |
+    State the user is based in.
+- key: country
+  type: string
+  desc: |
+    Country the user is based in.
+- key: group_id
+  type: string
+  desc: |
+    Group or Account ID from your CRM. This is useful in B2B scenarios.
+- key: description_u
+  name: description
+  type: string
+  desc: |
+    Text description of the user. This can be the user's own bio or the internal notes about the user. If available, Miso will analyze this description to better profile a user. 

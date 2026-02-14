@@ -1,4 +1,4 @@
-import * as specs from './specs-data.js';
+import * as specs from './specs/index.js';
 
 function compute() {
   return Object.freeze({ ...specs });
