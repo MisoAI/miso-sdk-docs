@@ -78,6 +78,11 @@ sections:
     outline:
     - Access the workflow object.
     - Link function.
+  - title: Multiple units
+    path: /explore/multiple
+    summary: Display multiple explore blocks with different unit IDs.
+    outline:
+    - Create multiple explore workflows with different unit IDs
   - title: Trending questions
     path: /explore/trending
     summary: Retrieve trending questions.
