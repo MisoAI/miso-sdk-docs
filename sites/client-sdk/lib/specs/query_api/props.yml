@@ -143,6 +143,11 @@
   type: object
   desc: |
     An object of autocompletion information.
+- key: completions_1
+  name: completions
+  type: array of strings
+  desc: |
+    An array of suggested query completions.
 - key: attributes
   type: array of objects
   desc: |

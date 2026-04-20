@@ -93,6 +93,11 @@ sections:
     summary: Use the explore module with only a search box.
     outline:
     - Display only the search box without related questions
+  - title: Autocomplete
+    path: /explore/autocomplete
+    summary: Enable autocomplete for explore units.
+    outline:
+    - Enable autocomplete for all explore units
   - title: Configuration
     path: /explore/configuration
     summary: Configure the explore module settings and behavior.
@@ -157,6 +162,9 @@ sections:
   - title: Related questions
     path: /api/related_questions
     summary: Generate related questions against an article.
+  - title: Query suggestion
+    path: /api/query_suggestion
+    summary: Generate query suggestions based on a partial query string.
   - title: Interactions (ask)
     path: /api/interactions-ask
     summary: Send user interaction events for analytics regarding ask module.

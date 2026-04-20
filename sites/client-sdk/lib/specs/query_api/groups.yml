@@ -83,6 +83,9 @@
 - key: related_questions.payload
   props:
   - product_id_1
+- key: query_suggestion.payload
+  props:
+  - q_0
 # response
 - key: search.response
   props:
@@ -116,3 +119,6 @@
 - key: related_questions.response
   props:
   - related_questions
+- key: query_suggestion.response
+  props:
+  - completions_1
