@@ -174,3 +174,6 @@ sections:
   - title: Context
     path: /api/context
     summary: Context values that are included by all to API payloads.
+  - title: Client variants
+    path: /api/client-variants
+    summary: Choose between the standard and lite client variants.
