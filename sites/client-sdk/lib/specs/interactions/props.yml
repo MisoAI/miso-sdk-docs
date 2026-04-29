@@ -1,0 +1,66 @@
+- name: type
+  required: true
+  type: string
+  desc: |
+    Interaction type.
+- name: miso_id
+  required: true
+  type: string
+  used_by:
+  - explore
+  - hybrid-search
+  - search
+  - recommendation
+  desc: |
+    Miso-generated unique ID in each API response.
+- name: product_ids
+  type: array of strings
+  used_by:
+  - ask
+  - hybrid-search
+  - search
+  - recommendation
+  desc: |
+    `product_id` values of the subject items (when they are catalog items).
+- name: context.custom_context.api_group
+  required: true
+  type: string
+  desc: |
+    The first segment of API path, in snake case.
+- name: context.custom_context.api_name
+  required: true
+  type: string
+  desc: |
+    The second segment of API path, in snake case.
+- name: context.custom_context.property
+  required: true
+  type: string
+  desc: |
+    The subject name of the interaction, which usually correspond to a field in the API response.
+- name: context.custom_context.site
+  type: string
+  desc: |
+    The site name. Only required when you serve multiple sites from a single Miso app.
+- name: context.custom_context.unit_id
+  type: string
+  used_by:
+  - explore
+  - recommendation
+  desc: |
+    The unit id of the workflow unit. Only required when you have multiple units in your site. When omitted, the unit name shows `Home` for URL path `/` and otherwise `Article` in analytics.
+- name: context.custom_context.items
+  type: array of strings
+  desc: |
+    Subject items (when they are non-catalog items, such as `related_questions`).
+- name: context.custom_context.question_id
+  used_by:
+  - ask
+  type: string
+  desc: |
+    The question id in ask API response.
+- name: context.custom_context.root_question_id
+  used_by:
+  - ask
+  type: string
+  desc: |
+    The question id of the first question in question sequence. It is different from `question_id` only when the question is a follow-up.

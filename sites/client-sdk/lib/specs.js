@@ -15,6 +15,9 @@ export default class Specs {
     // TODO: use proxy?
     return this._data.event;
   }
+  get interactions() {
+    return this._data.interactions;
+  }
   get query_api() {
     return this._data.query_api;
   }

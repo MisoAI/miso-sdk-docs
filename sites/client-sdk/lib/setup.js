@@ -57,7 +57,7 @@ export function setupMisoDocs(config, {
   config.addPassthroughCopy({
     'asset': '/',
   });
-  config.addWatchTarget('./scss/', './src/');
+  config.addWatchTarget('./scss/', './src/', './lib/');
   config.addGlobalData('layout', 'base.njk');
 
   // directories

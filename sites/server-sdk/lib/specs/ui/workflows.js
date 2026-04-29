@@ -6,15 +6,8 @@ const _workflows = readYaml('ui/workflows.yml');
 
 class Workflow {
 
-  constructor({ apis, ...args }) {
-    apis = apis.map(args => ({
-      ...args,
-      api_name_camel_case: snakeToCamel(args.api_name),
-    }));
-    Object.assign(this, {
-      ...args,
-      apis,
-    });
+  constructor({ ...args }) {
+    Object.assign(this, args);
     Object.freeze(this);
     addWorkflow(this);
   }

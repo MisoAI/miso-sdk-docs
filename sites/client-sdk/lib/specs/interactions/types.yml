@@ -1,0 +1,19 @@
+- name: impression
+  desc: |
+    The content of a subject is rendered in DOM tree, regardless of being seen or not.
+- name: viewable_impression
+  desc: |
+    At least 50% of the content of a subject shows up in viewport for a consecutive 1 second.
+- name: click
+  desc: |
+    The user clicks on the link of a subject, which may lead to an article/product page or answers page.
+- name: feedback
+  used_by:
+  - ask
+  desc: |
+    The user gives feedback on an answer.
+- name: submit
+  used_by:
+  - explore
+  desc: |
+    The user submits a query through the search box.

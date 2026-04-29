@@ -1,121 +1,80 @@
-## Performance events
-
-To generate performance measurement data for analytics, you can send the following events to Miso API:
-
-* Impression
-* Viewable impression
-* Click
-
-See [Performance measurement]({{ '/advanced/performance/' | url }}) for detailed definitions.
+The UI plugin of SDK sends user interactions to Miso API for analytics automatically. You can send interactions manually if needed.
 
 #### Syntax
 
-To send an event using SDK that works with analytics, specifying `api_group`, `api_name`, and `property` in `custom_context` is required.
-
 ```js
 client.api.interactions.upload({
-  type: 'impression', // or 'viewable_impression', 'click'
+  type: 'impression', // or 'viewable_impression', 'click', 'submit'
+{%- if workflow.name == 'ask' %}
   product_ids: [...], // if subjects are catalog items
+{%- endif %}
+{%- if workflow.name != 'ask' %}
+  miso_id: '...', // miso_id from API response
+{%- endif %}
   context: {
     custom_context: {
       api_group: '{{ workflow.api_group }}',
-      api_name: {% for api in workflow.apis -%}'{{ api.api_name }}'{{ ', ' if not loop.last or loop.first }}{{ '// or ' if loop.first and not loop.last }}{%- endfor %}
+      api_name: {% for api_name in workflow.api_names -%}'{{ api_name }}'{{ ', ' if not loop.last or loop.first }}{{ '// or ' if loop.first and not loop.last }}{%- endfor %}
+      property: '...',
+      items: [...], // if subjects are not catalog items
 {%- if workflow.name == 'ask' %}
       question_id: '...',
       root_question_id: '...',
 {%- endif %}
-      property: '...',
-      items: [...], // if subjects are not catalog items
     },
   },
 });
 ```
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `type` | string | Event type: `impression`, `viewable_impression`, or `click`. |
-| `product_ids` | array of strings | Product ids of the event subjects |
-| `items` | array of strings | Event subjects (when they are not catalog items) |
-| `api_group` | string | The first segment of API path, in snake case |
-| `api_name` | string | The second segment of API path, in snake case |
-{%- if workflow.name == 'ask' %}
-| `question_id` | string | The question id in ask API response |
-| `root_question_id` | string | The question id of the first question in question sequence. It is different from `question_id` only when the question is a follow-up one. |
-{%- endif %}
-| `property` | string | The property name of the event subjects, which corresponds to the API response |
+#### API names
 
-#### API and key properties
-
-| API | Property | Is catalog item? |
-| --- | --- | --- |
-{%- for api in workflow.apis %}
-{%- for property in api.properties %}
-| {% if loop.first %}`{{ api.api_name }}`{% endif %} | `{{ property.name }}` | {% if property.in_catalog %}✓{% else %}✗{% endif %} |
-{%- endfor %}
+{%- for api_name in workflow.api_names %}
+* `{{ api_name }}`
 {%- endfor %}
 
-{% set api = workflow.apis[0] %}
-{% set property = api.properties[0] %}
+#### Properties
 
-#### Examples
+The property field in the interaction payload refers to the subject of the interaction. It usually corresponds to a field in the API response with a few exceptions.
 
-For example, suppose we call the API with the following response:
+| Property | Associated required field | Interactions |
+| --- | --- | --- |
+{%- for property in workflow.properties %}
+| `{{ property.name }}` | {% if property.item_type == 'catalog' %}`product_ids`{% elif property.item_type == 'non-catalog' %}`context.custom_context.items`{% elif property.item_type == 'itemless' %}--{% endif %} | `{{ property.interaction_types | join('`, `') }}` |
+{%- endfor %}
 
-```js
-{%- if workflow.name == 'ask' %}
-const answer = await client.api.ask.questions(payload);
-for await (const response of answer) {
-  // ...
-}
-{%- else %}
-const response = await client.api.{{ workflow.api_group }}.{{ api.api_name_camel_case }}(payload);
+{%- if workflow.name == 'explore' %}
+* The property `container` refers to the entire explore unit section. The purpose of tracking `container` is to keep track of the data when the API response is empty or in a scenario where the user does not send an API request (e.g. search bar only).
+* In the analytics, the CTR of submit is defined as `query`'s `submit` divided by `container`'s `impression`. Vice versa for vCTR, it is `query`'s `submit` divided by `container`'s `viewable_impression`.
 {%- endif %}
 
-// response
-{
-{%- if workflow.name == 'ask' %}
-  question_id: '11111111-2222-4444-8888-000000000000',
-{%- endif %}
-  {{ property.name }}: [
-{%- if property.in_catalog %}
-    { product_id: '{{ property.item_term }}_1', ... },
-    { product_id: '{{ property.item_term }}_2', ... },
-    { product_id: '{{ property.item_term }}_3', ... }
-{%- else %}
-    '{{ property.item_term }}_1',
-    '{{ property.item_term }}_2',
-    '{{ property.item_term }}_3'
-{%- endif %}
-  ],
-  ...
-}
-```
+#### Interaction types
 
-And we want to track click events on the first two items from the `{{ property.name }}` property, then we send the following interaction:
+| Type | Definition |
+| --- | --- |
+{%- for type in specs.interactions.workflows[workflow.name].types %}
+| `{{ type.name }}` | {{ type.desc | trim }} |
+{%- endfor %}
 
-```js
-client.api.interactions.upload({
-  type: 'click',
-{%- if property.in_catalog %}
-  product_ids: ['{{ property.item_term }}_1', '{{ property.item_term }}_2'],
-{%- endif %}
-  context: {
-    custom_context: {
-      api_group: '{{ workflow.api_group }}',
-      api_name: '{{ api.api_name }}',
-{%- if workflow.name == 'ask' %}
-      root_question_id: '...',
-      question_id: '11111111-2222-4444-8888-000000000000',
-{%- endif %}
-      property: '{{ property.name }}',
-{%- if not property.in_catalog %}
-      items: ['{{ property.item_term }}_1', '{{ property.item_term }}_2'],
-{%- endif %}
-    },
-  },
-});
-```
+* See [performance measurement]({{ '/advanced/performance/' | url }}) for the detailed definitions and metrics of CTR, vCTR, and view rate.
 
-{%- if workflow.name == 'ask' %}
-You can also learn from [live example]({{ '/demo/latest/answers/ask/' | url }}).
+#### Interaction payload fields
+
+Top-level fields:
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+{%- for prop in specs.interactions.workflows[workflow.name].props %}
+{%- if not prop.parent %}
+| `{{ prop.key }}` | {{ prop.type }} | {% if prop.required %}✓{% endif %} | {{ prop.desc | trim }} |
 {%- endif %}
+{%- endfor %}
+
+Fields under `context.custom_context`:
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+{%- for prop in specs.interactions.workflows[workflow.name].props %}
+{%- if prop.parent == 'context.custom_context' %}
+| `{{ prop.key }}` | {{ prop.type }} | {% if prop.required %}✓{% endif %} | {{ prop.desc | trim }} |
+{%- endif %}
+{%- endfor %}
